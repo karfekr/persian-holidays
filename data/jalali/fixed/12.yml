@@ -1,0 +1,264 @@
+events:
+  - id: jalali-12-01-gneby
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 1
+    title:
+      fa: آبسالان
+      en: Absalan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-12-05-bwm702
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 5
+    title:
+      fa: بزرگداشت خواجه نصیرالدین طوسی
+      en: Commemoration of Khajeh Nasir al-Din Tusi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-05-kdts55
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 5
+    title:
+      fa: روز مهندسی
+      en: Engineering Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-09-v6kqaj
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 9
+    title:
+      fa: روز حمایت از حقوق مصرف‌کنندگان
+      en: Consumer Rights Support Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-10-1u7v2j7
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 10
+    title:
+      fa: وخشنکام
+      en: Vakhshankam
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-12-14-10jf5ih
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 14
+    title:
+      fa: روز احسان و نیکوکاری
+      en: Charity & Benevolence Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-14-1azzreo
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 14
+    title:
+      fa: روز ترویج فرهنگ قرض‌الحسنه
+      en: Day of Promoting the Culture of Qarz al-Hasanah
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-15-1tqn0tf
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 15
+    title:
+      fa: روز درختکاری
+      en: Tree Planting Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-18-1ovj66u
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 18
+    title:
+      fa: تاسیس کانون‌های فرهنگی و هنری مساجد کشور
+      en: Establishment of Mosque official Centers
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-12-18-dhi43p
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 18
+    title:
+      fa: بزرگداشت جمال‌الدین اسدآبادی
+      en: Commemoration of Jamal al-Din Asadabadi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-19-5aniko
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 19
+    title:
+      fa: جشن نوروز رودها
+      en: Nowruz celebration of the rivers
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-12-20-1fh3dhh
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 20
+    title:
+      fa: جشن گلدان
+      en: Flowerpot Celebration
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-12-20-o49879
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 20
+    title:
+      fa: روز راهیان نور
+      en: Rahian Noor Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-21-mr75yb
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 21
+    title:
+      fa: بزرگداشت نظامی گنجوی
+      en: Commemoration of Nezami Ganjavi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-22-1f8cd3x
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 22
+    title:
+      fa: تاسیس بنیاد شهید انقلاب اسلامی
+      en: Establishment of the Martyrs Foundation of the Islamic Revolution
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-12-22-gqwkrt
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 22
+    title:
+      fa: بزرگداشت شهدا
+      en: Martyrs Commemoration
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-24-98jhuk
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 24
+    title:
+      fa: برگزاری انتخابات اولین دورهٔ مجلس شورای اسلامی
+      en: First Parliamentary Election Anniversary
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-12-25-1dsopsd
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 25
+    title:
+      fa: بزرگداشت پروین اعتصامی
+      en: Commemoration of Parvin Etesami
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-12-25-89o087
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 25
+    title:
+      fa: بمباران شیمیایی حلبچه
+      en: Halabja Chemical Bombing
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-12-26-hqi7s7
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 26
+    title:
+      fa: فروردگان
+      en: Farvardegan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-12-29-z8uegv
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 29
+    title:
+      fa: گاهنبار همسپتمدم، اوشیدر
+      en: Hamaspathmaedaya, Ushidar
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-12-29-np24ls
+    calendar: jalali
+    type: fixed
+    month: 12
+    day: 29
+    title:
+      fa: ملی شدن صنعت نفت ایران
+      en: Nationalization of Iranian Oil Industry
+    categories:
+      - historical
+    isHolidayInIran: true

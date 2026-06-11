@@ -1,0 +1,26 @@
+#? multi-day: spans a range of days
+
+events:
+  - id: jalali-nowruz-holidays
+    type: multi-day
+    startMonth: 1
+    startDay: 1
+    endMonth: 1
+    endDay: 4
+    title:
+      fa: تعطیلات نوروز
+      en: Nowruz Holidays
+    categories: [government, cultural]
+    isHolidayInIran: true
+
+  - id: jalali-defense-week
+    type: multi-day
+    startMonth: 6
+    startDay: 31
+    endMonth: 7
+    endDay: 6
+    title:
+      fa: هفته دفاع مقدس
+      en: Sacred Defense Week
+    categories: [government, historical]
+    isHolidayInIran: false

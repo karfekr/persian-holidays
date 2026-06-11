@@ -60,7 +60,7 @@ describe("getMonthEvents", () => {
 
 	test("applies category filtering", async () => {
 		const res = await getMonthEvents("jalali", 1, {
-			categories: ["national"],
+			categories: ["government"],
 		});
 
 		expect(res.map((e) => e.id)).not.toContain("fixed-m1d15");

@@ -1,0 +1,336 @@
+events:
+  - id: jalali-04-01-egy2l
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 1
+    title:
+      fa: تاسیس سازمان تبلیغات اسلامی
+      en: Establishment of Islamic Propagation Organization
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-01-1tba60x
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 1
+    title:
+      fa: روز اصناف
+      en: Guilds Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-01-p23p4o
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 1
+    title:
+      fa: آب‌پاشونک
+      en: Ab-pashonak
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-04-06-vbw87x
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 6
+    title:
+      fa: جشن نیلوفر
+      en: Niloofar/Lotus festival
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-04-07-1smeodw
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 7
+    title:
+      fa: شهادت آیت‌الله بهشتی
+      en: Martyrdom of Ayatollah Beheshti
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-07-mhh96q
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 7
+    title:
+      fa: روز قوهٔ قضاییه
+      en: Judiciary Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-10-p76xoz
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 10
+    title:
+      fa: روز صنعت و معدن
+      en: Industry & Mining Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-10-1jzj4cs
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 10
+    title:
+      fa: آزادسازی شهر مهران
+      en: Liberation of Mehran City
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-11-16kd1yx
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 11
+    title:
+      fa: شهادت آیت‌الله صدوقی
+      en: Martyrdom of Ayatollah Sadooghi
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-12-dvumkf
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 12
+    title:
+      fa: حملهٔ ناوگان آمریکا به هواپیمای مسافربری ایران
+      en: US Fleet Attack on Iranian Passenger Plane
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-12-nxuo0o
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 12
+    title:
+      fa: بزرگداشت علامه امینی
+      en: Commemoration of Allameh Amini
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-13-rrwgup
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 13
+    title:
+      fa: تیرگان
+      en: Tiregan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-04-14-w9rzl2
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 14
+    title:
+      fa: روز شهرداری و دهیاری
+      en: Municipality & Village Administration Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-14-cain4u
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 14
+    title:
+      fa: روز قلم
+      en: Pen Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-15-14bwrsn
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 15
+    title:
+      fa: روز خام‌خواری
+      en: Raw Eating Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-04-15-5i2o2d
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 15
+    title:
+      fa: گاهنبار میدیوشـِیم
+      en: Maidh-yo-shema
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-04-18-4cgde
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 18
+    title:
+      fa: روز ادبیات کودکان و نوجوانان
+      en: Children & Teen Literature Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-18-sdqp33
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 18
+    title:
+      fa: کشف کودتای نوژه
+      en: Discovery of Nojeh Coup
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-21-u2splj
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 21
+    title:
+      fa: روز عفاف و حجاب
+      en: Chastity & Hijab Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-21-hby5k5
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 21
+    title:
+      fa: حمله به مسجد گوهرشاد
+      en: Attack on Goharshad Mosque
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-22-171ea9s
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 22
+    title:
+      fa: بزرگداشت خوارزمی
+      en: Commemoration of Al-Khwarizmi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-22-1vx388k
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 22
+    title:
+      fa: روز ملی فناوری اطلاعات
+      en: National Information Technology Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-23-15kc58f
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 23
+    title:
+      fa: روز گفت‌وگو و تعامل سازنده با جهان
+      en: Dialogue & Constructive Interaction with the World Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-23-147qap3
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 23
+    title:
+      fa: گشایش نخستین مجلس خبرگان رهبری
+      en: Opening of First Assembly of Experts
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-25-1umlysh
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 25
+    title:
+      fa: روز بهزیستی و تامین اجتماعی
+      en: Welfare and Social Security Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-04-26-18e22m4
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 26
+    title:
+      fa: تاسیس شورای نگهبان
+      en: Anniversary of Establishment of Guardian Council
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-27-uevuo0
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 27
+    title:
+      fa: اعلام پذیرش قطعنامهٔ ۵۹۸ شورای امنیت از سوی ایران
+      en: Acceptance of UN Security Council Resolution 598 by Iran
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-04-30-1vtddcr
+    calendar: jalali
+    type: fixed
+    month: 4
+    day: 30
+    title:
+      fa: بزرگداشت آیت‌الله کاشانی
+      en: Commemoration of Ayatollah Kashani
+    categories:
+      - government
+    isHolidayInIran: false

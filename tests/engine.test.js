@@ -44,13 +44,13 @@ describe("matchDay — multi-day events", () => {
 
 describe("matchDay — category filter", () => {
 	test("returns only matching category", () => {
-		// Nowruz day 1 is in month 1 day 1 — categories: national, cultural
+		// Nowruz day 1 is in month 1 day 1 — categories: government, cultural
 		const res = matchDay(
 			jalaliSample,
 			"jalali",
 			2,
 			12,
-			["memorial"],
+			["historical"],
 			undefined,
 		);
 		expect(res.map((e) => e.id)).toContain("jalali-teachers-day");

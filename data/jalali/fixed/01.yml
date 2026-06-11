@@ -1,0 +1,317 @@
+events:
+  - id: jalali-01-01-3imwl2
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 1
+    title:
+      fa: آغاز نوروز
+      en: Nowruz (Persian New Year)
+    categories:
+      - government
+      - ancient
+    isHolidayInIran: true
+
+  - id: jalali-01-02-19ogomy
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 2
+    title:
+      fa: نوروز
+      en: Nowruz
+    categories:
+      - government
+      - ancient
+    isHolidayInIran: true
+
+  - id: jalali-01-02-1ml0mw4
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 2
+    title:
+      fa: هجوم به مدرسهٔ فیضیهٔ قم
+      en: Attack on Feyziyeh School(Qom)
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-02-1yskh25
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 2
+    title:
+      fa: آغاز عملیات فتح‌المبین
+      en: Start of Fath ol-Mobin Operation
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-03-16fgpuk
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 3
+    title:
+      fa: نوروز
+      en: Nowruz
+    categories:
+      - government
+      - ancient
+    isHolidayInIran: true
+
+  - id: jalali-01-04-136gr24
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 4
+    title:
+      fa: نوروز
+      en: Nowruz
+    categories:
+      - government
+      - ancient
+    isHolidayInIran: true
+
+  - id: jalali-01-06-1yg99ua
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 6
+    title:
+      fa: زادروز زرتشت پیامبر
+      en: Birth of Zarathustra the prophet
+    categories:
+      - ancient
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-01-06-pqbb0q
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 6
+    title:
+      fa: روز امید و شادباش‌نویسی
+      en: Hope & Congratulations Writing Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-01-07-vt3630
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 7
+    title:
+      fa: روز هنرهای نمایشی
+      en: Performing Arts Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-01-10-1rcfhqu
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 10
+    title:
+      fa: همه‌پرسی برای نظام جمهوری اسلامی ایران
+      en: Referendum for Islamic Republic
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-12-1w5rrnu
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 12
+    title:
+      fa: روز جمهوری اسلامی ایران
+      en: Iranian Islamic Republic Day
+    categories:
+      - government
+    isHolidayInIran: true
+
+  - id: jalali-01-13-p9ycih
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 13
+    title:
+      fa: روز طبیعت
+      en: Nature Day
+    categories:
+      - government
+    isHolidayInIran: true
+
+  - id: jalali-01-13-tgoeqw
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 13
+    title:
+      fa: روز سیزده‌بدر
+      en: Sizdah Bedar Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-01-15-w7msil
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 15
+    title:
+      fa: روز ذخایر ژنتیکی و زیستی
+      en: Genetic & Biological Resources Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-01-17-1xxxw94
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 17
+    title:
+      fa: سروش‌روز، سروشگان
+      en: Soroush, Soroushegan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-01-18-qtyyml
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 18
+    title:
+      fa: روز سلامتی
+      en: Health Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-01-19-1ggfadr
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 19
+    title:
+      fa: فروردینگان
+      en: Farvardinegan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-01-19-1gas1d5
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 19
+    title:
+      fa: شهادت آیت‌الله صدر و خواهرشان
+      en: Martyrdom of Ayatollah Sadr & his Sister
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-20-1u4ik0j
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 20
+    title:
+      fa: روز ملی فناوری هسته‌ای
+      en: National Nuclear Technology Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-01-20-1bixr6h
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 20
+    title:
+      fa: روز هنر انقلاب اسلامی
+      en: Islamic Revolution Arts Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-01-20-39prs9
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 20
+    title:
+      fa: قطع مناسبات دیپلماتیک ایران و آمریکا
+      en: Severance of Iran–US Diplomatic Relations
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-20-du8ng6
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 20
+    title:
+      fa: شهادت سید مرتضی آوینی
+      en: Martyrdom of Seyed Morteza Avini
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-21-12m36dl
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 21
+    title:
+      fa: شهادت امیر سپهبد علی صیاد شیرازی
+      en: Martyrdom of Lt. Gen. Ali Sayad Shirazi
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-21-5n0sul
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 21
+    title:
+      fa: تاسیس بنیاد مسکن انقلاب اسلامی
+      en: Housing Foundation Establishment
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-01-25-acu65r
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 25
+    title:
+      fa: بزرگداشت عطار نیشابوری
+      en: Commemoration of Attar of Nishapur
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-01-29-1pxwlqg
+    calendar: jalali
+    type: fixed
+    month: 1
+    day: 29
+    title:
+      fa: روز ارتش جمهوری اسلامی و نیروی زمینی
+      en: Day of the Islamic Republic Army & Ground Forces
+    categories:
+      - government
+    isHolidayInIran: false

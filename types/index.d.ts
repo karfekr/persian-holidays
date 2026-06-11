@@ -1,11 +1,11 @@
 export type CalendarType = "jalali" | "gregorian" | "hijri";
 
 export type Category =
-	| "national"
+	| "government"
 	| "religious"
 	| "cultural"
 	| "international"
-	| "memorial"
+	| "historical"
 	| "nature";
 
 export type EventType = "fixed" | "multi-day" | "relative";
@@ -13,12 +13,6 @@ export type EventType = "fixed" | "multi-day" | "relative";
 export type BilingualTitle = {
 	fa: string;
 	en: string;
-};
-
-export type EventMetadata = {
-	importance?: string;
-	source?: string;
-	note?: string;
 };
 
 export type RelativeRule =
@@ -83,21 +77,16 @@ export type RawEvent = {
 	title: BilingualTitle;
 	categories: Category[];
 
-	isHoliday: boolean;
-	isOfficialHolidayInIran: boolean;
-
-	metadata?: EventMetadata;
+	isHolidayInIran: boolean;
 };
 
 export type Event = {
 	id: string;
 	title: BilingualTitle;
 	categories: Category[];
-	isHoliday: boolean;
-	isOfficialHolidayInIran: boolean;
+	isHolidayInIran: boolean;
 	calendar: CalendarType;
 	type: EventType;
-	metadata?: EventMetadata;
 };
 
 export type QueryOptions = {

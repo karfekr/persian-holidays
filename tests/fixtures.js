@@ -5,9 +5,8 @@ export const jalaliSample = [
 		month: 1,
 		day: 1,
 		title: { fa: "نوروز", en: "Nowruz" },
-		categories: ["national", "cultural"],
-		isHoliday: true,
-		isOfficialHolidayInIran: true,
+		categories: ["government", "cultural"],
+		isHolidayInIran: true,
 	},
 	{
 		id: "jalali-nowruz-holidays",
@@ -17,9 +16,8 @@ export const jalaliSample = [
 		endMonth: 1,
 		endDay: 4,
 		title: { fa: "تعطیلات نوروز", en: "Nowruz Holidays" },
-		categories: ["national", "cultural"],
-		isHoliday: true,
-		isOfficialHolidayInIran: true,
+		categories: ["government", "cultural"],
+		isHolidayInIran: true,
 	},
 	{
 		id: "jalali-teachers-day",
@@ -27,9 +25,8 @@ export const jalaliSample = [
 		month: 2,
 		day: 12,
 		title: { fa: "روز معلم", en: "Teacher's Day" },
-		categories: ["national", "memorial"],
-		isHoliday: false,
-		isOfficialHolidayInIran: false,
+		categories: ["government", "historical"],
+		isHolidayInIran: false,
 	},
 ];
 
@@ -40,8 +37,7 @@ export const gregorianSample = [
 		rule: { base: "month-weekday", month: 5, weekday: 0, occurrence: "second" },
 		title: { fa: "روز مادر", en: "Mother's Day" },
 		categories: ["international", "cultural"],
-		isHoliday: false,
-		isOfficialHolidayInIran: false,
+		isHolidayInIran: false,
 	},
 	{
 		id: "gregorian-christmas",
@@ -50,8 +46,7 @@ export const gregorianSample = [
 		day: 25,
 		title: { fa: "کریسمس", en: "Christmas Day" },
 		categories: ["international", "religious"],
-		isHoliday: true,
-		isOfficialHolidayInIran: false,
+		isHolidayInIran: false,
 	},
 ];
 
@@ -62,9 +57,8 @@ export const loaderSample = [
 		month: 1,
 		day: 1,
 		title: { fa: "روز اول", en: "Day One" },
-		categories: ["national"],
-		isHoliday: true,
-		isOfficialHolidayInIran: true,
+		categories: ["government"],
+		isHolidayInIran: true,
 	},
 	{
 		id: "fixed-m1d15",
@@ -73,8 +67,7 @@ export const loaderSample = [
 		day: 15,
 		title: { fa: "روز پانزدهم", en: "Day Fifteen" },
 		categories: ["cultural"],
-		isHoliday: false,
-		isOfficialHolidayInIran: false,
+		isHolidayInIran: false,
 	},
 	{
 		id: "fixed-m6d31",
@@ -82,9 +75,8 @@ export const loaderSample = [
 		month: 6,
 		day: 31,
 		title: { fa: "روز پایان شهریور", en: "End of Shahrivar" },
-		categories: ["national"],
-		isHoliday: false,
-		isOfficialHolidayInIran: false,
+		categories: ["government"],
+		isHolidayInIran: false,
 	},
 	{
 		id: "multi-m1d1-4",
@@ -94,9 +86,8 @@ export const loaderSample = [
 		endMonth: 1,
 		endDay: 4,
 		title: { fa: "هفته نوروز", en: "Nowruz Week" },
-		categories: ["national", "cultural"],
-		isHoliday: true,
-		isOfficialHolidayInIran: true,
+		categories: ["government", "cultural"],
+		isHolidayInIran: true,
 	},
 	{
 		id: "relative-mothers-day",
@@ -109,7 +100,6 @@ export const loaderSample = [
 		},
 		title: { fa: "روز مادر", en: "Mother's Day" },
 		categories: ["cultural"],
-		isHoliday: false,
-		isOfficialHolidayInIran: false,
+		isHolidayInIran: false,
 	},
 ];

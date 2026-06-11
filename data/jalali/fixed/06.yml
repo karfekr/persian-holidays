@@ -1,0 +1,444 @@
+events:
+  - id: jalali-06-01-15yk8xm
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 1
+    title:
+      fa: فغدیه
+      en: Faghdiyeh
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-01-1nxqycy
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 1
+    title:
+      fa: بزرگداشت ابوعلی سینا
+      en: Commemoration of Avicenna
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-01-dkdw87
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 1
+    title:
+      fa: روز پزشک
+      en: Physician Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-02-1r2ae0f
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 2
+    title:
+      fa: آغاز هفتهٔ دولت
+      en: Beginning of Government Week
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-02-30klm2
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 2
+    title:
+      fa: شهادت علی اندرزگو
+      en: Martyrdom of Ali Andarzgoo
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-03-1p8qh4y
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 3
+    title:
+      fa: کشمین
+      en: Kashmin
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-03-dismpp
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 3
+    title:
+      fa: اشغال ایران به دست متفقین
+      en: Occupation of Iran by Allies
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-04-6bpnfl
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 4
+    title:
+      fa: شهریورگان
+      en: Shahrivaregan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-04-o0v5ja
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 4
+    title:
+      fa: عروج مانی
+      en: Ascension of Mani
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-04-6bpnfn
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 4
+    title:
+      fa: زادروز داراب
+      en: Shahrivaregan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-04-1u3c7np
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 4
+    title:
+      fa: کارمند
+      en: Employee
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-05-dj11n7
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 5
+    title:
+      fa: بزرگداشت محمد بن زکریای رازی
+      en: Commemoration of Muhammad ibn Zakariya al-Razi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-05-1opj9aw
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 5
+    title:
+      fa: روز داروسازی
+      en: Pharmacist Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-05-r9qye0
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 5
+    title:
+      fa: زادروز جهان پهلوان تختی
+      en: Birthday of Takhti, the Jahān-Pahlevan
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-05-qx5dr2
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 5
+    title:
+      fa: روز ملی کشتی
+      en: National Wrestling Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-08-jr6rqo
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 8
+    title:
+      fa: خزان
+      en: Khazan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-08-11bjqox
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 8
+    title:
+      fa: انفجار دفتر نخست‌وزیری و شهادت رجایی و باهنر
+      en: Prime Minister Office Bombing & Martyrdom of Rajaei & Bahonar
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-08-mdvit9
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 8
+    title:
+      fa: روز مبارزه با تروریسم
+      en: Fight Against Terrorism Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-08-15qmboe
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 8
+    title:
+      fa: تصویب قانون بانکداری بدون ربا
+      en: Approval of the Interest-Free Banking Law
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-10-10stjy
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 10
+    title:
+      fa: روز بانکداری اسلامی
+      en: Islamic Banking Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-11-1ibmref
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 11
+    title:
+      fa: روز ملی صنعت چاپ
+      en: National Printing Industry Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-12-2jms4r
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 12
+    title:
+      fa: کشته شدن رئیسعلی دلواری
+      en: Martyrdom of Rais-Ali Delvari
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-12-71d5zv
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 12
+    title:
+      fa: مبارزه با استعمار انگلیس
+      en: Fight Against British Colonialism
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-13-ecqrk7
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 13
+    title:
+      fa: روز تعاون
+      en: Cooperation Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-13-1j43wrb
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 13
+    title:
+      fa: بزرگداشت ابوریحان بیرونی
+      en: Commemoration of Al-Biruni
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-13-b5zwli
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 13
+    title:
+      fa: روز مردم‌شناسی
+      en: Anthropology Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-14-1ctom1m
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 14
+    title:
+      fa: شهادت آیت‌الله قدوسی و سرتیپ وحید دستجردی
+      en: Martyrdom of Ayatollah Qoddoosi & Brigadier Vahid Dastjerdi
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-15-5juz9n
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 15
+    title:
+      fa: روز بازار
+      en: Bazaar Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-17-y2edqf
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 17
+    title:
+      fa: قیام ۱۷ شهریور
+      en: 17th of Shahrivar Uprising
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-19-1tym1ic
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 19
+    title:
+      fa: وفات آیت‌الله سید محمود طالقانی
+      en: Death of Ayatollah Seyed Mahmoud Taleghani
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-20-cexb4g
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 20
+    title:
+      fa: شهادت آیت‌الله مدنی
+      en: Martyrdom of Ayatollah Madani
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-21-1j2qsry
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 21
+    title:
+      fa: روز سینما
+      en: Cinema Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-27-dgqi8e
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 27
+    title:
+      fa: روز شعر و ادب فارسی
+      en: Persian Poetry & Literature Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-27-95jp6l
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 27
+    title:
+      fa: بزرگداشت شهریار
+      en: Commemoration of Shahriar
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-06-31-18yqm72
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 31
+    title:
+      fa: گاهنبار پَتیَه‌شَهیم
+      en: Paiti-shahem
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-06-31-7q9nql
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 31
+    title:
+      fa: آغاز جنگ تحمیلی
+      en: Beginning of Iran-Iraq War
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-06-31-12qjn9q
+    calendar: jalali
+    type: fixed
+    month: 6
+    day: 31
+    title:
+      fa: آغاز هفتهٔ دفاع مقدس
+      en: Beginning of Sacred Defense Week
+    categories:
+      - government
+    isHolidayInIran: false

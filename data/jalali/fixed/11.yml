@@ -1,0 +1,169 @@
+events:
+  - id: jalali-11-01-2u3j5w
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 1
+    title:
+      fa: زادروز فردوسی
+      en: Birthday of Ferdowsi
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-11-04-1sw0wl0
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 4
+    title:
+      fa: آغاز پادشاهی داراب
+      en: Beginning of the Reign of Darab
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-11-05-ektw7h
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 5
+    title:
+      fa: جشن نوسَره
+      en: Nowsareh Festival
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-11-10-tmbbwk
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 10
+    title:
+      fa: جشن سده
+      en: Aban Day, Sadeh Festival
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-11-12-9fnbjm
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 12
+    title:
+      fa: بازگشت امام خمینی به ایران
+      en: Return of Imam Khomeini to Iran
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-11-12-1vjaf00
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 12
+    title:
+      fa: آغاز دههٔ فجر
+      en: Start of Fajr Days
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-11-14-1mkfh8o
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 14
+    title:
+      fa: روز فناوری فضایی
+      en: Space Technology Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-11-15-afzosx
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 15
+    title:
+      fa: جشن میانهٔ زمستان
+      en: Midwinter Festival
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-11-19-15pcnmq
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 19
+    title:
+      fa: روز نیروی هوایی
+      en: Air Force Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-11-22-13pbeds
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 22
+    title:
+      fa: بادروز
+      en: Wind Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-11-22-26ufc7
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 22
+    title:
+      fa: پیروزی انقلاب اسلامی ایران
+      en: Victory of Islamic Revolution
+    categories:
+      - government
+    isHolidayInIran: true
+
+  - id: jalali-11-29-7annkz
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 29
+    title:
+      fa: سپندارمذگان و روز عشق ایرانی
+      en: Sepandārmazgān & Iranian Love Day
+    categories:
+      - ancient
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-11-29-uy0pcw
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 29
+    title:
+      fa: قیام مردم تبریز
+      en: Uprising of Tabriz People
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-11-29-zkfota
+    calendar: jalali
+    type: fixed
+    month: 11
+    day: 29
+    title:
+      fa: روز اقتصاد مقاومتی و کارآفرینی
+      en: Resistance Economy & Entrepreneurship Day
+    categories:
+      - government
+    isHolidayInIran: false

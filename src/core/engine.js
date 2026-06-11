@@ -31,11 +31,9 @@ function toEvent(raw, calendar) {
 		id: raw.id,
 		title: raw.title,
 		categories: raw.categories,
-		isHoliday: raw.isHoliday,
-		isOfficialHolidayInIran: raw.isOfficialHolidayInIran,
+		isHolidayInIran: raw.isHolidayInIran,
 		calendar,
 		type: raw.type,
-		...(raw.metadata ? { metadata: raw.metadata } : {}),
 	};
 }
 

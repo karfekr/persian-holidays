@@ -1,0 +1,312 @@
+events:
+  - id: jalali-02-01-1cgreei
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 1
+    title:
+      fa: بزرگداشت سعدی
+      en: Saadi Commemoration
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-02-rjceo7
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 2
+    title:
+      fa: گیاه‌آوری
+      en: Planting
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-02-02-1fgf53w
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 2
+    title:
+      fa: تاسیس سپاه پاسداران انقلاب اسلامی
+      en: Establishment of IRGC
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-02-02-ntsirl
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 2
+    title:
+      fa: اعلام انقلاب فرهنگی
+      en: Iranian Cultural Revolution Declaration
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-02-02-iyz2nd
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 2
+    title:
+      fa: روز زمین پاک
+      en: Clean Earth Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-03-19v0egi
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 3
+    title:
+      fa: اردیبهشتگان
+      en: Ordibeheshtegan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-02-03-g0s91l
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 3
+    title:
+      fa: بزرگداشت شیخ بهایی
+      en: Sheikh Baha’i Commemoration
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-05-o6kjb5
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 5
+    title:
+      fa: شکست حملهٔ نظامی آمریکا به ایران در طبس
+      en: Defeat of US Military Attack in Tabas
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-02-07-1rx3nkq
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 7
+    title:
+      fa: روز ایمنی حمل‌ونقل
+      en: Transport Safety Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-09-koethw
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 9
+    title:
+      fa: روز شوراها
+      en: Councils Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-10-yuqdsx
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 10
+    title:
+      fa: چهلم نوروز
+      en: 40th of Nowruz
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-02-10-e1vnvy
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 10
+    title:
+      fa: روز ملی خلیج فارس
+      en: National Persian Gulf Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-10-1153s89
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 10
+    title:
+      fa: آغاز عملیات بیت المقدس
+      en: Start of Operation Beit al-Moqaddas
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-02-12-3yem4r
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 12
+    title:
+      fa: شهادت استاد مرتضی مطهری
+      en: Martyrdom of Morteza Motahhari
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-02-12-fjf3y6
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 12
+    title:
+      fa: روز معلم
+      en: Teacher’s Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-15-1e0443a
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 15
+    title:
+      fa: میدیوزَرِم، بهاربُد، روز پیام‌آوری زرتشت
+      en: Maidyozarem, Baharbud, the Day of Zarathustra’s Prophetic Calling
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-02-15-1376i9h
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 15
+    title:
+      fa: بزرگداشت شیخ صدوق
+      en: Sheikh Saduq Commemoration
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-18-1tynxdo
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 18
+    title:
+      fa: بیماری‌های خاص و صعب‌العلاج
+      en: Special & Incurable Diseases
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-19-aj9o7s
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 19
+    title:
+      fa: بزرگداشت شیخ کلینی
+      en: Sheikh Kulayni Commemoration
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-19-5y9tg1
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 19
+    title:
+      fa: روز اسناد ملی و میراث مکتوب
+      en: National Documents and Written Heritage Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-24-qhcge1
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 24
+    title:
+      fa: لغو امتیاز تنباکو به فتوای آیت‌الله میرزا حسن شیرازی
+      en: Revocation of Tobacco Concession by Ayatollah Mirza Hasan Shirazi
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-02-25-1mljeyt
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 25
+    title:
+      fa: بزرگداشت فردوسی
+      en: Commemoration of Ferdowsi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-25-11nhhos
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 25
+    title:
+      fa: روز پاسداشت زبان فارسی
+      en: Persian Language Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-28-1radkpg
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 28
+    title:
+      fa: بزرگداشت عمر خیام
+      en: Commemoration of Omar Khayyam
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-30-zipf2a
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 30
+    title:
+      fa: روز ملی جمعیت
+      en: National Population Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-02-31-ai3gsc
+    calendar: jalali
+    type: fixed
+    month: 2
+    day: 31
+    title:
+      fa: روز اهدای عضو، اهدای زندگی
+      en: Organ Donation, Life Donation Day
+    categories:
+      - government
+    isHolidayInIran: false

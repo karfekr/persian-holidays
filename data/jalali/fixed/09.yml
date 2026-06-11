@@ -1,0 +1,253 @@
+events:
+  - id: jalali-09-03-yxa0o5
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 3
+    title:
+      fa: آذرِگان
+      en: Azaregan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-09-05-1dxmmkb
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 5
+    title:
+      fa: قیام مردم گرگان
+      en: Gorgan People's Uprising
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-09-05-1gvo7pd
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 5
+    title:
+      fa: روز بسیج مستضعفان
+      en: Basij Mostazafan Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-07-1g9fbzx
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 7
+    title:
+      fa: روز نیروی دریایی
+      en: Navy Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-09-1777y80
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 9
+    title:
+      fa: بزرگداشت شیخ مفید
+      en: Commemoration of Sheikh Mofid
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-10-11ia3bh
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 10
+    title:
+      fa: شهادت آیت‌الله مدرس
+      en: Martyrdom of Ayatollah Modarres
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-10-15wi9r
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 10
+    title:
+      fa: روز مجلس
+      en: Parliament Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-11-lga3jo
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 11
+    title:
+      fa: کشته شدن میرزا کوچک خان جنگلی
+      en: Martyrdom of Mirza Kuchak Khan
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-09-12-6akeas
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 12
+    title:
+      fa: تصویب قانون اساسی جمهوری اسلامی ایران
+      en: Constitution of the Islamic Republic of Iran Day
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-09-12-6akeat
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 12
+    title:
+      fa: روز قانون اساسی جمهوری اسلامی ایران
+      en: Constitution of the Islamic Republic of Iran Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-13-8q4mod
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 13
+    title:
+      fa: روز بیمه
+      en: Insurance Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-16-1ydg36
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 16
+    title:
+      fa: روز دانشجو
+      en: Student Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-18-ts98z7
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 18
+    title:
+      fa: معرفی عراق به عنوان آغازگر جنگ از سوی سازمان ملل
+      en: UN Declaration of Iraq as Initiator of War
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-09-19-1knv5hx
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 19
+    title:
+      fa: تشکیل شورای عالی انقلاب فرهنگی
+      en: Formation of Supreme Council of official Revolution
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-09-20-1exdgt5
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 20
+    title:
+      fa: شهادت آیت‌الله دستغیب
+      en: Martyrdom of Ayatollah Dastgheib
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-09-25-1o5ksdv
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 25
+    title:
+      fa: روز پژوهش
+      en: Research Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-26-1scw2l7
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 26
+    title:
+      fa: روز حمل و نقل و رانندگان
+      en: Transport and Drivers Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-27-19gknzg
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 27
+    title:
+      fa: شهادت آیت‌الله دکتر محمد مفتح
+      en: Martyrdom of Ayatollah Dr. Mohammad مفتح
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-09-27-10sl4ij
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 27
+    title:
+      fa: روز وحدت حوزه و دانشگاه
+      en: Unity of Seminary & University Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-09-30-4xpt2n
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 30
+    title:
+      fa: گاهنبار میدیارِم
+      en: Maidh-ya-rem
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-09-30-1i92kfe
+    calendar: jalali
+    type: fixed
+    month: 9
+    day: 30
+    title:
+      fa: شب یلدا
+      en: Yalda Night
+    categories:
+      - ancient
+      - government
+    isHolidayInIran: false

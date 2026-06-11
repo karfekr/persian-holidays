@@ -1,0 +1,277 @@
+events:
+  - id: jalali-08-01-1gcw16q
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 1
+    title:
+      fa: شهادت آیت‌الله سید مصطفی خمینی
+      en: Martyrdom of Ayatollah Seyed Mostafa Khomeini
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-01-1mrs734
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 1
+    title:
+      fa: روز ملی آمار و برنامه‌ریزی
+      en: National Statistics and Planning Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-04-ffxs96
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 4
+    title:
+      fa: آبانِگان
+      en: Abanegan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-08-04-19i6mqb
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 4
+    title:
+      fa: اعتراض امام خمینی علیه پذیرش کاپیتولاسیون
+      en: Protest of Imam Khomeini Against Capitulation Approval
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-07-17gn2yu
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 7
+    title:
+      fa: ورود کوروش به بابل بر پایه‌ی رویدادنامه نبونئید
+      en: Entry of Cyrus into Babylon according to the Nabonidus Chronicle
+    categories:
+      - ancient
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-07-1d1xjg5
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 7
+    title:
+      fa: روز کوروش بزرگ
+      en: Cyrus the Great Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-08-08-1aumolq
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 8
+    title:
+      fa: شهادت محمدحسین فهمیده
+      en: Martyrdom of Mohammad Hossein Fahmideh
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-08-pmre15
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 8
+    title:
+      fa: روز نوجوان و بسیج دانش‌آموزی
+      en: Student Basij & Youth Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-08-x89vpp
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 8
+    title:
+      fa: تشکیل کمیتهٔ دائمی پدافند غیرعامل
+      en: Formation of the Permanent Passive Defense Committee
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-08-1v7b60u
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 8
+    title:
+      fa: روز پدافند غیرعامل
+      en: Passive Defense Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-10-pth2qv
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 10
+    title:
+      fa: شهادت آیت‌الله قاضی طباطبایی
+      en: Martyrdom of Ayatollah Ghazi Tabatabaei
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-13-ynl04r
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 13
+    title:
+      fa: تسخیر سفارت آمریکا
+      en: Seizure of US Embassy
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-13-11z8rhq
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 13
+    title:
+      fa: روز مبارزه با استکبار جهانی
+      en: Fight Against Global Arrogance Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-13-clpmyu
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 13
+    title:
+      fa: روز دانش‌آموز
+      en: Student Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-13-1t3jy73
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 13
+    title:
+      fa: تبعید امام خمینی به ترکیه
+      en: Exile of Imam Khomeini to Turkey
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-14-13d1nsd
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 14
+    title:
+      fa: روز فرهنگ عمومی
+      en: Public Culture Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-15-1mt4vg6
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 15
+    title:
+      fa: گاهنبار اَیاثرَم
+      en: Aya-threm
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-08-18-2ps2x1
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 18
+    title:
+      fa: روز ملی کیفیت
+      en: National Quality Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-24-zd3sya
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 24
+    title:
+      fa: روز کتاب، کتابخوانی و کتابدار
+      en: Book, Reading & Librarian Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-24-1revkil
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 24
+    title:
+      fa: بزرگداشت علامه طباطبایی
+      en: Commemoration of Allameh Tabatabaei
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-26-1r1ccun
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 26
+    title:
+      fa: آزادسازی سوسنگرد
+      en: Liberation of Susangerd
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-08-30-dd4m1z
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 30
+    title:
+      fa: بزرگداشت ابونصر فارابی
+      en: Commemoration of Abu Nasr Farabi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-08-30-g5cmot
+    calendar: jalali
+    type: fixed
+    month: 8
+    day: 30
+    title:
+      fa: روز حکمت و فلسفه
+      en: Wisdom and Philosophy Day
+    categories:
+      - government
+    isHolidayInIran: false

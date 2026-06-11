@@ -1,9 +1,8 @@
-//? Converts data/*.yml => dist/data/*.json
-
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
-import { resolve, dirname } from "path";
+import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { load as parseYaml } from "js-yaml";
+import { globSync } from "glob";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -14,11 +13,14 @@ const CALENDARS = ["jalali", "gregorian", "hijri"];
 
 const VALID_TYPES = new Set(["fixed", "multi-day", "relative"]);
 const VALID_CATEGORIES = new Set([
-	"national",
+	"government",
 	"religious",
+	"shia",
+	"sunni",
+	"ancient",
 	"cultural",
 	"international",
-	"memorial",
+	"historical",
 	"nature",
 ]);
 
@@ -39,10 +41,8 @@ function validateEvent(event, calendar, idx) {
 			throw new Error(`${prefix} Unknown category "${cat}"`);
 	}
 
-	if (typeof event.isHoliday !== "boolean")
-		throw new Error(`${prefix} "isHoliday" must be boolean`);
-	if (typeof event.isOfficialHolidayInIran !== "boolean")
-		throw new Error(`${prefix} "isOfficialHolidayInIran" must be boolean`);
+	if (typeof event.isHolidayInIran !== "boolean")
+		throw new Error(`${prefix} "isHolidayInIran" must be boolean`);
 
 	if (event.type === "fixed") {
 		if (event.month == null || event.day == null)
@@ -65,63 +65,75 @@ function compact(obj) {
 	return JSON.parse(JSON.stringify(obj, (_, v) => (v == null ? undefined : v)));
 }
 
+function loadCalendarFiles(calendar) {
+	const pattern = join(DATA_DIR, calendar, "**", "*.yml");
+	return globSync(pattern, { windowsPathsNoEscape: true });
+}
+
 mkdirSync(OUT_DIR, { recursive: true });
 
 let totalEvents = 0;
 const errors = [];
 
 for (const calendar of CALENDARS) {
-	const inFile = resolve(DATA_DIR, `${calendar}.yml`);
 	const outFile = resolve(OUT_DIR, `${calendar}.json`);
 
-	console.log(`\n📂 Processing ${calendar}.yml …`);
+	console.log(`\n📂 Processing ${calendar} ...`);
 
-	let raw;
-	try {
-		raw = parseYaml(readFileSync(inFile, "utf8"));
-	} catch (e) {
-		console.error(`  ✗ Failed to parse YAML: ${e.message}`);
-		errors.push(e.message);
-		continue;
-	}
+	const files = loadCalendarFiles(calendar);
 
-	const events = raw?.events ?? [];
-	if (!Array.isArray(events)) {
-		const msg = `${calendar}.yml root "events" must be an array`;
-		console.error(`  ✗ ${msg}`);
-		errors.push(msg);
-		continue;
-	}
+	let allEvents = [];
 
-	// Validate and collect
-	const validated = [];
-	for (let i = 0; i < events.length; i++) {
+	for (const file of files) {
+		let raw;
 		try {
-			validateEvent(events[i], calendar, i);
-			validated.push(compact(events[i]));
+			raw = parseYaml(readFileSync(file, "utf8"));
+		} catch (e) {
+			console.error(`  ✗ YAML error in ${file}: ${e.message}`);
+			errors.push(e.message);
+			continue;
+		}
+
+		const events = raw?.events ?? [];
+		if (!Array.isArray(events)) {
+			const msg = `"events" must be array in ${file}`;
+			console.error(`  ✗ ${msg}`);
+			errors.push(msg);
+			continue;
+		}
+
+		allEvents.push(...events);
+	}
+
+	const validated = [];
+	for (let i = 0; i < allEvents.length; i++) {
+		try {
+			validateEvent(allEvents[i], calendar, i);
+			validated.push(compact(allEvents[i]));
 		} catch (e) {
 			console.error(`  ✗ ${e.message}`);
 			errors.push(e.message);
 		}
 	}
 
-	// Check for duplicate IDs
 	const ids = new Set();
 	for (const ev of validated) {
 		if (ids.has(ev.id)) {
-			const msg = `Duplicate id "${ev.id}" in ${calendar}.yml`;
+			const msg = `Duplicate id "${ev.id}" in ${calendar}`;
 			console.error(`  ✗ ${msg}`);
 			errors.push(msg);
 		}
 		ids.add(ev.id);
 	}
 
-	writeFileSync(outFile, JSON.stringify(validated, null, 0)); // minified
+	writeFileSync(outFile, JSON.stringify(validated, null, 0));
+
 	console.log(`  ✓ ${validated.length} events → ${outFile}`);
 	totalEvents += validated.length;
 }
 
 console.log(`\n────────────────────────────────`);
+
 if (errors.length) {
 	console.error(`\n❌ Build failed with ${errors.length} error(s):`);
 	for (const e of errors) console.error(`   • ${e}`);

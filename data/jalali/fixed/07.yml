@@ -1,0 +1,216 @@
+events:
+  - id: jalali-07-01-1v3sp9l
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 1
+    title:
+      fa: میتراکانا
+      en: Mitrakana
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-07-05-10i53f4
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 5
+    title:
+      fa: شکست حصر آبادان در عملیات ثامن‌الأئمه
+      en: Breaking of Abadan Siege in Operation Samen al-Aemeh
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-07-1485k7c
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 7
+    title:
+      fa: شهادت فلاحی، فکوری، نامجو، کلاهدوز و جهان‌آرا
+      en: Martyrdom of Fallahi, Fakoori, Namjoo, Kolahdooz & Jahanara
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-07-4wf7uq
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 7
+    title:
+      fa: روز آتش‌نشانی و ایمنی
+      en: Firefighting & Safety Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-07-v30u9o
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 7
+    title:
+      fa: بزرگداشت شمس
+      en: Commemoration of Shams
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-08-1mgnwkr
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 8
+    title:
+      fa: بزرگداشت مولوی
+      en: Commemoration of Rumi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-10-1qf2bl5
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 10
+    title:
+      fa: مهرگان
+      en: Mehregan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-07-13-fpm50y
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 13
+    title:
+      fa: هجرت امام خمینی از عراق به پاریس
+      en: Migration of Imam Khomeini from Iraq to Paris
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-13-1aq8eig
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 13
+    title:
+      fa: روز نیروی انتظامی
+      en: Law Enforcement Force Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-14-2scfqc
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 14
+    title:
+      fa: روز دامپزشکی
+      en: Veterinary Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-15-cxtn8l
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 15
+    title:
+      fa: روز روستا و عشایر
+      en: Village & Nomads Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-20-u83ks9
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 20
+    title:
+      fa: بزرگداشت حافظ
+      en: Commemoration of Hafez
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-21-1sp8n6g
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 21
+    title:
+      fa: پیروزی کاوه و فریدون
+      en: Victory of Kaveh & Fereydun
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-07-23-bb4rh5
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 23
+    title:
+      fa: شهادت آیت‌الله اشرفی اصفهانی
+      en: Martyrdom of Ayatollah Ashrafi Esfahani
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-24-iibbpl
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 24
+    title:
+      fa: روز ملی پارالمپیک
+      en: National Paralympic Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-24-11mxm7a
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 24
+    title:
+      fa: پیوند اولیا و مربیان
+      en: Parents and Teachers Meeting Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-26-yzqup3
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 26
+    title:
+      fa: روز تربیت بدنی و ورزش
+      en: Physical Education & Sport Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-07-29-1tqtir1
+    calendar: jalali
+    type: fixed
+    month: 7
+    day: 29
+    title:
+      fa: روز صادرات
+      en: Exports Day
+    categories:
+      - government
+    isHolidayInIran: false

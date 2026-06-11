@@ -1,7 +1,7 @@
 /**
  * @typedef {'jalali' | 'gregorian' | 'hijri'} CalendarType
  *
- * @typedef {'national' | 'religious' | 'cultural' | 'international' | 'memorial' | 'nature'} Category
+ * @typedef {'government' | 'religious' | 'cultural' | 'international' | 'historical' | 'nature'} Category
  *
  * @typedef {'fixed' | 'multi-day' | 'relative'} EventType
  *
@@ -41,19 +41,15 @@
  * @property {RelativeRule} [rule]
  * @property {BilingualTitle} title
  * @property {Category[]} categories
- * @property {boolean} isHoliday
- * @property {boolean} isOfficialHolidayInIran
- * @property {EventMetadata} [metadata]
+ * @property {boolean} isHolidayInIran
  *
  * @typedef {Object} Event
  * @property {string} id
  * @property {BilingualTitle} title
  * @property {Category[]} categories
- * @property {boolean} isHoliday
- * @property {boolean} isOfficialHolidayInIran
+ * @property {boolean} isHolidayInIran
  * @property {CalendarType} calendar
  * @property {EventType} type
- * @property {EventMetadata} [metadata]
  *
  * @typedef {Object} QueryOptions
  * @property {Category[]} [categories]
@@ -67,10 +63,10 @@ export const CALENDAR_TYPES = /** @type {const} */ ([
 ]);
 
 export const CATEGORIES = /** @type {const} */ ([
-	"national",
+	"government",
 	"religious",
 	"cultural",
 	"international",
-	"memorial",
+	"historical",
 	"nature",
 ]);

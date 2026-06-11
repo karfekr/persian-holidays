@@ -1,0 +1,264 @@
+events:
+  - id: jalali-10-01-18jnubo
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 1
+    title:
+      fa: خرم‌روز
+      en: Khorram Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-03-yl9hw1
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 3
+    title:
+      fa: ثبت احوال
+      en: Civil Registration Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-10-04-hjb5n8
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 4
+    title:
+      fa: روز بزرگداشت رودکی
+      en: Commemoration of Rudaki
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-10-05-xsjqj6
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 5
+    title:
+      fa: بازارجشن
+      en: Bazaar Festival
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-05-te7i3a
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 5
+    title:
+      fa: زلزله‌ی بم
+      en: The 2003 Bam Earthquake
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-10-05-17dzywg
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 5
+    title:
+      fa: روز ایمنی در برابر زلزله و کاهش اثرات بلایای طبیعی
+      en: Earthquake Safety & Disaster Risk Reduction Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-10-05-1j1p02v
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 5
+    title:
+      fa: درگذشت زرتشت
+      en: Death of Zoroaster
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-07-1rccmo8
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 7
+    title:
+      fa: تشکیل نهضت سوادآموزی
+      en: Formation of Literacy Movement
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-10-08-34q4x9
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 8
+    title:
+      fa: دی به آذر
+      en: Dey be Azar
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-08-hy5i4z
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 8
+    title:
+      fa: صنعت پتروشیمی
+      en: Petrochemical Industry Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-10-09-12srgga
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 9
+    title:
+      fa: راهپیمایی در پاسخ به وقایع عاشورای ۸۸
+      en: March in Response to the Ashura Protests of 2009
+    categories:
+      - historical
+    isHolidayInIran: true
+
+  - id: jalali-10-09-pig9dd
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 9
+    title:
+      fa: روز بصیرت و میثاق امت با ولایت
+      en: Dey be Azar
+    categories:
+      - government
+    isHolidayInIran: true
+
+  - id: jalali-10-13-6nhp8a
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 13
+    title:
+      fa: ابلاغ پیام تاریخی امام خمینی به گورباچف
+      en: Imam Khomeini's Historic Message to Gorbachev
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-10-14-1xpspc4
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 14
+    title:
+      fa: سیرسور، جشن گیاه‌خواری
+      en: Sirsur, Vegetarian Festival
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-15-1liwa2o
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 15
+    title:
+      fa: دی به مهر
+      en: Dey be Mehr
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-16-nkd4u6
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 16
+    title:
+      fa: درامزینان، روز درفش‌ها
+      en: Dramzinan, Flags Day
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-19-17hp6ar
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 19
+    title:
+      fa: قیام خونین مردم قم
+      en: Bloody Uprising of Qom
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-10-20-ut2ukt
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 20
+    title:
+      fa: قتل امیرکبیر
+      en: Death of Amir Kabir
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-10-22-179ezm7
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 22
+    title:
+      fa: تشکیل شورای انقلاب
+      en: Formation of Revolutionary Council
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-10-23-17vmrct
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 23
+    title:
+      fa: دی به دین
+      en: Dey be Din
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-26-y1lo93
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 26
+    title:
+      fa: بهمن‌گان
+      en: Bahmanegan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-10-26-1mrslw9
+    calendar: jalali
+    type: fixed
+    month: 10
+    day: 26
+    title:
+      fa: خروج محمدرضاشاه از ایران
+      en: Departure of Mohammad Reza Shah from Iran
+    categories:
+      - historical
+    isHolidayInIran: false

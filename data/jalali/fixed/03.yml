@@ -1,0 +1,194 @@
+events:
+  - id: jalali-03-01-1fa1avs
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 1
+    title:
+      fa: ارغاسوان
+      en: Arghaswan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-03-01-1k0nwh1
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 1
+    title:
+      fa: بهره‌وری و بهینه‌سازی مصرف
+      en: Consumption Optimization
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-03-01-2gd14x
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 1
+    title:
+      fa: بزرگداشت ملاصدرا
+      en: Commemoration of Mulla Sadra
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-03-03-bwcool
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 3
+    title:
+      fa: فتح خرمشهر و مقاومت، ایثار و پیروزی
+      en: Liberation of Khorramshahr, Resistance, Sacrifice & Victory
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-03-04-qwvjyc
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 4
+    title:
+      fa: مقاومت دزفول
+      en: Dezful Resistance
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-03-04-1eldtbu
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 4
+    title:
+      fa: روز مقاومت و پایداری
+      en: Resistance & Perseverance Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-03-06-hwd4jn
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 6
+    title:
+      fa: خردادگان
+      en: Khordadegan
+    categories:
+      - ancient
+    isHolidayInIran: false
+
+  - id: jalali-03-07-1vdla3j
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 7
+    title:
+      fa: افتتاح اولین دورهٔ مجلس شورای اسلامی
+      en: Opening of First Islamic Consultative Assembly
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-03-14-3pjeqt
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 14
+    title:
+      fa: رحلت امام خمینی(ره)
+      en: Passing of Imam Khomeini
+    categories:
+      - government
+      - historical
+    isHolidayInIran: true
+
+  - id: jalali-03-14-1yfmb99
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 14
+    title:
+      fa: انتخاب آیت‌الله خامنه‌ای به رهبری
+      en: Selection of Ayatollah Khamenei as Leader
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-03-15-1043599
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 15
+    title:
+      fa: قیام ۱۵ خرداد
+      en: 15th of Khordad Uprising
+    categories:
+      - government
+      - historical
+    isHolidayInIran: true
+
+  - id: jalali-03-25-s7b3hf
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 25
+    title:
+      fa: روز گل و گیاه
+      en: Flowers and Plants Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-03-27-iy79pw
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 27
+    title:
+      fa: روز جهاد کشاورزی
+      en: Agricultural Jihad Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: jalali-03-29-y1qs6d
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 29
+    title:
+      fa: درگذشت علی شریعتی
+      en: Passing of Ali Shariati
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-03-31-1cd0jaj
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 31
+    title:
+      fa: شهادت مصطفی چمران
+      en: Martyrdom of Mostafa Chamran
+    categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-03-31-kcrr88
+    calendar: jalali
+    type: fixed
+    month: 3
+    day: 31
+    title:
+      fa: روز بسیج استادان
+      en: University Professors Basij Day
+    categories:
+      - government
+    isHolidayInIran: false

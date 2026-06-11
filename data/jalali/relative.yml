@@ -1,0 +1,16 @@
+#? relative: rule-based (e.g. first Monday, weekday offsets, etc.)
+
+events:
+  - id: jalali-last-wednesday
+    type: relative
+    rule:
+      base: nth-weekday-of-month
+      month: 12
+      weekday: 3
+      occurrence: last
+      weekdaySystem: jalali
+    title:
+      fa: چهارشنبه‌سوری
+      en: Chaharshanbe Suri(Fire Wednesday)
+    categories: [cultural, government]
+    isHolidayInIran: false

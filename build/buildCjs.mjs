@@ -1,5 +1,3 @@
-//? CJS fallback wrapper to support require() consumers by re-exporting from ESM via dynamic import
-
 import { writeFileSync, mkdirSync, readFileSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -12,10 +10,8 @@ mkdirSync(CJS_DIR, { recursive: true });
 
 const ENTRIES = ["index", "jalali", "gregorian", "hijri"];
 
-const shim = (entry) => `\
+const shim = (entry) => `
 'use strict';
-// Auto-generated CJS shim for persian-events/${entry}
-// This is a thin wrapper — bundlers like esbuild/webpack will inline ESM directly.
 
 let _module;
 
