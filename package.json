@@ -53,6 +53,13 @@
 			"types": "./types/index.d.ts"
 		}
 	},
+	"files": [
+		"src/",
+		"dist/",
+		"types/",
+		"README.md",
+		"LICENSE"
+	],
 	"sideEffects": false,
 	"scripts": {
 		"build:data": "node build/buildData.mjs",
