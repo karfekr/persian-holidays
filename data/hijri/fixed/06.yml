@@ -1,0 +1,91 @@
+events:
+  - id: hijri-06-03-1qif133
+    calendar: hijri
+    type: fixed
+    month: 6
+    day: 3
+    title:
+      fa: شهادت حضرت فاطمهٔ(س)
+      en: Martyrdom of Hazrat Fatimah
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-06-12-kwwxaq
+    calendar: hijri
+    type: fixed
+    month: 6
+    day: 12
+    title:
+      fa: حرکت پیامبر به سمت خیبر
+      en: Prophet's Movement Towards Khyber
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-06-13-10cfbb6
+    calendar: hijri
+    type: fixed
+    month: 6
+    day: 13
+    title:
+      fa: سالروز وفات حضرت ام‌البنین(س)
+      en: Anniversary of Passing of Hazrat Umm al-Banin
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-06-13-1ou0otz
+    calendar: hijri
+    type: fixed
+    month: 6
+    day: 13
+    title:
+      fa: روز تکریم مادران و همسران شهدا
+      en: Day to Honor Mothers and Wives of Martyrs
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-06-20-1v1wesl
+    calendar: hijri
+    type: fixed
+    month: 6
+    day: 20
+    title:
+      fa: ولادت حضرت فاطمهٔ زهرا(س)
+      en: Birth of Hazrat Fatimah
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-06-20-8bie1c
+    calendar: hijri
+    type: fixed
+    month: 6
+    day: 20
+    title:
+      fa: روز زن و مادر
+      en: Women's and Mother's Day
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-06-21-af7wbr
+    calendar: hijri
+    type: fixed
+    month: 6
+    day: 21
+    title:
+      fa: ولادت حضرت ام‌کلثوم(س)
+      en: Birth of Hazrat Umm Kulthum
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false

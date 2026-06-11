@@ -1,0 +1,26 @@
+#? multi-day: spans a range of days
+
+events:
+  - id: hijri-eid-fitr-holidays
+    type: multi-day
+    startMonth: 10
+    startDay: 1
+    endMonth: 10
+    endDay: 3
+    title:
+      fa: تعطیلات عید فطر
+      en: Eid al-Fitr Holidays
+    categories: [religious, government]
+    isHolidayInIran: true
+
+  - id: hijri-ramadan
+    type: multi-day
+    startMonth: 9
+    startDay: 1
+    endMonth: 9
+    endDay: 30
+    title:
+      fa: ماه رمضان
+      en: Month of Ramadan
+    categories: [religious]
+    isHolidayInIran: false

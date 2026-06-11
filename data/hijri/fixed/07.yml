@@ -1,0 +1,196 @@
+events:
+  - id: hijri-07-01-4phis3
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 1
+    title:
+      fa: ولادت امام باقر(ع)
+      en: Birth of Imam al-Baqir
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-03-109wowj
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 3
+    title:
+      fa: شهادت امام هادی(ع)
+      en: Martyrdom of Imam al-Hadi
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-09-p821xg
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 9
+    title:
+      fa: ولادت حضرت علی اصغر(ع)
+      en: Birth of Hazrat Ali Asghar
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-10-19lg1gh
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 10
+    title:
+      fa: ولادت امام جواد(ع))
+      en: Birth of Imam Javad
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-13-l7zuoz
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 13
+    title:
+      fa: ولادت امام علی(ع)
+      en: Birth of Imam Ali
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-07-13-xzrxj
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 13
+    title:
+      fa: روز پدر و مرد
+      en: Father's and Men's Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-07-15-15fchyl
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 15
+    title:
+      fa: وفات حضرت زینب(س)
+      en: Passing of Hazrat Zainab
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-15-1n5sbfb
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 15
+    title:
+      fa: تغییر قبلهٔ مسلمین از بیت‌المقدس به مکهٔ
+      en: Change of Qibla from Jerusalem to Mecca
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-16-7wx3sg
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 16
+    title:
+      fa: خروج فاطمه بنت اسد از کعبه
+      en: Exit of Fatimah bint Asad from Kaaba
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-23-najpj8
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 23
+    title:
+      fa: مجروح شدن امام حسن(ع) در ساباط مدائن
+      en: Injury of Imam Hasan in Sabat Mada'in
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-23-jx6g76
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 23
+    title:
+      fa: مسموم شدن امام کاظم(ع)
+      en: Poisoning of Imam al-Kadhim
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-24-1hv7qq4
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 24
+    title:
+      fa: فتح خیبر توسط امام علی(ع)
+      en: Conquest of Khyber by Imam Ali
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-25-u8o6kp
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 25
+    title:
+      fa: شهادت امام کاظم(ع)
+      en: Martyrdom of Imam al-Kadhim
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-07-27-1cj7x7x
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 27
+    title:
+      fa: مبعث پیامبر(ص)، شب معراج
+      en: Mab'ath of Prophet Muhammad, Isra and Mi'raj
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-07-27-1cj7x7y
+    calendar: hijri
+    type: fixed
+    month: 7
+    day: 27
+    title:
+      fa: مبعث پیامبر(ص)، شب معراج اهل تسنن
+      en: Mab'ath of Prophet Muhammad, Isra and Mi'raj
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false

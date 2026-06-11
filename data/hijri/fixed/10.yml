@@ -1,0 +1,53 @@
+events:
+  - id: hijri-10-01-hum8ft
+    calendar: hijri
+    type: fixed
+    month: 10
+    day: 1
+    title:
+      fa: عید سعید فطر
+      en: Eid al-Fitr
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-10-01-hum8fu
+    calendar: hijri
+    type: fixed
+    month: 10
+    day: 1
+    title:
+      fa: عید سعید فطر
+      en: Eid al-Fitr
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-10-17-13k3j8t
+    calendar: hijri
+    type: fixed
+    month: 10
+    day: 17
+    title:
+      fa: روز فرهنگ پهلوانی و ورزش زورخانه‌ای
+      en: Day of Pahlavani Culture & Zurkhaneh Sports
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-10-25-9vsldb
+    calendar: hijri
+    type: fixed
+    month: 10
+    day: 25
+    title:
+      fa: شهادت امام صادق(ع)
+      en: Martyrdom of Imam al-Sadiq
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true

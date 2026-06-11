@@ -1,0 +1,130 @@
+events:
+  - id: hijri-09-10-10u1089
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 10
+    title:
+      fa: وفات حضرت خدیجه(س)
+      en: Passing of Hazrat Khadijah
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-09-15-1s3whrg
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 15
+    title:
+      fa: ولادت امام حسن مجتبی(ع)
+      en: Birth of Imam Hasan al-Mujtaba
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-09-15-x7w4b9
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 15
+    title:
+      fa: روز اکرام
+      en: Day of Honor
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-09-18-1buo04v
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 18
+    title:
+      fa: شب قدر
+      en: Night of Qadr
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-09-19-fwzky
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 19
+    title:
+      fa: ضربت خوردن امام علی(ع)
+      en: Assassination Attempt on Imam Ali
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-09-19-d0prtq
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 19
+    title:
+      fa: روز ملی نهج البلاغه
+      en: National Nahj al-Balagha Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-09-20-nqpp4r
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 20
+    title:
+      fa: شب قدر
+      en: Night of Qadr
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-09-21-6rhk5s
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 21
+    title:
+      fa: شهادت امام علی(ع)
+      en: Martyrdom of Imam Ali
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-09-22-1pskb7f
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 22
+    title:
+      fa: شب قدر
+      en: Night of Qadr
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-09-27-1edirfb
+    calendar: hijri
+    type: fixed
+    month: 9
+    day: 27
+    title:
+      fa: شب قدر
+      en: Night of Qadr
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false

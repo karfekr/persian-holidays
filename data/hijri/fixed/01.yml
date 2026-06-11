@@ -1,0 +1,79 @@
+events:
+  - id: hijri-01-09-1fq94ws
+    calendar: hijri
+    type: fixed
+    month: 1
+    day: 9
+    title:
+      fa: تاسوعای حسینی
+      en: Tasu'a of Husayn
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-01-10-1t2ubbq
+    calendar: hijri
+    type: fixed
+    month: 1
+    day: 10
+    title:
+      fa: عاشورای حسینی
+      en: Ashura of Husayn
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-01-10-1lcwdhf
+    calendar: hijri
+    type: fixed
+    month: 1
+    day: 10
+    title:
+      fa: روزه عاشورا
+      en: Fast of Ashura
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-01-11-11byxkl
+    calendar: hijri
+    type: fixed
+    month: 1
+    day: 11
+    title:
+      fa: روز تجلیل از اسرا و مفقودان
+      en: Day of Honoring Prisoners and Missing Persons
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-01-12-1yln6lf
+    calendar: hijri
+    type: fixed
+    month: 1
+    day: 12
+    title:
+      fa: شهادت امام سجاد(ع)
+      en: Martyrdom of Imam al-Sajjad
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-01-25-ghm9l7
+    calendar: hijri
+    type: fixed
+    month: 1
+    day: 25
+    title:
+      fa: شهادت امام سجاد(ع) به روایتی
+      en: Martyrdom of Imam al-Sajjad(according to a narration)
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false

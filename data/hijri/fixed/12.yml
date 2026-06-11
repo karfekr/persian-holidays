@@ -1,0 +1,183 @@
+events:
+  - id: hijri-12-01-p59bj6
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 1
+    title:
+      fa: سالروز ازدواج امام علی(ع) و حضرت فاطمه(س)
+      en: Anniversary of Marriage of Imam Ali & Hazrat Fatimah
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-01-14t0het
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 1
+    title:
+      fa: روز ازدواج
+      en: Marriage Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-12-07-stzzr9
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 7
+    title:
+      fa: شهادت امام باقر(ع)
+      en: Martyrdom of Imam al-Baqir
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-09-159sz9v
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 9
+    title:
+      fa: روز عرفه
+      en: Day of Arafah
+    categories:
+      - shia
+      - religious
+      - sunni
+    isHolidayInIran: false
+
+  - id: hijri-12-10-nl0az8
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 10
+    title:
+      fa: عید سعید قربان
+      en: Eid al-Adha
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-12-10-nl0az9
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 10
+    title:
+      fa: عید سعید قربان
+      en: Eid al-Adha
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-11-557yvv
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 11
+    title:
+      fa: روزهای تشریق
+      en: Days of Tashriq
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-12-1xexi2j
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 12
+    title:
+      fa: روزهای تشریق
+      en: Days of Tashriq
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-13-1qniza3
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 13
+    title:
+      fa: روزهای تشریق
+      en: Days of Tashriq
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-15-4q0rrs
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 15
+    title:
+      fa: ولادت امام هادی(ع)
+      en: Birth of Imam al-Hadi
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-18-1g6p89f
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 18
+    title:
+      fa: غدیر خم
+      en: Eid al-Ghadir
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-12-20-5aupis
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 20
+    title:
+      fa: ولادت امام کاظم(ع)
+      en: Birth of Imam al-Kadhim
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-24-4rxcok
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 24
+    title:
+      fa: روز مباهلهٔ پیامبر(ص)
+      en: Day of Mubahala of Prophet Muhammad
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-12-25-8gnuga
+    calendar: hijri
+    type: fixed
+    month: 12
+    day: 25
+    title:
+      fa: روز خانواده و تکریم بازنشستگان
+      en: Family Day & Honoring Retirees
+    categories:
+      - government
+    isHolidayInIran: false

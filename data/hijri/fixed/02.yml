@@ -1,0 +1,119 @@
+events:
+  - id: hijri-02-03-1hv4v2d
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 3
+    title:
+      fa: ولادت امام محمد باقر(ع) به روایتی
+      en: Birth of Imam Muhammad al-Baqir(according to a narration)
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-02-07-bex1qo
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 7
+    title:
+      fa: شهادت امام حسن(ع) به روایتی
+      en: Martyrdom of Imam Hasan(according to a narration)
+    categories:
+      - shia
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-02-07-8e4ya3
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 7
+    title:
+      fa: روز بزرگداشت سلمان فارسی
+      en: Commemoration of Salman al-Farsi
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-02-20-1exdwx5
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 20
+    title:
+      fa: اربعین حسینی
+      en: Arba'een of Husayn
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-02-27-1kk1dyn
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 27
+    title:
+      fa: روز وقف
+      en: Endowment Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: hijri-02-28-170896q
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 28
+    title:
+      fa: رحلت پیامبر(ص)
+      en: Passing of Prophet Muhammad
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-02-28-170896r
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 28
+    title:
+      fa: رحلت پیامبر(ص) اهل تسنن
+      en: Passing of Prophet Muhammad
+    categories:
+      - sunni
+      - religious
+    isHolidayInIran: false
+
+  - id: hijri-02-28-biqjob
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 28
+    title:
+      fa: شهادت امام حسن(ع)
+      en: Martyrdom of Imam Hasan
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
+
+  - id: hijri-02-30-8jkjp0
+    calendar: hijri
+    type: fixed
+    month: 2
+    day: 30
+    title:
+      fa: شهادت امام رضا(ع)
+      en: Martyrdom of Imam Reza
+    categories:
+      - shia
+      - religious
+      - government
+    isHolidayInIran: true
