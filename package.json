@@ -1,0 +1,69 @@
+{
+	"name": "persian-events",
+	"version": "0.5.0",
+	"description": "A unified calendar events engine for Persian, Islamic, and international dates, providing bilingual event data(English & Persian), holiday classification, and a powerful query system for fixed, multi-day, and relative events.",
+	"type": "module",
+	"keywords": [
+		"persian",
+		"jalali",
+		"hijri",
+		"gregorian",
+		"events",
+		"holidays",
+		"iran",
+		"calendar"
+	],
+	"license": "MIT",
+	"author": "",
+	"main": "./dist/cjs/index.cjs",
+	"module": "./src/index.js",
+	"types": "./types/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./src/index.js",
+			"require": "./dist/cjs/index.cjs",
+			"types": "./types/index.d.ts"
+		},
+		"./jalali": {
+			"import": "./src/jalali.js",
+			"require": "./dist/cjs/jalali.cjs",
+			"types": "./types/index.d.ts"
+		},
+		"./gregorian": {
+			"import": "./src/gregorian.js",
+			"require": "./dist/cjs/gregorian.cjs",
+			"types": "./types/index.d.ts"
+		},
+		"./hijri": {
+			"import": "./src/hijri.js",
+			"require": "./dist/cjs/hijri.cjs",
+			"types": "./types/index.d.ts"
+		}
+	},
+	"files": [
+		"src/",
+		"dist/",
+		"index.d.ts",
+		"README.md"
+	],
+	"sideEffects": false,
+	"scripts": {
+		"build:data": "node build/buildData.mjs",
+		"build:cjs": "node build/buildCjs.mjs",
+		"build": "node build/buildData.mjs && node build/buildCjs.mjs",
+		"test": "vitest",
+		"test:watch": "vitest watch",
+		"test:run": "vitest run",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"js-yaml": "^4.2.0",
+		"vitest": "^4.1.8"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"dependencies": {
+		"@internationalized/date": "^3.12.2"
+	}
+}
