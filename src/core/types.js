@@ -1,7 +1,7 @@
 /**
  * @typedef {'jalali' | 'gregorian' | 'hijri'} CalendarType
  *
- * @typedef {'government' | 'religious' | 'cultural' | 'international' | 'historical' | 'nature'} Category
+ * @typedef {'government' | 'religious' | 'international' | 'historical' | 'united_nations' | 'ancient' | 'sunni' | 'shia'} Category
  *
  * @typedef {'fixed' | 'multi-day' | 'relative'} EventType
  *
@@ -65,8 +65,10 @@ export const CALENDAR_TYPES = /** @type {const} */ ([
 export const CATEGORIES = /** @type {const} */ ([
 	"government",
 	"religious",
-	"cultural",
+	"shia",
+	"sunni",
+	"ancient",
 	"international",
 	"historical",
-	"nature",
+	"united_nations",
 ]);

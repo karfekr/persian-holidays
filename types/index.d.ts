@@ -3,10 +3,12 @@ export type CalendarType = "jalali" | "gregorian" | "hijri";
 export type Category =
 	| "government"
 	| "religious"
-	| "cultural"
+	| "shia"
+	| "sunni"
+	| "ancient"
 	| "international"
 	| "historical"
-	| "nature";
+	| "united_nations";
 
 export type EventType = "fixed" | "multi-day" | "relative";
 

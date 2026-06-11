@@ -10,7 +10,7 @@ events:
     title:
       fa: تعطیلات نوروز
       en: Nowruz Holidays
-    categories: [government, cultural]
+    categories: [government]
     isHolidayInIran: true
 
   - id: jalali-defense-week

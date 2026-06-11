@@ -1,0 +1,182 @@
+events:
+  - id: gregorian-12-01-14uslvu
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 1
+    title:
+      fa: روز جهانی ایدز
+      en: World AIDS Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-02-1jeqau3
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 2
+    title:
+      fa: روز جهانی لغو برده‌داری
+      en: International Day for the Abolition of Slavery
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-03-1xuxydk
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 3
+    title:
+      fa: روز جهانی افراد دارای معلولیت
+      en: International Day of Persons with Disabilities
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-05-mr9t2l
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 5
+    title:
+      fa: روز جهانی داوطلبان برای توسعه اقتصادی و اجتماعی
+      en: International Volunteer Day for Economic and Social Development
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-05-189atzb
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 5
+    title:
+      fa: روز جهانی خاک
+      en: World Soil Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-07-cywzq1
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 7
+    title:
+      fa: روز جهانی هوانوردی غیرنظامی
+      en: International Civil Aviation Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-09-1enj55s
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 9
+    title:
+      fa: روز جهانی مبارزه با فساد
+      en: International Anti-Corruption Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-09-9h8vxy
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 9
+    title:
+      fa: یادبود و کرامت قربانیان جنایت نسل‌کشی و پیشگیری از آن
+      en: Commemoration and Dignity of the Victims of the Crime of Genocide and of the Prevention of this Crime
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-10-1uqasic
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 10
+    title:
+      fa: روز جهانی حقوق بشر
+      en: Human Rights Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-11-hbh7mx
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 11
+    title:
+      fa: روز جهانی کوهستان
+      en: International Mountain Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-12-1fcm2lc
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 12
+    title:
+      fa: روز جهانی بی‌طرفی
+      en: International Day of Neutrality
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-18-1edt6xv
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 18
+    title:
+      fa: روز جهانی زبان عربی
+      en: International Arabic Language Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-18-17yk2y3
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 18
+    title:
+      fa: روز جهانی مهاجران
+      en: International Migrants Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-12-20-bjn7gn
+    calendar: gregorian
+    type: fixed
+    month: 12
+    day: 20
+    title:
+      fa: روز جهانی همبستگی انسانی
+      en: International Human Solidarity Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false

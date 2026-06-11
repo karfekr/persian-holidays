@@ -1,0 +1,210 @@
+events:
+  - id: gregorian-03-01-1n6tmu4
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 1
+    title:
+      fa: روز جهانی تبعیض صفر
+      en: Zero Discrimination Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-03-116x85s
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 3
+    title:
+      fa: روز جهانی حیات وحش
+      en: World Wildlife Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-08-1rmfzx2
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 8
+    title:
+      fa: روز جهانی زن
+      en: International Women's Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-20-j3judg
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 20
+    title:
+      fa: روز جهانی شادی
+      en: International Day of Happiness
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-20-imx3w3
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 20
+    title:
+      fa: روز جهانی زبان فرانسه
+      en: International French Language Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-21-1wspsfy
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 21
+    title:
+      fa: روز جهانی مبارزه با تبعیض نژادی
+      en: International Day for the Elimination of Racial Discrimination
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-21-1ukcb19
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 21
+    title:
+      fa: روز جهانی شعر
+      en: World Poetry Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-21-1pkrl0p
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 21
+    title:
+      fa: روز جهانی نوروز
+      en: International Day of Nowruz
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-21-dirmox
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 21
+    title:
+      fa: روز جهانی سندرم داون
+      en: World Down Syndrome Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-21-109m4t8
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 21
+    title:
+      fa: روز جهانی جنگل
+      en: International Day of Forests
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-22-p920ai
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 22
+    title:
+      fa: روز جهانی آب
+      en: World Water Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-23-4xg5v
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 23
+    title:
+      fa: روز جهانی هواشناسی
+      en: World Meteorological Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-24-e19i1t
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 24
+    title:
+      fa: روز جهانی مبارزه با سل
+      en: World Tuberculosis Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-24-gu9jy7
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 24
+    title:
+      fa: روز جهانی حق دانستن حقیقت درباره نقض حقوق بشر
+      en: >-
+        International Day for the Right to the Truth concerning Gross Human Rights Violations and for the Dignity of
+        Victims
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-25-byr3bu
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 25
+    title:
+      fa: روز جهانی یادبود قربانیان برده‌داری و تجارت برده فراآتلانتیک
+      en: International Day of Remembrance of the Victims of Slavery and the Transatlantic Slave Trade
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-03-25-a3o967
+    calendar: gregorian
+    type: fixed
+    month: 3
+    day: 25
+    title:
+      fa: روز جهانی همبستگی با کارکنان بازداشت‌شده و ناپدیدشده
+      en: International Day of Solidarity with Detained and Missing Staff Members
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false

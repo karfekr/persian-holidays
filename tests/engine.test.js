@@ -44,7 +44,7 @@ describe("matchDay — multi-day events", () => {
 
 describe("matchDay — category filter", () => {
 	test("returns only matching category", () => {
-		// Nowruz day 1 is in month 1 day 1 — categories: government, cultural
+		// Nowruz day 1 is in month 1 day 1 — categories: government
 		const res = matchDay(
 			jalaliSample,
 			"jalali",

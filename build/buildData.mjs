@@ -18,10 +18,9 @@ const VALID_CATEGORIES = new Set([
 	"shia",
 	"sunni",
 	"ancient",
-	"cultural",
 	"international",
 	"historical",
-	"nature",
+	"united_nations",
 ]);
 
 function validateEvent(event, calendar, idx) {

@@ -5,7 +5,7 @@ export const jalaliSample = [
 		month: 1,
 		day: 1,
 		title: { fa: "نوروز", en: "Nowruz" },
-		categories: ["government", "cultural"],
+		categories: ["government"],
 		isHolidayInIran: true,
 	},
 	{
@@ -16,7 +16,7 @@ export const jalaliSample = [
 		endMonth: 1,
 		endDay: 4,
 		title: { fa: "تعطیلات نوروز", en: "Nowruz Holidays" },
-		categories: ["government", "cultural"],
+		categories: ["government"],
 		isHolidayInIran: true,
 	},
 	{
@@ -36,7 +36,7 @@ export const gregorianSample = [
 		type: "relative",
 		rule: { base: "month-weekday", month: 5, weekday: 0, occurrence: "second" },
 		title: { fa: "روز مادر", en: "Mother's Day" },
-		categories: ["international", "cultural"],
+		categories: ["international"],
 		isHolidayInIran: false,
 	},
 	{
@@ -61,15 +61,6 @@ export const loaderSample = [
 		isHolidayInIran: true,
 	},
 	{
-		id: "fixed-m1d15",
-		type: "fixed",
-		month: 1,
-		day: 15,
-		title: { fa: "روز پانزدهم", en: "Day Fifteen" },
-		categories: ["cultural"],
-		isHolidayInIran: false,
-	},
-	{
 		id: "fixed-m6d31",
 		type: "fixed",
 		month: 6,
@@ -86,20 +77,7 @@ export const loaderSample = [
 		endMonth: 1,
 		endDay: 4,
 		title: { fa: "هفته نوروز", en: "Nowruz Week" },
-		categories: ["government", "cultural"],
+		categories: ["government"],
 		isHolidayInIran: true,
-	},
-	{
-		id: "relative-mothers-day",
-		type: "relative",
-		rule: {
-			base: "nth-weekday-of-month",
-			month: 5,
-			weekday: 0,
-			occurrence: "second",
-		},
-		title: { fa: "روز مادر", en: "Mother's Day" },
-		categories: ["cultural"],
-		isHolidayInIran: false,
 	},
 ];

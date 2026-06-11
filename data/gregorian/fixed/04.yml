@@ -1,0 +1,234 @@
+events:
+  - id: gregorian-04-02-3460tz
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 2
+    title:
+      fa: روز جهانی آگاهی از اوتیسم
+      en: World Autism Awareness Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-04-jn18ps
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 4
+    title:
+      fa: روز جهانی آگاهی از مین و کمک در عملیات مین‌زدایی
+      en: International Day for Mine Awareness and Assistance in Mine Action
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-06-1toxwl1
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 6
+    title:
+      fa: روز جهانی ورزش برای توسعه و صلح
+      en: International Day of Sport for Development and Peace
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-07-135dd25
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 7
+    title:
+      fa: روز جهانی تأمل درباره نسل‌کشی روآندا
+      en: International Day of Reflection on the Genocide in Rwanda
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-07-s274rg
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 7
+    title:
+      fa: روز جهانی بهداشت
+      en: World Health Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-12-v2u8un
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 12
+    title:
+      fa: روز جهانی پرواز انسان در فضا
+      en: International Day of Human Space Flight
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-20-1v99i4m
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 20
+    title:
+      fa: روز جهانی زبان چینی
+      en: International Chinese Language Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-21-1orr7hw
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 21
+    title:
+      fa: روز جهانی خلاقیت و نوآوری
+      en: World Creativity and Innovation Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-22-1i9p0rh
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 22
+    title:
+      fa: روز جهانی مادر زمین
+      en: International Mother Earth Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-23-1sj08a0
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 23
+    title:
+      fa: روز جهانی زبان اسپانیایی
+      en: International Spanish Language Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-23-w32p1m
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 23
+    title:
+      fa: روز جهانی کتاب و حق مؤلف
+      en: World Book and Copyright Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-23-kafsyu
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 23
+    title:
+      fa: روز جهانی زبان انگلیسی
+      en: International English Language Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-25-17cxs22
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 25
+    title:
+      fa: روز جهانی مالاریا
+      en: World Malaria Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-26-165xu8j
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 26
+    title:
+      fa: روز جهانی یادبود فاجعه چرنوبیل
+      en: International Chernobyl Disaster Remembrance Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-26-1y49edz
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 26
+    title:
+      fa: روز جهانی مالکیت فکری
+      en: World Intellectual Property Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-28-2n44s1
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 28
+    title:
+      fa: روز جهانی ایمنی و بهداشت در کار
+      en: World Day for Safety and Health at Work
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-29-ia0b9h
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 29
+    title:
+      fa: روز یادبود تمام قربانیان جنگ شیمیایی
+      en: Day of Remembrance for all Victims of Chemical Warfare
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-04-30-31k7fy
+    calendar: gregorian
+    type: fixed
+    month: 4
+    day: 30
+    title:
+      fa: روز جهانی جاز
+      en: International Jazz Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false

@@ -1,0 +1,78 @@
+events:
+  - id: gregorian-02-04-ng0ygz
+    calendar: gregorian
+    type: fixed
+    month: 2
+    day: 4
+    title:
+      fa: روز جهانی سرطان
+      en: World Cancer Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-02-06-13t848v
+    calendar: gregorian
+    type: fixed
+    month: 2
+    day: 6
+    title:
+      fa: روز جهانی مقابله با ختنه زنان
+      en: International Day of Zero Tolerance to Female Genital Mutilation
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-02-11-15pz557
+    calendar: gregorian
+    type: fixed
+    month: 2
+    day: 11
+    title:
+      fa: روز جهانی زنان و دختران در علم
+      en: International Day of Women and Girls in Science
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-02-13-v612mf
+    calendar: gregorian
+    type: fixed
+    month: 2
+    day: 13
+    title:
+      fa: روز جهانی رادیو
+      en: World Radio Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-02-20-11iu8pq
+    calendar: gregorian
+    type: fixed
+    month: 2
+    day: 20
+    title:
+      fa: روز جهانی عدالت اجتماعی
+      en: World Day of Social Justice
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-02-21-w7z80s
+    calendar: gregorian
+    type: fixed
+    month: 2
+    day: 21
+    title:
+      fa: روز جهانی زبان مادری
+      en: International Mother Language Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false

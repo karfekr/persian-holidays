@@ -1,0 +1,39 @@
+#? relative: rule-based (e.g. first Monday, weekday offsets, etc.)
+
+events:
+  - id: gregorian-mothers-day
+    type: relative
+    rule:
+      base: nth-weekday-of-month
+      month: 5
+      weekday: 0 # Sunday in iso system
+      occurrence: second
+    title:
+      fa: روز مادر (بین‌المللی)
+      en: Mother's Day (International)
+    categories: [international]
+    isHolidayInIran: false
+
+  - id: gregorian-thanksgiving
+    type: relative
+    rule:
+      base: nth-weekday-of-month
+      month: 11
+      weekday: 4 # Thursday in iso system
+      occurrence: fourth
+    title:
+      fa: روز شکرگزاری
+      en: Thanksgiving Day
+    categories: [international]
+    isHolidayInIran: false
+
+  - id: gregorian-easter
+    type: relative
+    rule:
+      base: computus # Easter uses Computus algorithm — year-dependent
+      offsetDays: 0
+    title:
+      fa: عید پاک
+      en: Easter Sunday
+    categories: [international, religious]
+    isHolidayInIran: false

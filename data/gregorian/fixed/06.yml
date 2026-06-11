@@ -1,0 +1,299 @@
+events:
+  - id: gregorian-06-01-1i2jhfc
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 1
+    title:
+      fa: روز جهانی والدین
+      en: Global Day of Parents
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-04-gq7i39
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 4
+    title:
+      fa: روز جهانی کودکان بی‌گناه قربانی تجاوز
+      en: International Day of Innocent Children Victims of Aggression
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-05-1qed7va
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 5
+    title:
+      fa: روز جهانی محیط زیست
+      en: World Environment Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-06-12qf3ws
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 6
+    title:
+      fa: روز جهانی زبان روسی
+      en: International Russian Language Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-08-ll5hz7
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 8
+    title:
+      fa: روز جهانی اقیانوس‌ها
+      en: World Oceans Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-12-crit54
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 12
+    title:
+      fa: روز جهانی مبارزه با کار کودکان
+      en: World Day Against Child Labour
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-13-1bpj59w
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 13
+    title:
+      fa: روز جهانی آگاهی از آلبینیسم
+      en: International Albinism Awareness Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-14-tquq05
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 14
+    title:
+      fa: روز جهانی اهدای خون
+      en: World Blood Donor Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-15-5ze4e8
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 15
+    title:
+      fa: روز جهانی آگاهی از سوءاستفاده از سالمندان
+      en: World Elder Abuse Awareness Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-16-wz3oo7
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 16
+    title:
+      fa: روز جهانی حواله‌های خانوادگی
+      en: International Day of Family Remittances
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-17-1m7yki9
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 17
+    title:
+      fa: روز جهانی مبارزه با بیابان‌زایی و خشکسالی
+      en: International Day to Combat Desertification and Drought
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-18-19i67ug
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 18
+    title:
+      fa: روز جهانی گاسترونومی پایدار
+      en: International Day of Sustainable Gastronomy
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-19-11zolcz
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 19
+    title:
+      fa: روز جهانی پایان دادن به خشونت جنسی در مناطق درگیر
+      en: International Day for the Elimination of Sexual Violence in Conflict
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-20-tiwx4b
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 20
+    title:
+      fa: روز جهانی پناهندگان
+      en: World Refugee Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-21-7grz23
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 21
+    title:
+      fa: روز جهانی یوگا
+      en: International Day of Yoga
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-23-15ah4h1
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 23
+    title:
+      fa: روز جهانی بیوه‌ها
+      en: International Widows' Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-23-11ebtcj
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 23
+    title:
+      fa: روز خدمات عمومی سازمان ملل
+      en: United Nations Public Service Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-25-osslp7
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 25
+    title:
+      fa: روز جهانی دریانوردان
+      en: International Day of the Seafarer
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-26-1izpsde
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 26
+    title:
+      fa: روز جهانی مبارزه با مواد مخدر و قاچاق غیرقانونی
+      en: International Day against Drug Abuse and Illicit Trafficking
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-26-bw5iq5
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 26
+    title:
+      fa: روز جهانی حمایت از قربانیان شکنجه
+      en: International Day in Support of Victims of Torture
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-27-d2k0bl
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 27
+    title:
+      fa: روز بنگاه‌های کوچک، خرد و متوسط
+      en: Micro-, Small and Medium-sized Enterprises Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-29-hd4stg
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 29
+    title:
+      fa: روز جهانی مناطق استوایی
+      en: International Day of the Tropics
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-06-30-xgaekq
+    calendar: gregorian
+    type: fixed
+    month: 6
+    day: 30
+    title:
+      fa: روز جهانی سیارک
+      en: International Asteroid Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false

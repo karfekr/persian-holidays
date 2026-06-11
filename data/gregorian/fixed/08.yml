@@ -1,0 +1,90 @@
+events:
+  - id: gregorian-08-09-1qb7syk
+    calendar: gregorian
+    type: fixed
+    month: 8
+    day: 9
+    title:
+      fa: روز جهانی مردمان بومی جهان
+      en: International Day of the World's Indigenous Peoples
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-08-12-9xnnbv
+    calendar: gregorian
+    type: fixed
+    month: 8
+    day: 12
+    title:
+      fa: روز جهانی جوانان
+      en: International Youth Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-08-19-1oy2qmb
+    calendar: gregorian
+    type: fixed
+    month: 8
+    day: 19
+    title:
+      fa: روز جهانی بشردوستی
+      en: World Humanitarian Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-08-21-1wlrty0
+    calendar: gregorian
+    type: fixed
+    month: 8
+    day: 21
+    title:
+      fa: روز جهانی مسجد
+      en: World Mosque Day
+    categories:
+      - government
+    isHolidayInIran: false
+
+  - id: gregorian-08-23-ettdd2
+    calendar: gregorian
+    type: fixed
+    month: 8
+    day: 23
+    title:
+      fa: یادبود تجارت برده و لغو آن
+      en: the Remembrance of the Slave Trade and Its Abolition
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-08-29-1fthamc
+    calendar: gregorian
+    type: fixed
+    month: 8
+    day: 29
+    title:
+      fa: روز جهانی مبارزه با آزمایش‌های هسته‌ای
+      en: International Day against Nuclear Tests
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-08-30-9ez36c
+    calendar: gregorian
+    type: fixed
+    month: 8
+    day: 30
+    title:
+      fa: روز جهانی قربانیان ناپدیدشدن اجباری
+      en: International Day of the Victims of Enforced Disappearances
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false

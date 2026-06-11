@@ -1,0 +1,156 @@
+events:
+  - id: gregorian-11-02-r26rr8
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 2
+    title:
+      fa: روز جهانی پایان دادن به مصونیت از مجازات برای جرایم علیه روزنامه‌نگاران
+      en: International Day to End Impunity for Crimes against Journalists
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-05-74n96g
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 5
+    title:
+      fa: روز جهانی آگاهی از سونامی
+      en: World Tsunami Awareness Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-06-50xihe
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 6
+    title:
+      fa: روز جهانی پیشگیری از بهره‌برداری از محیط زیست در جنگ و مخاصمات مسلحانه
+      en: International Day for Preventing the Exploitation of the Environment in War and Armed Conflict
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-10-zd83gj
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 10
+    title:
+      fa: روز جهانی علم برای صلح و توسعه
+      en: World Science Day for Peace and Development
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-14-1fj0ygs
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 14
+    title:
+      fa: روز جهانی دیابت
+      en: World Diabetes Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-16-ec62j4
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 16
+    title:
+      fa: روز جهانی مدارا
+      en: International Day for Tolerance
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-19-srnn94
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 19
+    title:
+      fa: روز جهانی توالت
+      en: World Toilet Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-20-150i9lr
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 20
+    title:
+      fa: روز جهانی صنعتی‌سازی آفریقا
+      en: International Africa Industrialization Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-20-8pulgp
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 20
+    title:
+      fa: روز جهانی کودک
+      en: Universal Children's Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-21-9efknd
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 21
+    title:
+      fa: روز جهانی تلویزیون
+      en: World Television Day
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-25-1mpp4fo
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 25
+    title:
+      fa: روز جهانی پایان دادن به خشونت علیه زنان
+      en: International Day for the Elimination of Violence against Women
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-29-qyobs4
+    calendar: gregorian
+    type: fixed
+    month: 11
+    day: 29
+    title:
+      fa: روز جهانی همبستگی با مردم فلسطین
+      en: International Day of Solidarity with the Palestinian People
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
