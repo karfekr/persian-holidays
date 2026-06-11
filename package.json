@@ -1,5 +1,5 @@
 {
-	"name": "persian-events",
+	"name": "persian-holidays",
 	"version": "0.5.0",
 	"description": "A unified calendar events engine for Persian, Islamic, and international dates, providing bilingual event data(English & Persian), holiday classification, and a powerful query system for fixed, multi-day, and relative events.",
 	"type": "module",
@@ -8,6 +8,7 @@
 		"jalali",
 		"hijri",
 		"gregorian",
+		"holidays",
 		"events",
 		"holidays",
 		"iran",
@@ -18,6 +19,15 @@
 		"name": "Alireza Mohammadzadeh(NedaMani)",
 		"url": "https://nedamani.ir"
 	},
+	"homepage": "https://github.com/karfekr/persian-holidays",
+	"bugs": {
+    "url": "https://github.com/karfekr/persian-holidays/issues"
+  },
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/karfekr/persian-holidays.git"
+  },
+	"packageManager": "pnpm@11.5.3+sha512.7ac1c919341c213a34dc0d02afb7143c5c26ac26ee8c4782deea821b8ac64d2134a081fd8941dae6e29bbb48f58dfc2b7fbceeccc07cb2f09d219d342a4969ed",
 	"main": "./dist/cjs/index.cjs",
 	"module": "./src/index.js",
 	"types": "./types/index.d.ts",
