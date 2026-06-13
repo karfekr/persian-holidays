@@ -25,11 +25,7 @@
 			"persian-holidays": ["./src/index.js"],
 			"persian-holidays/jalali": ["./src/jalali.js"],
 			"persian-holidays/gregorian": ["./src/gregorian.js"],
-			"persian-holidays/hijri": ["./src/hijri.js"],
-			"persian-holidays/adapters/builtin": ["./src/adapters/builtin.js"],
-			"persian-holidays/adapters/internationalized": [
-				"./src/adapters/internationalized.js"
-			]
+			"persian-holidays/hijri": ["./src/hijri.js"]
 		},
 
 		"noUnusedLocals": true,
@@ -40,5 +36,5 @@
 		"forceConsistentCasingInFileNames": true
 	},
 
-	"include": ["src/**/*.js", "types/**/*.d.ts"]
+	"include": ["src/**/*.js", "types/**/*.d.ts", "tests/**/*.js"]
 }

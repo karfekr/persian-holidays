@@ -1,23 +1,29 @@
+import { beforeAll, afterAll, describe, expect, test } from "vitest";
 import { matchDay, matchRange } from "../src/core/engine.js";
-import { jalaliSample, gregorianSample } from "./fixtures.js";
+import { jalaliSample, gregorianSample } from "./fixtures/index.js";
 import { setAdapter, clearAdapter } from "../src/core/adapter.js";
+import { createInternationalizedAdapter } from "./fixtures/adapter.js";
 
+beforeAll(() => setAdapter(createInternationalizedAdapter()));
 afterAll(() => clearAdapter());
 
 describe("matchDay — fixed events", () => {
 	test("returns event on exact date", () => {
+		// @ts-ignore
 		const res = matchDay(jalaliSample, "jalali", 1, 1);
 		const ids = res.map((e) => e.id);
 		expect(ids).toContain("jalali-nowruz-day1");
 	});
 
 	test("does not return event on wrong date", () => {
+		// @ts-ignore
 		const res = matchDay(jalaliSample, "jalali", 1, 5);
 		const ids = res.map((e) => e.id);
 		expect(ids).not.toContain("jalali-nowruz-day1");
 	});
 
 	test("attaches correct calendar type", () => {
+		// @ts-ignore
 		const [event] = matchDay(jalaliSample, "jalali", 1, 1);
 		expect(event.calendar).toBe("jalali");
 	});
@@ -25,21 +31,25 @@ describe("matchDay — fixed events", () => {
 
 describe("matchDay — multi-day events", () => {
 	test("returns multi-day event on start date", () => {
+		// @ts-ignore
 		const res = matchDay(jalaliSample, "jalali", 1, 1);
 		expect(res.map((e) => e.id)).toContain("jalali-nowruz-holidays");
 	});
 
 	test("returns multi-day event on middle date", () => {
+		// @ts-ignore
 		const res = matchDay(jalaliSample, "jalali", 1, 2);
 		expect(res.map((e) => e.id)).toContain("jalali-nowruz-holidays");
 	});
 
 	test("returns multi-day event on end date", () => {
+		// @ts-ignore
 		const res = matchDay(jalaliSample, "jalali", 1, 4);
 		expect(res.map((e) => e.id)).toContain("jalali-nowruz-holidays");
 	});
 
 	test("does not return multi-day event outside range", () => {
+		// @ts-ignore
 		const res = matchDay(jalaliSample, "jalali", 1, 5);
 		expect(res.map((e) => e.id)).not.toContain("jalali-nowruz-holidays");
 	});
@@ -49,6 +59,7 @@ describe("matchDay — category filter", () => {
 	test("returns only matching category", () => {
 		// Nowruz day 1 is in month 1 day 1 — categories: government
 		const res = matchDay(
+			// @ts-ignore
 			jalaliSample,
 			"jalali",
 			2,
@@ -61,6 +72,7 @@ describe("matchDay — category filter", () => {
 
 	test("excludes non-matching category", () => {
 		const res = matchDay(
+			// @ts-ignore
 			jalaliSample,
 			"jalali",
 			2,
@@ -75,11 +87,13 @@ describe("matchDay — category filter", () => {
 describe("matchDay — relative events", () => {
 	// In 2024, Mother's Day (2nd Sunday of May) is May 12
 	test("resolves relative event correctly for year 2024", () => {
+		// @ts-ignore
 		const res = matchDay(gregorianSample, "gregorian", 5, 12, undefined, 2024);
 		expect(res.map((e) => e.id)).toContain("gregorian-mothers-day");
 	});
 
 	test("does not match relative event on wrong date", () => {
+		// @ts-ignore
 		const res = matchDay(gregorianSample, "gregorian", 5, 13, undefined, 2024);
 		expect(res.map((e) => e.id)).not.toContain("gregorian-mothers-day");
 	});
@@ -87,6 +101,7 @@ describe("matchDay — relative events", () => {
 
 describe("matchRange", () => {
 	test("returns all events in full Farvardin range", () => {
+		// @ts-ignore
 		const res = matchRange(jalaliSample, "jalali", 1, 1, 1, 30);
 		const ids = res.map((e) => e.id);
 		expect(ids).toContain("jalali-nowruz-day1");
@@ -95,11 +110,13 @@ describe("matchRange", () => {
 	});
 
 	test("returns teacher day in correct month range", () => {
+		// @ts-ignore
 		const res = matchRange(jalaliSample, "jalali", 2, 1, 2, 30);
 		expect(res.map((e) => e.id)).toContain("jalali-teachers-day");
 	});
 
 	test("deduplicates events that span the range", () => {
+		// @ts-ignore
 		const res = matchRange(jalaliSample, "jalali", 1, 1, 1, 4);
 		const ids = res.map((e) => e.id);
 		const unique = [...new Set(ids)];
@@ -107,6 +124,7 @@ describe("matchRange", () => {
 	});
 
 	test("returns empty array for empty range", () => {
+		// @ts-ignore
 		const res = matchRange(jalaliSample, "jalali", 6, 1, 6, 30);
 		expect(res).toHaveLength(0);
 	});

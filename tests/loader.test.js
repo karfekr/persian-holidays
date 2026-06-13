@@ -1,6 +1,7 @@
+import { beforeAll, describe, expect, test } from "vitest";
 import { registerData } from "../src/core/loader.js";
 import { getEvents, getMonthEvents, getYearEvents } from "../src/query.js";
-import { loaderSample } from "./fixtures.js";
+import { loaderSample } from "./fixtures/index.js";
 
 beforeAll(() => {
 	registerData("jalali", loaderSample);

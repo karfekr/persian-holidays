@@ -50,6 +50,7 @@ export const gregorianSample = [
 	},
 ];
 
+/** @type {import('../../src/core/types.js').RawEvent[]} */
 export const loaderSample = [
 	{
 		id: "fixed-m1d1",
