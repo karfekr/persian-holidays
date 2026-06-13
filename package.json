@@ -76,7 +76,7 @@
 		"test:watch": "vitest watch",
 		"test:run": "vitest run",
 		"lint": "eslint . --fix",
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build",
 		"prepare": "husky"
 	},
 	"devDependencies": {
