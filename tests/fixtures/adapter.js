@@ -9,7 +9,7 @@ import {
 } from "@internationalized/date";
 
 /**
- * @typedef {Object} InternationalizedAdapter
+ * @typedef {object} InternationalizedAdapter
  * @property {(calendar: import('../../src/core/types.js').CalendarType, year: number, month: number) => number} firstWeekdayOfMonth
  * @property {(calendar: import('../../src/core/types.js').CalendarType, year: number, month: number) => number} daysInMonth
  */

@@ -164,7 +164,10 @@ const RULE_REGISTRY = {
 /** @type {Map<string, DatePoint[]>} */
 const _cache = new Map();
 
-/** @param {RelativeRule} rule */
+/**
+ * @param {RelativeRule} rule
+ * @returns {string}
+ */
 function _ruleKey(rule) {
 	return JSON.stringify([
 		rule.base,

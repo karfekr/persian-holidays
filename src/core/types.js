@@ -7,12 +7,12 @@
  *
  * @typedef {{ fa: string; en: string }} BilingualTitle
  *
- * @typedef {Object} EventMetadata
+ * @typedef {object} EventMetadata
  * @property {string} [importance]
  * @property {string} [source]
  * @property {string} [note]
  *
- * @typedef {Object} RelativeRule
+ * @typedef {object} RelativeRule
  * @property {'nth-weekday-of-month' | 'computus' | 'day-candidates' | 'month-weekday' | 'month-end'} base
  * @property {number} [month]
  * @property {number} [weekday]
@@ -20,16 +20,16 @@
  * @property {number} [offsetDays]
  * @property {number[]} [candidates]
  *
- * @typedef {Object} ResolverContext
- * @property {number} [year]
+ * @typedef {object} ResolverContext
+ * @property {number|undefined} [year]
  * @property {CalendarType} [calendar]
  * @property {boolean} [skipOnMissingYear]
  *
- * @typedef {Object} DatePoint
+ * @typedef {object} DatePoint
  * @property {number} month
  * @property {number} day
  *
- * @typedef {Object} RawEvent
+ * @typedef {object} RawEvent
  * @property {string} id
  * @property {EventType} type
  * @property {number} [month]
@@ -43,7 +43,7 @@
  * @property {Category[]} categories
  * @property {boolean} isHolidayInIran
  *
- * @typedef {Object} Event
+ * @typedef {object} Event
  * @property {string} id
  * @property {BilingualTitle} title
  * @property {Category[]} categories
@@ -51,7 +51,7 @@
  * @property {CalendarType} calendar
  * @property {EventType} type
  *
- * @typedef {Object} QueryOptions
+ * @typedef {object} QueryOptions
  * @property {Category[]} [categories]
  * @property {number} [year]
  */

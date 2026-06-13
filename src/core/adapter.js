@@ -1,5 +1,5 @@
 /**
- * @typedef {Object} CalendarAdapter
+ * @typedef {object} CalendarAdapter
  * @property {(calendar: import('./types.js').CalendarType, year: number, month: number) => number} firstWeekdayOfMonth
  * @property {(calendar: import('./types.js').CalendarType, year: number, month: number) => number} daysInMonth
  */
