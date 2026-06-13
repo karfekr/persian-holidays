@@ -263,7 +263,6 @@ setAdapter({
 
 [![Website](https://img.shields.io/badge/Website-karfekr.ir-orange)](https://karfekr.ir)
 [![Telegram Channel](https://img.shields.io/endpoint?color=neon&label=Karfekr&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fkarfekr)](https://t.me/karfekr)
-(https://t.me/ObsidianFarsi)
 
 </div>
 
