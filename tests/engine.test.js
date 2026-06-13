@@ -1,5 +1,8 @@
 import { matchDay, matchRange } from "../src/core/engine.js";
 import { jalaliSample, gregorianSample } from "./fixtures.js";
+import { setAdapter, clearAdapter } from "../src/core/adapter.js";
+
+afterAll(() => clearAdapter());
 
 describe("matchDay — fixed events", () => {
 	test("returns event on exact date", () => {

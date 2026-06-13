@@ -1,0 +1,44 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["ES2022"],
+
+		"checkJs": true,
+		"allowJs": true,
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": false,
+
+		"noEmit": true,
+		"declaration": false,
+
+		"paths": {
+			"persian-holidays": ["./src/index.js"],
+			"persian-holidays/jalali": ["./src/jalali.js"],
+			"persian-holidays/gregorian": ["./src/gregorian.js"],
+			"persian-holidays/hijri": ["./src/hijri.js"],
+			"persian-holidays/adapters/builtin": ["./src/adapters/builtin.js"],
+			"persian-holidays/adapters/internationalized": [
+				"./src/adapters/internationalized.js"
+			]
+		},
+
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"noFallthroughCasesInSwitch": true,
+		"exactOptionalPropertyTypes": false,
+
+		"forceConsistentCasingInFileNames": true
+	},
+
+	"include": ["src/**/*.js", "types/**/*.d.ts"]
+}

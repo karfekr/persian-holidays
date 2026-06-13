@@ -1,9 +1,11 @@
-//? src/gregorian.js  →  entry: "persian-events/gregorian"
+//? src/gregorian.js  →  entry: "persian-holidays/gregorian"
 // Keeps the bundle small
 
-export { getEvents, getEventsInRange } from "./query.js";
+export { getEvents, getMonthEvents, getYearEvents } from "./query.js";
+export { setAdapter, clearAdapter } from "./core/adapter.js";
 
 import { registerData } from "./core/loader.js";
-import gregorianEvents from "../dist/data/gregorian.json" assert { type: "json" };
+import gregorianEvents from "../dist/data/gregorian.json" with { type: "json" };
 
+// @ts-ignore
 registerData("gregorian", gregorianEvents);

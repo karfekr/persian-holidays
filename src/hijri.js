@@ -1,9 +1,11 @@
-//? src/hijri.js  →  entry: "persian-events/hijri"
+//? src/hijri.js  →  entry: "persian-holidays/hijri"
 // Keeps the bundle small
 
-export { getEvents, getEventsInRange } from "./query.js";
+export { getEvents, getMonthEvents, getYearEvents } from "./query.js";
+export { setAdapter, clearAdapter } from "./core/adapter.js";
 
 import { registerData } from "./core/loader.js";
-import hijriEvents from "../dist/data/hijri.json" assert { type: "json" };
+import hijriEvents from "../dist/data/hijri.json" with { type: "json" };
 
+// @ts-ignore
 registerData("hijri", hijriEvents);

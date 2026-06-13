@@ -1,11 +1,10 @@
 import {
 	resolveRule,
-	registerRuleResolver,
-	clearRuleCache,
 } from "../src/core/ruleResolver.js";
+import { setAdapter, clearAdapter } from "../src/core/adapter.js";
 
 describe("resolveRule — registry dispatch", () => {
-	beforeEach(() => clearRuleCache());
+	afterAll(() => clearAdapter());
 
 	test("throws on unknown rule base", () => {
 		expect(() => resolveRule({ base: "totally-unknown" }, {})).toThrow(
@@ -206,36 +205,13 @@ describe("resolveRule — registry dispatch", () => {
 		expect(r2024).not.toBe(r2025);
 	});
 
-	test("clearRuleCache forces recomputation", () => {
-		const rule = {
-			base: "nth-weekday-of-month",
-			month: 5,
-			weekday: 0,
-			occurrence: "second",
-		};
-
-		const ctx = {
-			year: 2024,
-			calendar: "gregorian",
-		};
-
-		const before = resolveRule(rule, ctx);
-
-		clearRuleCache();
-
-		const after = resolveRule(rule, ctx);
-
-		expect(before).toEqual(after);
-		expect(before).not.toBe(after);
-	});
-
 	test("jalali: Chaharshanbe Suri in year 1403", () => {
 		// Chaharshanbe Suri is the last Wednesday of Esfand.
 		const pts = resolveRule(
 			{
 				base: "nth-weekday-of-month",
 				month: 12,
-				weekday: 4,
+				weekday: 3, // Wednesday in Sun=0 convention
 				occurrence: "last",
 			},
 			{ year: 1403, calendar: "jalali" },
@@ -282,7 +258,7 @@ describe("resolveRule — registry dispatch", () => {
 			{
 				base: "nth-weekday-of-month",
 				month: 1,
-				weekday: 0,
+				weekday: 6, // Saturday in Sun=0 convention
 				occurrence: "first",
 			},
 			{ year: 1402, calendar: "jalali" },
@@ -303,19 +279,5 @@ describe("resolveRule — registry dispatch", () => {
 				{ year: 2024, calendar: "hebrew" },
 			),
 		).toThrow(/unsupported calendar/);
-	});
-
-	test("registerRuleResolver adds custom rule types", () => {
-		registerRuleResolver("always-first", () => [{ month: 1, day: 1 }]);
-
-		const pts = resolveRule({ base: "always-first" }, {});
-
-		expect(pts).toEqual([{ month: 1, day: 1 }]);
-	});
-
-	test("registerRuleResolver rejects non-functions", () => {
-		expect(() => registerRuleResolver("bad", "notAFunction")).toThrow(
-			/must be a function/,
-		);
 	});
 });

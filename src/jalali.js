@@ -1,9 +1,11 @@
-//? src/jalali.js  →  entry: "persian-events/jalali"
+//? src/jalali.js  →  entry: "persian-holidays/jalali"
 // Keeps the bundle small
 
-export { getEvents, getEventsInRange } from "./query.js";
+export { getEvents, getMonthEvents, getYearEvents } from "./query.js";
+export { setAdapter, clearAdapter } from "./core/adapter.js";
 
 import { registerData } from "./core/loader.js";
-import jalaliEvents from "../dist/data/jalali.json" assert { type: "json" };
+import jalaliEvents from "../dist/data/jalali.json" with { type: "json" };
 
+// @ts-ignore
 registerData("jalali", jalaliEvents);

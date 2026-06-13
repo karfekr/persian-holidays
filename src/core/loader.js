@@ -1,14 +1,25 @@
-/** @type {Map<string, import('./types.js').RawEvent[]>} */
+/**
+ * @typedef {import('./types.js').RawEvent} RawEvent
+ * @typedef {string} CalendarName
+ * @typedef {Record<CalendarName, RawEvent[]>} CalendarDataMap
+ * @typedef {Map<CalendarName, RawEvent[]>} CalendarCacheMap
+ */
+
+/** @type {CalendarCacheMap} */
 const cache = new Map();
 
-/** @type {Record<string, import('./types.js').RawEvent[]>} */
+/** @type {CalendarDataMap} */
 const _staticData = {};
 
 /**
- * Load events for a calendar type.
+ * @param {CalendarName} calendar
+ * @returns {Promise<RawEvent[]>}
  */
 export async function loadCalendar(calendar) {
-	if (cache.has(calendar)) return cache.get(calendar);
+	if (cache.has(calendar)) {
+		const events = cache.get(calendar);
+		if (events) return events;
+	}
 
 	if (_staticData[calendar]) {
 		const events = _staticData[calendar];
@@ -23,7 +34,8 @@ export async function loadCalendar(calendar) {
 }
 
 /**
- * Register preloaded calendar data.
+ * @param {CalendarName} calendar
+ * @param {RawEvent[]} events
  */
 export function registerData(calendar, events) {
 	_staticData[calendar] = events;
@@ -31,14 +43,13 @@ export function registerData(calendar, events) {
 }
 
 /**
- * Get already-loaded data (must be registered first).
+ * @param {CalendarName} calendar
+ * @returns {RawEvent[]}
  */
 export function getLoadedData(calendar) {
 	const data = _staticData[calendar];
 	if (!data) {
-		throw new Error(
-			`[persian-events] Data for "${calendar}" not loaded.`,
-		);
+		throw new Error(`[persian-events] Data for "${calendar}" not loaded.`);
 	}
 	return data;
 }

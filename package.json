@@ -21,12 +21,12 @@
 	},
 	"homepage": "https://github.com/karfekr/persian-holidays",
 	"bugs": {
-    "url": "https://github.com/karfekr/persian-holidays/issues"
-  },
+		"url": "https://github.com/karfekr/persian-holidays/issues"
+	},
 	"repository": {
-    "type": "git",
-    "url": "git+https://github.com/karfekr/persian-holidays.git"
-  },
+		"type": "git",
+		"url": "git+https://github.com/karfekr/persian-holidays.git"
+	},
 	"packageManager": "pnpm@11.5.3+sha512.7ac1c919341c213a34dc0d02afb7143c5c26ac26ee8c4782deea821b8ac64d2134a081fd8941dae6e29bbb48f58dfc2b7fbceeccc07cb2f09d219d342a4969ed",
 	"main": "./dist/cjs/index.cjs",
 	"module": "./src/index.js",
@@ -70,15 +70,12 @@
 		"test:run": "vitest run",
 		"prepublishOnly": "npm run build"
 	},
-	"engines": {
-		"node": ">=18.0.0"
-	},
 	"devDependencies": {
 		"js-yaml": "^4.2.0",
 		"vitest": "^4.1.8",
 		"glob": "^13.0.6"
 	},
-	"dependencies": {
-		"@internationalized/date": "^3.12.2"
+	"engines": {
+		"node": ">=18.0.0"
 	}
 }

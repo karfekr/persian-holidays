@@ -5,10 +5,12 @@
  * @typedef {(rule: RelativeRule, ctx: ResolverContext) => DatePoint[]} RuleResolver
  */
 
+import { getAdapter } from "./adapter.js";
+
 /**
  * @param {string} ruleName
  * @param {ResolverContext} ctx
- * @param {...string} fields
+ * @param {...(keyof ResolverContext)} fields
  * @returns {boolean}
  */
 function requireCtx(ruleName, ctx, ...fields) {
@@ -27,13 +29,13 @@ function requireCtx(ruleName, ctx, ...fields) {
 /**
  * @param {string} ruleName
  * @param {RelativeRule} rule
- * @param {...string} fields
+ * @param {...(keyof RelativeRule)} fields
  */
 function requireRule(ruleName, rule, ...fields) {
 	for (const f of fields) {
 		if (rule[f] == null) {
 			throw new Error(
-				`[persian-events] Rule "${ruleName}" requires rule.${f} in the YAML definition.`,
+				`[persian-events] Rule "${ruleName}" requires rule.${f} in the data definition.`,
 			);
 		}
 	}
@@ -64,28 +66,6 @@ function resolveComputus(rule, ctx) {
 	return [{ month, day }];
 }
 
-import {
-	CalendarDate,
-	PersianCalendar,
-	IslamicCivilCalendar,
-	GregorianCalendar,
-	getDayOfWeek,
-	endOfMonth,
-	startOfMonth,
-} from "@internationalized/date";
-
-const _CAL = {
-	jalali: new PersianCalendar(),
-	hijri: new IslamicCivilCalendar(),
-	gregorian: new GregorianCalendar(),
-};
-
-const _LOCALE = {
-	jalali: "fa-IR",
-	hijri: "fa-IR",
-	gregorian: "en-US",
-};
-
 /**
  * @type {RuleResolver}
  */
@@ -93,52 +73,60 @@ function resolveNthWeekdayOfMonth(rule, ctx) {
 	if (requireCtx("nth-weekday-of-month", ctx, "year")) return [];
 	requireRule("nth-weekday-of-month", rule, "month", "weekday");
 
-	const { year, calendar = "gregorian" } = ctx;
+	const { calendar = "gregorian" } = ctx;
+	const year = ctx.year;
 	const { month, weekday, occurrence = "first" } = rule;
 
-	const cal = _CAL[calendar];
-	const locale = _LOCALE[calendar];
+	if (year == null) return [];
 
-	if (!cal) {
+	if (month == null) {
+		// Defensive runtime check to satisfy static type systems
 		throw new Error(
-			`[persian-events] nth-weekday-of-month: unsupported calendar "${calendar}". ` +
-				`Supported: jalali, hijri, gregorian.`,
+			`[persian-events] nth-weekday-of-month: rule.month is required and must be a number.`,
 		);
 	}
 
-	const monthStart = startOfMonth(new CalendarDate(cal, year, month, 1));
-	const monthEnd = endOfMonth(monthStart);
+	const monthNumber = /** @type {number} */ (month);
 
+	const SUPPORTED = ["jalali", "hijri", "gregorian"];
+	if (!SUPPORTED.includes(calendar)) {
+		throw new Error(
+			`[persian-events] nth-weekday-of-month: unsupported calendar "${calendar}". ` +
+				`Supported: ${SUPPORTED.join(", ")}.`,
+		);
+	}
+
+	const adapter = getAdapter("nth-weekday-of-month");
+
+	const firstWeekday = adapter.firstWeekdayOfMonth(calendar, year, monthNumber);
+	const totalDays = adapter.daysInMonth(calendar, year, monthNumber);
 	const matches = [];
-	let cur = monthStart;
-
-	while (cur.compare(monthEnd) <= 0) {
-		if (getDayOfWeek(cur, locale) === weekday) {
-			matches.push(cur.day);
+	for (let d = 1; d <= totalDays; d++) {
+		if ((firstWeekday + d - 1) % 7 === weekday) {
+			matches.push(d);
 		}
-		cur = cur.add({ days: 1 });
 	}
 
 	if (matches.length === 0) {
 		throw new Error(
 			`[persian-events] nth-weekday-of-month: weekday ${weekday} not found in ` +
-				`${calendar} ${year}/${month}. Check rule.weekday convention.`,
+				`${calendar} ${year}/${month}. Verify rule.weekday convention (0=Sun … 6=Sat).`,
 		);
 	}
 
-	const idx =
+	const occurrenceIndex =
 		occurrence === "last"
 			? matches.length - 1
 			: ({ first: 0, second: 1, third: 2, fourth: 3 }[occurrence] ?? 0);
 
-	if (matches[idx] == null) {
+	if (matches[occurrenceIndex] == null) {
 		throw new Error(
 			`[persian-events] nth-weekday-of-month: occurrence "${occurrence}" out of range ` +
 				`(found ${matches.length} matching days) for ${calendar} ${year}/${month} weekday=${weekday}.`,
 		);
 	}
 
-	return [{ month, day: matches[idx] }];
+	return [{ month, day: matches[occurrenceIndex] }];
 }
 
 /**
@@ -153,10 +141,14 @@ function resolveDayCandidates(rule, _ctx) {
 		);
 	}
 
-	return rule.candidates.map((day) => ({
-		month: rule.month,
-		day,
-	}));
+	const month = rule.month;
+	if (month == null) {
+		throw new Error(
+			`[persian-events] Rule "day-candidates" requires rule.month in the data definition.`,
+		);
+	}
+
+	return rule.candidates.map((day) => ({ month, day }));
 }
 
 /** @type {Record<string, RuleResolver>} */
@@ -172,10 +164,7 @@ const RULE_REGISTRY = {
 /** @type {Map<string, DatePoint[]>} */
 const _cache = new Map();
 
-/**
- * @param {RelativeRule} rule
- * @returns {string}
- */
+/** @param {RelativeRule} rule */
 function _ruleKey(rule) {
 	return JSON.stringify([
 		rule.base,
@@ -185,20 +174,6 @@ function _ruleKey(rule) {
 		rule.offsetDays ?? null,
 		rule.candidates ?? null,
 	]);
-}
-
-/**
- * @param {string} base
- * @param {RuleResolver} fn
- */
-export function registerRuleResolver(base, fn) {
-	if (typeof fn !== "function") {
-		throw new TypeError(
-			`[persian-events] Resolver for "${base}" must be a function.`,
-		);
-	}
-
-	RULE_REGISTRY[base] = fn;
 }
 
 /**
@@ -212,24 +187,20 @@ export function resolveRule(rule, ctx = {}) {
 	if (!fn) {
 		throw new Error(
 			`[persian-events] Unknown rule base: "${rule.base}". ` +
-				`Known types: ${Object.keys(RULE_REGISTRY).join(", ")}. ` +
-				`Use registerRuleResolver() to add custom types.`,
+				`Known types: ${Object.keys(RULE_REGISTRY).join(", ")}. `,
 		);
 	}
 
 	const cacheKey = `${_ruleKey(rule)}:${ctx.year ?? "-"}:${ctx.calendar ?? "-"}`;
 
 	if (_cache.has(cacheKey)) {
-		return _cache.get(cacheKey);
+		const cached = _cache.get(cacheKey);
+		if (cached !== undefined) {
+			return cached;
+		}
 	}
 
 	const result = fn(rule, ctx);
-
 	_cache.set(cacheKey, result);
-
 	return result;
-}
-
-export function clearRuleCache() {
-	_cache.clear();
 }
