@@ -1,69 +1,62 @@
-<div dir="rtl">
+<div dir="ltr" align=center>
 
-# پکیج persian-holidays
+[**فارسی**](README_FA.md) / [**English**](README.md)
 
-یک موتور یکپارچه برای مناسبت‌ها و تعطیلات تقویم‌های شمسی، هجری قمری و میلادی — با داده‌های دوزبانه (فارسی و انگلیسی)، دسته‌بندی تعطیلات رسمی، و پشتیبانی از مناسبت‌های ثابت، چند‌روزه، و وابسته به قواعد نامنظم.
+</div>
 
-## امکانات
+# 📦 persian-holidays
 
-- **مناسبات سه تقویم**: در یک پکیج: هجری شمسی(جلالی)، هجری قمری، میلادی
-- **شامل مناسبت‌های پیچیده**: مناسبت‌هایی مثل عید پاک میلادی و چهارشنبه‌سوری شمسی
-- خروجی مبتنی بر استفاده‌ی کاربر و **Tree-Shaking**
-- بدون وابستگی پیشفرض خارجی یا **zero-dependency**
-- دارای **Adapter system** که به کاربر اجازه می‌دهد از پکیج تبدیل تاریخ دلخواهش استفاده کند.
-- **عنوان دوزبانه برای مناسبت‌ها**
-- **فیلترهای دسته‌بندی متنوع و هم‌پوشان**
+A unified engine for holidays and events across the Jalali (Persian), Hijri (Islamic), and Gregorian calendars — with bilingual (Persian & English) data, official holiday categorization, and support for fixed, multi-day, and rule-based dynamic events.
 
-## نصب پکیج
+## ✨ Features
 
-<div dir="ltr">
+- **Three-calendar support in one package**: Jalali, Hijri, and Gregorian calendars
+- **Complex event support**: Includes events like Easter (Gregorian) and Chaharshanbe Suri (Jalali)
+- **Tree-shaking friendly output** based on actual usage
+- **Zero dependencies**
+- **Adapter system** allowing integration with any date conversion library
+- **Bilingual event titles**
+- **Flexible and overlapping category filters**
+
+## 📦 Installation
 
 ```bash
 npm install persian-holidays
 ```
 
-</div>
+## 🚀 Usage
 
-## نحوه‌ی استفاده
+All calendar events are divided into two main types:
 
-می‌توان تمام مناسبت‌های تقویم را در دو دسته قرار داد:
+- **Fixed events**: Events that can be defined by a specific day/month across all years
+- **Dynamic events**: Events like Chaharshanbe Suri (Jalali) or Thanksgiving (Gregorian), which cannot be fixed to a single day/month across all years
 
-- **مناسبت‌های ثابت**: مناسبت‌هایی که می‌توان به صورت روز/ماه برای همه‌ی سال‌ها مشخص کرد.
-- **مناسبت‌های متغیر**: مناسبت‌هایی مانند چهارشنبه سوری شمسی یا روز شکرگزاری میلادی که نمی‌توان به صورت روز/ماه برای همه‌ی سال‌ها مشخص کرد.
+> Dynamic events require a date conversion configuration via a one-time adapter setup.
 
-> مناسبت‌های غیر ثابت نیازمند کانفیگ تبدیل تاریخ هستند که با تنظیم یکباره‌ی adapter قابل بهره‌برداری است.
-
-> اگر تنها به مناسبت‌های ثابت نیاز دارید می‌توانید بدون adapter از این پکیج استفاده کنید.
+> If you only need fixed events, you can use this package without configuring an adapter.
 
 ### `getEvents(calendar, month, day, options?)`
 
-تمام مناسبت‌های یک روز از ماه
-
-<div dir="ltr">
+Returns all events for a specific day of a month.
 
 ```js
-const events = await getEvents("jalali", 09, 20);
+const events = await getEvents("jalali", 9, 20);
 ```
 
 ```ts
 getEvents(
   calendar: 'jalali' | 'gregorian' | 'hijri',
   month: number,
-  day: number,
   options?: {
-    year?: number; // برای مناسبت‌های متغیر
+    year?: number; // required for dynamic events
     categories?: Category[];
   }
 ): Promise<Event[]>
 ```
 
-</div>
-
 ### `getMonthEvents(calendar, month, options?)`
 
-تمام مناسبت‌های یک ماه را برمی‌گرداند.
-
-<div dir="ltr">
+Returns all events for a given month.
 
 ```js
 const events = await getMonthEvents("jalali", 1, { year: 1403 });
@@ -74,22 +67,19 @@ getMonthEvents(
   calendar: 'jalali' | 'gregorian' | 'hijri',
   month: number,
   options?: {
-    year?: number; // برای مناسبت‌های متغیر
+    year?: number;
     categories?: Category[];
   }
 ): Promise<Event[]>
 ```
 
-</div>
-
 ### `getYearEvents(calendar, year, options?)`
 
-تمام مناسبت‌های یک سال را برمی‌گرداند.
-
-<div dir="ltr">
+Returns all events in a given year.
 
 ```js
 const allOf1403 = await getYearEvents("jalali", 1403);
+
 const religiousOf1403 = await getYearEvents("jalali", 1403, {
 	categories: ["religious", "shia"],
 });
@@ -105,11 +95,7 @@ getYearEvents(
 ): Promise<Event[]>
 ```
 
-</div>
-
-### ساختار مناسبت‌ها
-
-<div dir="ltr">
+## 📘 Event Structure
 
 ```ts
 type Event = {
@@ -125,33 +111,27 @@ type Event = {
 };
 ```
 
-</div>
+## ⚙️ Adapter Configuration
 
-## کانفیگ Adapter
+### Why adapters?
 
-### چرا adapter؟
+The engine needs two key pieces of calendar information to compute dynamic events:
 
-موتور پکیج به دو چیز درباره‌ی تقویم نیاز دارد تا مناسبت‌های متغیر را محاسبه کند:
+1. What is the first weekday of a given month?
+2. How many days does that month have?
 
-1. اولین روز هفته‌ی هر ماه چیست؟
-2. هر ماه چند روز دارد؟
+Instead of depending on a specific date library, this package delegates responsibility to the user via adapters.
 
-پکیج حاضر به جای اینکه خود را به پکیج تبدیل تاریخ خاصی وابسته کند، این مسئولیت را به کاربر واگذار کرده است.
-
-هر objectای که دو function زیر را داشته باشد یک adapter معتبر است:
-
-<div dir="ltr">
+Any object implementing the following interface is a valid adapter:
 
 ```ts
 interface CalendarAdapter {
-	// باید اولین روز هفته‌ی ماه را با استاندارد عددی برگرداند(یکشنبه = 0)
 	firstWeekdayOfMonth(
 		calendar: "jalali" | "gregorian" | "hijri",
 		year: number,
 		month: number,
 	): number;
 
-	// باید تعداد روزهای ماه را برگرداند
 	daysInMonth(
 		calendar: "jalali" | "gregorian" | "hijri",
 		year: number,
@@ -160,11 +140,7 @@ interface CalendarAdapter {
 }
 ```
 
-</div>
-
-#### مثال: adapter مبتنی بر `moment`
-
-<div dir="ltr">
+### 🔧 Example Adapter using `moment`
 
 ```js
 import { setAdapter } from "persian-holidays";
@@ -191,13 +167,13 @@ setAdapter({
 	},
 	daysInMonth(calendar, year, month) {
 		return calendars[calendar].daysInMonth
-			? config.daysInMonth(year, month)
-			: config.create(year, month, 1).daysInMonth();
+			? calendars[calendar].daysInMonth(year, month)
+			: calendars[calendar].create(year, month, 1).daysInMonth();
 	},
 });
 ```
 
-#### مثال: adapter مبتنی بر `internationalized/date`
+### 🔧 Example Adapter using `@internationalized/date`
 
 ```js
 import { setAdapter } from "persian-holidays";
@@ -223,7 +199,7 @@ const LOCALE = {
 	gregorian: "en-US",
 };
 
-function normaliseWeekday(rawWeekday, calendar) {
+function normalizeWeekday(rawWeekday, calendar) {
 	if (calendar === "jalali" || calendar === "hijri") {
 		return (rawWeekday + 6) % 7;
 	}
@@ -235,7 +211,7 @@ setAdapter({
 		const cal = CALENDARS[calendar];
 		const firstDay = startOfMonth(new CalendarDate(cal, year, month, 1));
 		const raw = getDayOfWeek(firstDay, LOCALE[calendar]);
-		return normaliseWeekday(raw, calendar);
+		return normalizeWeekday(raw, calendar);
 	},
 
 	daysInMonth(calendar, year, month) {
@@ -243,27 +219,23 @@ setAdapter({
 		const last = endOfMonth(new CalendarDate(cal, year, month, 1));
 		return last.day;
 	},
-}
+});
 ```
 
-</div>
+## 🤝 Contribution & Support
 
-## همراهی و مشارکت در پروژه
+This package is built with love and for non-commercial use under the [LICENSE](LICENSE).
 
-این افزونه با عشق و با مقاصد غیرتجاری و تحت [این لایسنس](LICENSE) توسعه داده شده است.
+You can support its continued development by:
 
-شما می‌توانید به شیوه‌های زیر از ادامه‌ی فعالیت‌های ما حمایت کنید:
+- Contributing to the project
+- Adding missing events via Issues or PRs
+- Reporting bugs or suggesting features
+- Following the Karfekr website and Telegram channels
 
-- مشارکت در توسعه‌ی این پکیج
-- با افزودن یک مناسبت ناموجود از طریق Issues یا PR
-- گزارش خطا یا پیشنهاد یک ویژگی برای توسعه در Issues
-- دنبال کردن سایت و کانال تلگرامی کارفکر
-
-<div align=center>
+<div align="center">
 
 [![Website](https://img.shields.io/badge/Website-karfekr.ir-orange)](https://karfekr.ir)
 [![Telegram Channel](https://img.shields.io/endpoint?color=neon&label=Karfekr&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fkarfekr)](https://t.me/karfekr)
-
-</div>
 
 </div>
