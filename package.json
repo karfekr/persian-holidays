@@ -64,6 +64,7 @@
 	"sideEffects": false,
 	"lint-staged": {
 		"*.{js,cjs,mjs,ts}": [
+			"prettier --write",
 			"eslint --fix"
 		]
 	},
@@ -92,6 +93,7 @@
 		"husky": "^9.1.7",
 		"js-yaml": "^4.2.0",
 		"lint-staged": "^17.0.7",
+		"prettier": "^3.8.4",
 		"vitest": "^4.1.8"
 	},
 	"engines": {
