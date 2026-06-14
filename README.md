@@ -43,7 +43,7 @@ All calendar events are divided into two main types:
 Returns all events for a specific day of a month.
 
 ```js
-const events = await getEvents("jalali", 9, 20);
+const events = getEvents("jalali", 9, 20);
 ```
 
 ```ts
@@ -54,7 +54,7 @@ getEvents(
     year?: number; // required for dynamic events
     categories?: Category[];
   }
-): Promise<Event[]>
+): Event[]
 ```
 
 ### `getMonthEvents(calendar, month, options?)`
@@ -62,7 +62,7 @@ getEvents(
 Returns all events for a given month.
 
 ```js
-const events = await getMonthEvents("jalali", 1, { year: 1403 });
+const events = getMonthEvents("jalali", 1, { year: 1403 });
 ```
 
 ```ts
@@ -73,7 +73,7 @@ getMonthEvents(
     year?: number;
     categories?: Category[];
   }
-): Promise<Event[]>
+): Event[]
 ```
 
 ### `getYearEvents(calendar, year, options?)`
@@ -81,9 +81,9 @@ getMonthEvents(
 Returns all events in a given year.
 
 ```js
-const allOf1403 = await getYearEvents("jalali", 1403);
+const allOf1403 = getYearEvents("jalali", 1403);
 
-const religiousOf1403 = await getYearEvents("jalali", 1403, {
+const religiousOf1403 = getYearEvents("jalali", 1403, {
 	categories: ["religious", "shia"],
 });
 ```
@@ -95,7 +95,7 @@ getYearEvents(
   options?: {
     categories?: Category[];
   }
-): Promise<Event[]>
+): Event[]
 ```
 
 ## 📘 Event Structure

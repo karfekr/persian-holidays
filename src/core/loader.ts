@@ -1,15 +1,13 @@
-import type { RawEvent } from "src/types";
+import type { CalendarType, RawEvent } from "src/types";
 
-type CalendarName = string;
-
-type CalendarDataMap = Record<CalendarName, RawEvent[]>;
-type CalendarCacheMap = Map<CalendarName, RawEvent[]>;
+type CalendarDataMap = Record<CalendarType, RawEvent[]>;
+type CalendarCacheMap = Map<CalendarType, RawEvent[]>;
 
 const cache: CalendarCacheMap = new Map();
 
-const staticData: CalendarDataMap = {};
+const staticData = {} as CalendarDataMap;
 
-export async function loadCalendar(calendar: CalendarName): Promise<RawEvent[]> {
+export function loadCalendar(calendar: CalendarType): RawEvent[] {
 	const cached = cache.get(calendar);
 
 	if (cached) {
@@ -29,12 +27,12 @@ export async function loadCalendar(calendar: CalendarName): Promise<RawEvent[]> 
 	);
 }
 
-export function registerData(calendar: CalendarName, events: RawEvent[]): void {
+export function registerData(calendar: CalendarType, events: RawEvent[]): void {
 	staticData[calendar] = events;
 	cache.delete(calendar);
 }
 
-export function getLoadedData(calendar: CalendarName): RawEvent[] {
+export function getLoadedData(calendar: CalendarType): RawEvent[] {
 	const data = staticData[calendar];
 
 	if (!data) {

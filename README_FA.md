@@ -51,7 +51,7 @@ npm install persian-holidays
 <div dir="ltr">
 
 ```js
-const events = await getEvents("jalali", 09, 20);
+const events = getEvents("jalali", 09, 20);
 ```
 
 ```ts
@@ -63,7 +63,7 @@ getEvents(
     year?: number; // برای مناسبت‌های متغیر
     categories?: Category[];
   }
-): Promise<Event[]>
+)
 ```
 
 </div>
@@ -75,7 +75,7 @@ getEvents(
 <div dir="ltr">
 
 ```js
-const events = await getMonthEvents("jalali", 1, { year: 1403 });
+const events = getMonthEvents("jalali", 1, { year: 1403 });
 ```
 
 ```ts
@@ -86,7 +86,7 @@ getMonthEvents(
     year?: number; // برای مناسبت‌های متغیر
     categories?: Category[];
   }
-): Promise<Event[]>
+): Event[]
 ```
 
 </div>
@@ -98,8 +98,8 @@ getMonthEvents(
 <div dir="ltr">
 
 ```js
-const allOf1403 = await getYearEvents("jalali", 1403);
-const religiousOf1403 = await getYearEvents("jalali", 1403, {
+const allOf1403 = getYearEvents("jalali", 1403);
+const religiousOf1403 = getYearEvents("jalali", 1403, {
 	categories: ["religious", "shia"],
 });
 ```
@@ -111,7 +111,7 @@ getYearEvents(
   options?: {
     categories?: Category[];
   }
-): Promise<Event[]>
+): Event[]
 ```
 
 </div>
