@@ -28,34 +28,34 @@
 		"url": "git+https://github.com/karfekr/persian-holidays.git"
 	},
 	"packageManager": "pnpm@11.5.3+sha512.7ac1c919341c213a34dc0d02afb7143c5c26ac26ee8c4782deea821b8ac64d2134a081fd8941dae6e29bbb48f58dfc2b7fbceeccc07cb2f09d219d342a4969ed",
-	"main": "./dist/cjs/index.cjs",
+	"main": "./lib/cjs/index.cjs",
 	"module": "./src/index.js",
 	"types": "./types/index.d.ts",
 	"exports": {
 		".": {
 			"import": "./src/index.js",
-			"require": "./dist/cjs/index.cjs",
+			"require": "./lib/cjs/index.cjs",
 			"types": "./types/index.d.ts"
 		},
 		"./jalali": {
 			"import": "./src/jalali.js",
-			"require": "./dist/cjs/jalali.cjs",
+			"require": "./lib/cjs/jalali.cjs",
 			"types": "./types/index.d.ts"
 		},
 		"./gregorian": {
 			"import": "./src/gregorian.js",
-			"require": "./dist/cjs/gregorian.cjs",
+			"require": "./lib/cjs/gregorian.cjs",
 			"types": "./types/index.d.ts"
 		},
 		"./hijri": {
 			"import": "./src/hijri.js",
-			"require": "./dist/cjs/hijri.cjs",
+			"require": "./lib/cjs/hijri.cjs",
 			"types": "./types/index.d.ts"
 		}
 	},
 	"files": [
 		"src/",
-		"dist/",
+		"lib/",
 		"types/",
 		"README.md",
 		"README_FA.md",

@@ -7,7 +7,7 @@ import { globSync } from "glob";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DATA_DIR = resolve(ROOT, "data");
-const OUT_DIR = resolve(ROOT, "dist", "data");
+const OUT_DIR = resolve(ROOT, "lib", "data");
 
 const CALENDARS = ["jalali", "gregorian", "hijri"];
 

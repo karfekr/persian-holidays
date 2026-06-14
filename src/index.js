@@ -5,9 +5,9 @@ export { setAdapter, clearAdapter } from "./core/adapter.js";
 export { registerData } from "./core/loader.js";
 
 import { registerData } from "./core/loader.js";
-import jalaliEvents from "../dist/data/jalali.json" with { type: "json" };
-import gregorianEvents from "../dist/data/gregorian.json" with { type: "json" };
-import hijriEvents from "../dist/data/hijri.json" with { type: "json" };
+import jalaliEvents from "../lib/data/jalali.json" with { type: "json" };
+import gregorianEvents from "../lib/data/gregorian.json" with { type: "json" };
+import hijriEvents from "../lib/data/hijri.json" with { type: "json" };
 
 // @ts-ignore
 registerData("jalali", jalaliEvents);

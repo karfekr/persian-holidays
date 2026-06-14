@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
-const CJS_DIR = resolve(ROOT, "dist", "cjs");
+const CJS_DIR = resolve(ROOT, "lib", "cjs");
 
 mkdirSync(CJS_DIR, { recursive: true });
 
