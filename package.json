@@ -63,9 +63,8 @@
 	],
 	"sideEffects": false,
 	"lint-staged": {
-		"*.js": [
-			"eslint --fix",
-			"git add"
+		"*.{js,cjs,mjs,ts}": [
+			"eslint --fix"
 		]
 	},
 	"scripts": {
