@@ -1,0 +1,9 @@
+node_modules
+pnpm-lock.yaml
+
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg
