@@ -162,51 +162,15 @@ interface CalendarAdapter {
 	): number;
 
 	// باید تعداد روزهای ماه را برگرداند
-	daysInMonth(calendar: "jalali" | "gregorian" | "hijri", year: number, month: number): number;
+	monthLength(calendar: "jalali" | "gregorian" | "hijri", year: number, month: number): number;
 }
 ```
 
 </div>
 
-### 🔧 مثال: adapter مبتنی بر `moment`
-
-<div dir="ltr">
-
-```js
-import { setAdapter } from "persian-holidays";
-import moment from "moment";
-import "moment-jalaali";
-import "moment-hijri";
-
-const calendars = {
-	jalali: {
-		create: (y, m, d) => moment(`${y}/${m}/${d}`, "jYYYY/jM/jD"),
-		daysInMonth: (y, m) => moment.jDaysInMonth(y, m - 1),
-	},
-	hijri: {
-		create: (y, m, d) => moment(`${y}/${m}/${d}`, "iYYYY/iM/iD"),
-	},
-	gregorian: {
-		create: (y, m, d) => moment(new Date(y, m - 1, d)),
-	},
-};
-
-setAdapter({
-	firstWeekdayOfMonth(calendar, year, month) {
-		return calendars[calendar].create(year, month, 1).day();
-	},
-	daysInMonth(calendar, year, month) {
-		return calendars[calendar].daysInMonth
-			? config.daysInMonth(year, month)
-			: config.create(year, month, 1).daysInMonth();
-	},
-});
-```
-
 ### 🔧 مثال: adapter مبتنی بر `internationalized/date`
 
-```js
-import { setAdapter } from "persian-holidays";
+```ts
 import {
 	CalendarDate,
 	PersianCalendar,
@@ -216,6 +180,7 @@ import {
 	endOfMonth,
 	startOfMonth,
 } from "@internationalized/date";
+import { setAdapter, CalendarType } from "persian-holidays";
 
 const CALENDARS = {
 	jalali: new PersianCalendar(),
@@ -229,7 +194,7 @@ const LOCALE = {
 	gregorian: "en-US",
 };
 
-function normaliseWeekday(rawWeekday, calendar) {
+function normaliseWeekday(rawWeekday: number, calendar: CalendarType) {
 	if (calendar === "jalali" || calendar === "hijri") {
 		return (rawWeekday + 6) % 7;
 	}
@@ -244,12 +209,12 @@ setAdapter({
 		return normaliseWeekday(raw, calendar);
 	},
 
-	daysInMonth(calendar, year, month) {
+	monthLength(calendar, year, month) {
 		const cal = CALENDARS[calendar];
 		const last = endOfMonth(new CalendarDate(cal, year, month, 1));
 		return last.day;
 	},
-}
+});
 ```
 
 </div>

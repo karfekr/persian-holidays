@@ -1,8 +1,8 @@
 import type {
 	CalendarType,
-	Category,
+	CategoryType,
 	DatePoint,
-	Event,
+	EventType,
 	RawEvent,
 	ResolverContext,
 } from "src/types";
@@ -28,7 +28,7 @@ function inRange(
 	);
 }
 
-function matchesCategory(event: RawEvent, categories?: Category[]): boolean {
+function matchesCategory(event: RawEvent, categories?: CategoryType[]): boolean {
 	if (!categories || categories.length === 0) {
 		return true;
 	}
@@ -36,7 +36,7 @@ function matchesCategory(event: RawEvent, categories?: Category[]): boolean {
 	return event.categories.some((c) => categories.includes(c));
 }
 
-function toEvent(raw: RawEvent, calendar: CalendarType): Event {
+function toEvent(raw: RawEvent, calendar: CalendarType): EventType {
 	return {
 		id: raw.id,
 		title: raw.title,
@@ -52,10 +52,10 @@ export function matchDay(
 	calendar: CalendarType,
 	month: number,
 	day: number,
-	categories?: Category[],
+	categories?: CategoryType[],
 	year?: number,
-): Event[] {
-	const results: Event[] = [];
+): EventType[] {
+	const results: EventType[] = [];
 
 	for (const event of rawEvents) {
 		if (!matchesCategory(event, categories)) continue;
@@ -106,10 +106,10 @@ export function matchRange(
 	startDay: number,
 	endMonth: number,
 	endDay: number,
-	categories?: Category[],
+	categories?: CategoryType[],
 	year?: number,
-): Event[] {
-	const results: Event[] = [];
+): EventType[] {
+	const results: EventType[] = [];
 	const seen = new Set<string>();
 
 	const add = (event: RawEvent): void => {

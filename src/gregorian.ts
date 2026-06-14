@@ -3,6 +3,7 @@
 
 export { clearAdapter, setAdapter } from "./core/adapter";
 export { getEvents, getMonthEvents, getYearEvents } from "./core/query";
+export type { CalendarType, CategoryType, EventType } from "./types";
 
 import { registerData } from "./core/loader";
 import gregorianEvents from "./data/gregorian.json" with { type: "json" };

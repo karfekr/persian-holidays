@@ -13,9 +13,9 @@ export const CATEGORIES = [
 	"united_nations",
 ] as const;
 
-export type Category = (typeof CATEGORIES)[number];
+export type CategoryType = (typeof CATEGORIES)[number];
 
-export type EventType = "fixed" | "multi-day" | "relative";
+export type OccasionType = "fixed" | "multi-day" | "relative";
 
 export type BilingualTitle = {
 	fa: string;
@@ -53,7 +53,7 @@ export type DatePoint = {
 export type RawEvent = {
 	id: string;
 
-	type: EventType;
+	type: OccasionType;
 
 	month?: number;
 	day?: number;
@@ -68,27 +68,27 @@ export type RawEvent = {
 
 	title: BilingualTitle;
 
-	categories: Category[];
+	categories: CategoryType[];
 
 	isHolidayInIran: boolean;
 };
 
-export type Event = {
+export type EventType = {
 	id: string;
 
 	title: BilingualTitle;
 
-	categories: Category[];
+	categories: CategoryType[];
 
 	isHolidayInIran: boolean;
 
 	calendar: CalendarType;
 
-	type: EventType;
+	type: OccasionType;
 };
 
 export type QueryOptions = {
-	categories?: Category[];
+	categories?: CategoryType[];
 	year?: number;
 };
 

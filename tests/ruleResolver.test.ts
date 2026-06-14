@@ -17,7 +17,7 @@ describe("adapter", () => {
 	it("setAdapter with valid object should make getAdapter succeed", () => {
 		const mock = {
 			firstWeekdayOfMonth: vi.fn(() => 0),
-			daysInMonth: vi.fn(() => 30),
+			monthLength: vi.fn(() => 30),
 		};
 		setAdapter(mock);
 		expect(() => getAdapter()).not.toThrow();
@@ -26,12 +26,12 @@ describe("adapter", () => {
 
 	it("setAdapter with incomplete object should throw TypeError", () => {
 		expect(() => setAdapter({ firstWeekdayOfMonth: vi.fn() } as never)).toThrow(TypeError);
-		expect(() => setAdapter({ daysInMonth: vi.fn() } as never)).toThrow(TypeError);
+		expect(() => setAdapter({ monthLength: vi.fn() } as never)).toThrow(TypeError);
 		expect(() => setAdapter(null as never)).toThrow(TypeError);
 	});
 
 	it("clearAdapter should remove adapter", () => {
-		setAdapter({ firstWeekdayOfMonth: vi.fn(() => 0), daysInMonth: vi.fn(() => 30) });
+		setAdapter({ firstWeekdayOfMonth: vi.fn(() => 0), monthLength: vi.fn(() => 30) });
 		clearAdapter();
 		expect(() => getAdapter()).toThrow();
 	});
@@ -40,7 +40,7 @@ describe("adapter", () => {
 describe("resolveRule", () => {
 	const mockAdapter = {
 		firstWeekdayOfMonth: vi.fn(),
-		daysInMonth: vi.fn(),
+		monthLength: vi.fn(),
 	};
 
 	beforeEach(() => {
@@ -106,7 +106,7 @@ describe("resolveRule", () => {
 		it("should find first Sunday", () => {
 			// gregorian 2024/5: first day = Wednesday (3), first Sunday (0) = day 5
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(3);
-			mockAdapter.daysInMonth.mockReturnValue(31);
+			mockAdapter.monthLength.mockReturnValue(31);
 
 			const result = resolveRule(
 				{ base: "nth-weekday-of-month", month: 5, weekday: 0, occurrence: "first" },
@@ -117,7 +117,7 @@ describe("resolveRule", () => {
 
 		it("should find second Sunday (Mother's Day 2024)", () => {
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(3);
-			mockAdapter.daysInMonth.mockReturnValue(31);
+			mockAdapter.monthLength.mockReturnValue(31);
 
 			const result = resolveRule(
 				{ base: "nth-weekday-of-month", month: 5, weekday: 0, occurrence: "second" },
@@ -129,7 +129,7 @@ describe("resolveRule", () => {
 		it("should find last Wednesday (3) of jalali month 12", () => {
 			// assumption: first day of month 12 jalali = Saturday (6), 29-day month
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(6);
-			mockAdapter.daysInMonth.mockReturnValue(29);
+			mockAdapter.monthLength.mockReturnValue(29);
 
 			const result = resolveRule(
 				{ base: "nth-weekday-of-month", month: 12, weekday: 3, occurrence: "last" },
@@ -164,7 +164,7 @@ describe("resolveRule", () => {
 		it("should return last weekday of month (alias of last)", () => {
 			setAdapter(mockAdapter);
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(0); // Saturday
-			mockAdapter.daysInMonth.mockReturnValue(30);
+			mockAdapter.monthLength.mockReturnValue(30);
 
 			const result = resolveRule(
 				{ base: "month-end", month: 3, weekday: 5 },
@@ -181,7 +181,7 @@ describe("resolveRule", () => {
 		it("should return same result without calling adapter again", () => {
 			setAdapter(mockAdapter);
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(2);
-			mockAdapter.daysInMonth.mockReturnValue(28);
+			mockAdapter.monthLength.mockReturnValue(28);
 
 			const rule = {
 				base: "nth-weekday-of-month" as const,
@@ -196,7 +196,7 @@ describe("resolveRule", () => {
 
 			expect(r1).toEqual(r2);
 			expect(mockAdapter.firstWeekdayOfMonth).toHaveBeenCalledTimes(1);
-			expect(mockAdapter.daysInMonth).toHaveBeenCalledTimes(1);
+			expect(mockAdapter.monthLength).toHaveBeenCalledTimes(1);
 		});
 	});
 

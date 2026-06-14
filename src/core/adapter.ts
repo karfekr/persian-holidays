@@ -2,17 +2,17 @@ import type { CalendarType } from "src/types";
 
 export type CalendarAdapter = {
 	firstWeekdayOfMonth: (calendar: CalendarType, year: number, month: number) => number;
-	daysInMonth: (calendar: CalendarType, year: number, month: number) => number;
+	monthLength: (calendar: CalendarType, year: number, month: number) => number;
 };
 
 let adapter: CalendarAdapter | null = null;
 
 export function setAdapter(next: CalendarAdapter): void {
-	if (typeof next?.firstWeekdayOfMonth !== "function" || typeof next?.daysInMonth !== "function") {
+	if (typeof next?.firstWeekdayOfMonth !== "function" || typeof next?.monthLength !== "function") {
 		throw new TypeError(
 			"[persian-holidays] setAdapter() requires an object with " +
 				"firstWeekdayOfMonth(calendar, year, month) and " +
-				"daysInMonth(calendar, year, month) methods.",
+				"monthLength(calendar, year, month) methods.",
 		);
 	}
 

@@ -12,7 +12,7 @@ import type { CalendarType } from "src/types";
 export type InternationalizedAdapter = {
 	firstWeekdayOfMonth: (calendar: CalendarType, year: number, month: number) => number;
 
-	daysInMonth: (calendar: CalendarType, year: number, month: number) => number;
+	monthLength: (calendar: CalendarType, year: number, month: number) => number;
 };
 
 const CALENDARS: Record<CalendarType, unknown> = {
@@ -53,7 +53,7 @@ export function createInternationalizedAdapter(): InternationalizedAdapter {
 			return normaliseWeekday(raw, calendar);
 		},
 
-		daysInMonth(calendar, year, month) {
+		monthLength(calendar, year, month) {
 			const cal = CALENDARS[calendar];
 
 			if (!cal) {

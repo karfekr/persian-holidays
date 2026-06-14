@@ -1,4 +1,4 @@
-import type { CalendarType, Event, QueryOptions } from "src/types";
+import type { CalendarType, EventType, QueryOptions } from "src/types";
 
 import { getAdapter } from "./adapter";
 import { matchDay, matchRange } from "./engine";
@@ -7,7 +7,7 @@ import { loadCalendar } from "./loader";
 function getMonthLength(calendar: CalendarType, month: number, year?: number): number {
 	const adapter = getAdapter("getMonthLength");
 
-	return adapter.daysInMonth(calendar, year ?? 0, month);
+	return adapter.monthLength(calendar, year ?? 0, month);
 }
 
 export async function getEvents(
@@ -15,7 +15,7 @@ export async function getEvents(
 	month: number,
 	day: number,
 	options?: QueryOptions,
-): Promise<Event[]> {
+): Promise<EventType[]> {
 	const raw = await loadCalendar(calendar);
 
 	return matchDay(raw, calendar, month, day, options?.categories, options?.year);
@@ -25,7 +25,7 @@ export async function getMonthEvents(
 	calendar: CalendarType,
 	month: number,
 	options?: QueryOptions,
-): Promise<Event[]> {
+): Promise<EventType[]> {
 	const raw = await loadCalendar(calendar);
 
 	const year = options?.year;
@@ -38,7 +38,7 @@ export async function getYearEvents(
 	calendar: CalendarType,
 	year: number,
 	options?: QueryOptions,
-): Promise<Event[]> {
+): Promise<EventType[]> {
 	const raw = await loadCalendar(calendar);
 
 	const lastDay = getMonthLength(calendar, 12, year);
