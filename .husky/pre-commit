@@ -1,1 +1,2 @@
 npx lint-staged
+commitlint --edit "$1"
