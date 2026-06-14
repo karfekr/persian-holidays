@@ -6,7 +6,9 @@
 
 # 📦 persian-holidays
 
-A unified engine for holidays and events across the Jalali (Persian), Hijri (Islamic), and Gregorian calendars — with bilingual (Persian & English) data, official holiday categorization, and support for fixed, multi-day, and rule-based dynamic events.
+A unified engine for holidays and events across the Jalali (Persian), Hijri (Islamic), and Gregorian
+calendars — with bilingual (Persian & English) data, official holiday categorization, and support
+for fixed, multi-day, and rule-based dynamic events.
 
 ## ✨ Features
 
@@ -29,7 +31,8 @@ npm install persian-holidays
 All calendar events are divided into two main types:
 
 - **Fixed events**: Events that can be defined by a specific day/month across all years
-- **Dynamic events**: Events like Chaharshanbe Suri (Jalali) or Thanksgiving (Gregorian), which cannot be fixed to a single day/month across all years
+- **Dynamic events**: Events like Chaharshanbe Suri (Jalali) or Thanksgiving (Gregorian), which
+  cannot be fixed to a single day/month across all years
 
 > Dynamic events require a date conversion configuration via a one-time adapter setup.
 
@@ -120,7 +123,8 @@ The engine needs two key pieces of calendar information to compute dynamic event
 1. What is the first weekday of a given month?
 2. How many days does that month have?
 
-Instead of depending on a specific date library, this package delegates responsibility to the user via adapters.
+Instead of depending on a specific date library, this package delegates responsibility to the user
+via adapters.
 
 Any object implementing the following interface is a valid adapter:
 
@@ -132,11 +136,7 @@ interface CalendarAdapter {
 		month: number,
 	): number;
 
-	daysInMonth(
-		calendar: "jalali" | "gregorian" | "hijri",
-		year: number,
-		month: number,
-	): number;
+	daysInMonth(calendar: "jalali" | "gregorian" | "hijri", year: number, month: number): number;
 }
 ```
 

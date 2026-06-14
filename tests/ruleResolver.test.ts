@@ -6,15 +6,15 @@ describe("adapter", () => {
 		clearAdapter();
 	});
 
-	it("getAdapter بدون setAdapter باید خطا بدهد", () => {
+	it("getAdapter without setAdapter should throw an error", () => {
 		expect(() => getAdapter()).toThrow(/no adapter has been registered/);
 	});
 
-	it("getAdapter با callerHint باید نام caller را در خطا بگنجاند", () => {
+	it("getAdapter with callerHint should include caller name in error", () => {
 		expect(() => getAdapter("nth-weekday-of-month")).toThrow(/nth-weekday-of-month/);
 	});
 
-	it("setAdapter با شیء معتبر باید getAdapter را موفق کند", () => {
+	it("setAdapter with valid object should make getAdapter succeed", () => {
 		const mock = {
 			firstWeekdayOfMonth: vi.fn(() => 0),
 			daysInMonth: vi.fn(() => 30),
@@ -24,13 +24,13 @@ describe("adapter", () => {
 		expect(getAdapter()).toBe(mock);
 	});
 
-	it("setAdapter با شیء ناقص باید TypeError بدهد", () => {
+	it("setAdapter with incomplete object should throw TypeError", () => {
 		expect(() => setAdapter({ firstWeekdayOfMonth: vi.fn() } as never)).toThrow(TypeError);
 		expect(() => setAdapter({ daysInMonth: vi.fn() } as never)).toThrow(TypeError);
 		expect(() => setAdapter(null as never)).toThrow(TypeError);
 	});
 
-	it("clearAdapter باید adapter را پاک کند", () => {
+	it("clearAdapter should remove adapter", () => {
 		setAdapter({ firstWeekdayOfMonth: vi.fn(() => 0), daysInMonth: vi.fn(() => 30) });
 		clearAdapter();
 		expect(() => getAdapter()).toThrow();
@@ -49,7 +49,7 @@ describe("resolveRule", () => {
 	});
 
 	describe("day-candidates", () => {
-		it("باید تمام candidateها را به DatePoint تبدیل کند", () => {
+		it("should convert all candidates to DatePoint", () => {
 			const result = resolveRule({
 				base: "day-candidates",
 				month: 9,
@@ -62,13 +62,13 @@ describe("resolveRule", () => {
 			]);
 		});
 
-		it("با candidates خالی باید خطا بدهد", () => {
+		it("should throw error with empty candidates", () => {
 			expect(() => resolveRule({ base: "day-candidates", month: 9, candidates: [] })).toThrow(
 				/non-empty/,
 			);
 		});
 
-		it("بدون month باید خطا بدهد", () => {
+		it("should throw error without month", () => {
 			expect(() => resolveRule({ base: "day-candidates", candidates: [1] } as never)).toThrow(
 				/month/,
 			);
@@ -76,23 +76,23 @@ describe("resolveRule", () => {
 	});
 
 	describe("computus", () => {
-		it("باید عید پاک ۲۰۲۴ را صحیح محاسبه کند (۳۱ مارس = ماه ۳ روز ۳۱)", () => {
+		it("should correctly compute Easter 2024 (March 31)", () => {
 			const result = resolveRule({ base: "computus" }, { year: 2024 });
 			expect(result).toEqual([{ month: 3, day: 31 }]);
 		});
 
-		it("باید عید پاک ۲۰۲۵ را صحیح محاسبه کند (۲۰ آوریل = ماه ۴ روز ۲۰)", () => {
+		it("should correctly compute Easter 2025 (April 20)", () => {
 			const result = resolveRule({ base: "computus" }, { year: 2025 });
 			expect(result).toEqual([{ month: 4, day: 20 }]);
 		});
 
-		it("باید offsetDays را اعمال کند", () => {
+		it("should apply offsetDays", () => {
 			// Good Friday = Easter - 2
 			const result = resolveRule({ base: "computus", offsetDays: -2 }, { year: 2024 });
 			expect(result).toEqual([{ month: 3, day: 29 }]);
 		});
 
-		it("بدون year باید آرایه خالی برگرداند", () => {
+		it("should return empty array without year", () => {
 			const result = resolveRule({ base: "computus" }, {});
 			expect(result).toEqual([]);
 		});
@@ -103,8 +103,8 @@ describe("resolveRule", () => {
 			setAdapter(mockAdapter);
 		});
 
-		it("باید اولین یکشنبه را پیدا کند", () => {
-			// gregorian 2024/5: اول ماه = چهارشنبه (3)، اولین یکشنبه (0) = روز 5
+		it("should find first Sunday", () => {
+			// gregorian 2024/5: first day = Wednesday (3), first Sunday (0) = day 5
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(3);
 			mockAdapter.daysInMonth.mockReturnValue(31);
 
@@ -115,7 +115,7 @@ describe("resolveRule", () => {
 			expect(result).toEqual([{ month: 5, day: 5 }]);
 		});
 
-		it("باید دومین یکشنبه را پیدا کند (Mother's Day 2024)", () => {
+		it("should find second Sunday (Mother's Day 2024)", () => {
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(3);
 			mockAdapter.daysInMonth.mockReturnValue(31);
 
@@ -126,8 +126,8 @@ describe("resolveRule", () => {
 			expect(result).toEqual([{ month: 5, day: 12 }]);
 		});
 
-		it("باید آخرین چهارشنبه (3) ماه ۱۲ جلالی را پیدا کند", () => {
-			// فرض: اول ماه ۱۲ جلالی = شنبه (6)، ماه ۲۹ روز
+		it("should find last Wednesday (3) of jalali month 12", () => {
+			// assumption: first day of month 12 jalali = Saturday (6), 29-day month
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(6);
 			mockAdapter.daysInMonth.mockReturnValue(29);
 
@@ -135,12 +135,13 @@ describe("resolveRule", () => {
 				{ base: "nth-weekday-of-month", month: 12, weekday: 3, occurrence: "last" },
 				{ year: 1402, calendar: "jalali" },
 			);
-			// چهارشنبه‌های ماه: روزهایی که (6 + d - 1) % 7 === 3
-			// d=4: (6+3)%7=2 ✗  d=5: (6+4)%7=3 ✓ → 5, 12, 19, 26
+
+			// Wednesdays in month: days where (6 + d - 1) % 7 === 3
+			// d=5 → first valid match for last sequence → 5, 12, 19, 26
 			expect(result[0].day).toBe(26);
 		});
 
-		it("بدون year باید آرایه خالی برگرداند (skipOnMissingYear)", () => {
+		it("should return empty array without year (skipOnMissingYear)", () => {
 			const result = resolveRule(
 				{ base: "nth-weekday-of-month", month: 5, weekday: 0, occurrence: "first" },
 				{ skipOnMissingYear: true, calendar: "gregorian" },
@@ -148,7 +149,7 @@ describe("resolveRule", () => {
 			expect(result).toEqual([]);
 		});
 
-		it("بدون adapter باید خطا بدهد", () => {
+		it("should throw error without adapter", () => {
 			clearAdapter();
 			expect(() =>
 				resolveRule(
@@ -159,30 +160,29 @@ describe("resolveRule", () => {
 		});
 	});
 
-	// ── month-end ─────────────────────────────────────────────
 	describe("month-end", () => {
-		it("باید آخرین روز هفته ماه را برگرداند (alias of last)", () => {
+		it("should return last weekday of month (alias of last)", () => {
 			setAdapter(mockAdapter);
-			mockAdapter.firstWeekdayOfMonth.mockReturnValue(0); // شنبه
+			mockAdapter.firstWeekdayOfMonth.mockReturnValue(0); // Saturday
 			mockAdapter.daysInMonth.mockReturnValue(30);
 
 			const result = resolveRule(
 				{ base: "month-end", month: 3, weekday: 5 },
 				{ year: 2024, calendar: "gregorian" },
 			);
-			// آخرین جمعه (5) در ماه ۳۰ روزه با اول شنبه (0):
-			// روزهایی که (0+d-1)%7===5 → d=6,13,20,27 → آخری: 27
+
+			// last Friday (5) in 30-day month starting Saturday (0):
+			// days where (0 + d - 1) % 7 === 5 → 6, 13, 20, 27 → last: 27
 			expect(result[0].day).toBe(27);
 		});
 	});
 
 	describe("caching", () => {
-		it("باید نتیجه یکسان بدون فراخوانی دوباره adapter برگرداند", () => {
+		it("should return same result without calling adapter again", () => {
 			setAdapter(mockAdapter);
 			mockAdapter.firstWeekdayOfMonth.mockReturnValue(2);
 			mockAdapter.daysInMonth.mockReturnValue(28);
 
-			// از year منحصربه‌فرد استفاده می‌کنیم تا کش قبلی تداخل نداشته باشد
 			const rule = {
 				base: "nth-weekday-of-month" as const,
 				month: 7,
@@ -192,18 +192,16 @@ describe("resolveRule", () => {
 			const ctx = { year: 9999, calendar: "gregorian" as const };
 
 			const r1 = resolveRule(rule, ctx);
-			// فراخوانی دوم باید از کش بیاید
 			const r2 = resolveRule(rule, ctx);
 
 			expect(r1).toEqual(r2);
-			// adapter باید دقیقاً یک‌بار (در فراخوانی اول) صدا زده شده باشد
 			expect(mockAdapter.firstWeekdayOfMonth).toHaveBeenCalledTimes(1);
 			expect(mockAdapter.daysInMonth).toHaveBeenCalledTimes(1);
 		});
 	});
 
 	describe("unknown rule", () => {
-		it("باید خطا بدهد اگر base ناشناخته باشد", () => {
+		it("should throw error if base is unknown", () => {
 			expect(() => resolveRule({ base: "unknown-base" as never }, {})).toThrow(/Unknown rule base/);
 		});
 	});

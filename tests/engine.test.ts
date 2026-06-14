@@ -12,46 +12,46 @@ beforeEach(() => {
 
 describe("matchDay", () => {
 	describe("fixed events", () => {
-		it("باید رویداد fixed را در روز دقیق برگرداند", () => {
+		it("should return fixed event on exact day", () => {
 			const result = matchDay(jalaliSample, "jalali", 12, 1);
 			expect(result).toHaveLength(1);
 			expect(result[0].id).toBe("jalali-12-01-gneby");
 		});
 
-		it("نباید رویداد fixed را در روز اشتباه برگرداند", () => {
+		it("should not return fixed event on wrong day", () => {
 			const result = matchDay(jalaliSample, "jalali", 12, 2);
 			const fixed = result.find((e) => e.id === "jalali-12-01-gneby");
 			expect(fixed).toBeUndefined();
 		});
 
-		it("باید رویداد fixed gregorian را برگرداند", () => {
+		it("should return gregorian fixed event", () => {
 			const result = matchDay(gregorianSample, "gregorian", 12, 1);
 			expect(result.some((e) => e.id === "gregorian-12-01-14uslvu")).toBe(true);
 		});
 	});
 
 	describe("multi-day events", () => {
-		it("باید رویداد multi-day را در روز شروع برگرداند", () => {
+		it("should return multi-day event on start day", () => {
 			const result = matchDay(jalaliSample, "jalali", 1, 1);
 			expect(result.some((e) => e.id === "jalali-nowruz-holidays")).toBe(true);
 		});
 
-		it("باید رویداد multi-day را در وسط بازه برگرداند", () => {
+		it("should return multi-day event in middle of range", () => {
 			const result = matchDay(jalaliSample, "jalali", 1, 3);
 			expect(result.some((e) => e.id === "jalali-nowruz-holidays")).toBe(true);
 		});
 
-		it("باید رویداد multi-day را در روز پایان برگرداند", () => {
+		it("should return multi-day event on end day", () => {
 			const result = matchDay(jalaliSample, "jalali", 1, 4);
 			expect(result.some((e) => e.id === "jalali-nowruz-holidays")).toBe(true);
 		});
 
-		it("نباید رویداد multi-day را خارج از بازه برگرداند", () => {
+		it("should not return multi-day event outside range", () => {
 			const result = matchDay(jalaliSample, "jalali", 1, 5);
 			expect(result.some((e) => e.id === "jalali-nowruz-holidays")).toBe(false);
 		});
 
-		it("باید رویداد multi-day که از ماه ۶ به ۷ ادامه دارد (defense week) را صحیح پردازش کند", () => {
+		it("should correctly handle multi-day event that spans month 6 to 7 (defense week)", () => {
 			const onStart = matchDay(jalaliSample, "jalali", 6, 31);
 			expect(onStart.some((e) => e.id === "jalali-defense-week")).toBe(true);
 
@@ -65,14 +65,14 @@ describe("matchDay", () => {
 			expect(after.some((e) => e.id === "jalali-defense-week")).toBe(false);
 		});
 
-		it("باید رویداد‌های hijri چند روزه را صحیح برگرداند", () => {
+		it("should correctly return multi-day hijri events", () => {
 			const result = matchDay(hijriSample, "hijri", 10, 2);
 			expect(result.some((e) => e.id === "hijri-eid-fitr-holidays")).toBe(true);
 		});
 	});
 
 	describe("relative events", () => {
-		it("باید رویداد day-candidates را در هر روز کاندید برگرداند", () => {
+		it("should return day-candidates event on all candidate days", () => {
 			// laylat-al-qadr candidates: 21, 23, 25, 27, 29 in month 9
 			for (const day of [21, 23, 25, 27, 29]) {
 				const result = matchDay(hijriSample, "hijri", 9, day);
@@ -80,44 +80,44 @@ describe("matchDay", () => {
 			}
 		});
 
-		it("نباید رویداد day-candidates را در روز غیرکاندید برگرداند", () => {
+		it("should not return day-candidates event on non-candidate day", () => {
 			const result = matchDay(hijriSample, "hijri", 9, 22);
 			expect(result.some((e) => e.id === "hijri-laylat-al-qadr")).toBe(false);
 		});
 
-		it("باید رویداد nth-weekday-of-month را با adapter پیدا کند", () => {
+		it("should find nth-weekday-of-month event using adapter", () => {
 			setAdapter(createInternationalizedAdapter());
-			// gregorian 2024/5: اول ماه = چهارشنبه (3)، دومین یکشنبه (0) = روز 12
+			// gregorian 2024/5: first day = Wednesday (3), second Sunday (0) = day 12
 			const result = matchDay(gregorianSample, "gregorian", 5, 12, undefined, 2024);
 			expect(result.some((e) => e.id === "gregorian-mothers-day")).toBe(true);
 		});
 
-		it("نباید رویداد relative را بدون year و بدون adapter برگرداند (skipOnMissingYear)", () => {
-			// بدون year و بدون adapter → skip
+		it("should not return relative event without year and without adapter (skipOnMissingYear)", () => {
+			// without year and without adapter → skip
 			const result = matchDay(gregorianSample, "gregorian", 5, 12, undefined, undefined);
 			expect(result.some((e) => e.id === "gregorian-mothers-day")).toBe(false);
 		});
 	});
 
 	describe("category filtering", () => {
-		it("باید فقط رویدادهای دسته‌بندی خواسته‌شده را برگرداند", () => {
+		it("should return only requested category events", () => {
 			const result = matchDay(gregorianSample, "gregorian", 12, 1, ["international"]);
 			expect(result.every((e) => e.categories.includes("international"))).toBe(true);
 		});
 
-		it("نباید رویداد بدون دسته‌بندی مطابق را برگرداند", () => {
+		it("should not return event without matching category", () => {
 			const result = matchDay(gregorianSample, "gregorian", 12, 1, ["government"]);
 			expect(result.some((e) => e.id === "gregorian-12-01-14uslvu")).toBe(false);
 		});
 
-		it("با آرایه خالی باید همه رویدادها را برگرداند", () => {
+		it("with empty array should return all events", () => {
 			const result = matchDay(jalaliSample, "jalali", 12, 1, []);
 			expect(result.some((e) => e.id === "jalali-12-01-gneby")).toBe(true);
 		});
 	});
 
-	describe("شکل Event خروجی", () => {
-		it("باید فیلدهای calendar و type را به‌درستی در خروجی قرار دهد", () => {
+	describe("output Event shape", () => {
+		it("should correctly include calendar and type fields in output", () => {
 			const result = matchDay(jalaliSample, "jalali", 12, 1);
 			expect(result[0]).toMatchObject({
 				id: "jalali-12-01-gneby",
@@ -130,11 +130,11 @@ describe("matchDay", () => {
 	});
 
 	describe("edge cases", () => {
-		it("با لیست خالی باید آرایه خالی برگرداند", () => {
+		it("with empty list should return empty array", () => {
 			expect(matchDay([], "gregorian", 1, 1)).toEqual([]);
 		});
 
-		it("رویداد fixed بدون month/day نباید match کند", () => {
+		it("fixed event without month/day should not match", () => {
 			const broken: RawEvent[] = [
 				{
 					id: "broken",
@@ -147,7 +147,7 @@ describe("matchDay", () => {
 			expect(matchDay(broken, "gregorian", 1, 1)).toEqual([]);
 		});
 
-		it("رویداد relative بدون rule نباید match کند", () => {
+		it("relative event without rule should not match", () => {
 			const noRule: RawEvent[] = [
 				{
 					id: "no-rule",
@@ -164,36 +164,36 @@ describe("matchDay", () => {
 
 describe("matchRange", () => {
 	describe("fixed events", () => {
-		it("باید رویداد fixed را در بازه پیدا کند", () => {
+		it("should find fixed event in range", () => {
 			const result = matchRange(gregorianSample, "gregorian", 11, 1, 12, 31);
 			expect(result.some((e) => e.id === "gregorian-12-01-14uslvu")).toBe(true);
 		});
 
-		it("نباید رویداد خارج از بازه را برگرداند", () => {
+		it("should not return event outside range", () => {
 			const result = matchRange(gregorianSample, "gregorian", 1, 1, 6, 30);
 			expect(result.some((e) => e.id === "gregorian-12-01-14uslvu")).toBe(false);
 		});
 	});
 
 	describe("multi-day events", () => {
-		it("باید رویداد multi-day با overlap کامل را برگرداند", () => {
+		it("should return multi-day event with full overlap", () => {
 			const result = matchRange(gregorianSample, "gregorian", 12, 1, 12, 31);
 			expect(result.some((e) => e.id === "gregorian-christmas-week")).toBe(true);
 		});
 
-		it("باید رویداد multi-day که فقط بخشی از آن در بازه است را برگرداند", () => {
+		it("should return multi-day event when partially overlapping range", () => {
 			// christmas-week: 12/24-12/26 — query: 12/25-12/31
 			const result = matchRange(gregorianSample, "gregorian", 12, 25, 12, 31);
 			expect(result.some((e) => e.id === "gregorian-christmas-week")).toBe(true);
 		});
 
-		it("نباید رویداد multi-day بدون overlap را برگرداند", () => {
+		it("should not return multi-day event without overlap", () => {
 			// christmas-week: 12/24-12/26 — query: 1/1-12/23
 			const result = matchRange(gregorianSample, "gregorian", 1, 1, 12, 23);
 			expect(result.some((e) => e.id === "gregorian-christmas-week")).toBe(false);
 		});
 
-		it("باید رویداد multi-day cross-month را صحیح مدیریت کند", () => {
+		it("should correctly handle cross-month multi-day event", () => {
 			// defense-week: 6/31 - 7/6
 			const result = matchRange(jalaliSample, "jalali", 6, 1, 7, 31);
 			expect(result.some((e) => e.id === "jalali-defense-week")).toBe(true);
@@ -201,8 +201,8 @@ describe("matchRange", () => {
 	});
 
 	describe("deduplication", () => {
-		it("نباید رویداد تکراری در نتیجه باشد حتی اگر چند بار match شود", () => {
-			// day-candidates در بازه ماه 9 - تمام candidates در بازه
+		it("should not include duplicate events in result even if matched multiple times", () => {
+			// day-candidates in month 9 range - all candidates in range
 			const result = matchRange(hijriSample, "hijri", 9, 1, 9, 30);
 			const ids = result.map((e) => e.id);
 			const unique = new Set(ids);
@@ -210,14 +210,14 @@ describe("matchRange", () => {
 		});
 	});
 
-	describe("relative events در بازه", () => {
-		it("باید رویداد day-candidates را اگر حداقل یک candidate در بازه باشد برگرداند", () => {
+	describe("relative events in range", () => {
+		it("should return day-candidates event if at least one candidate is in range", () => {
 			// candidates: 21,23,25,27,29 — query: month 9, days 20-22
 			const result = matchRange(hijriSample, "hijri", 9, 20, 9, 22);
 			expect(result.some((e) => e.id === "hijri-laylat-al-qadr")).toBe(true);
 		});
 
-		it("نباید رویداد day-candidates را اگر هیچ candidate در بازه نباشد برگرداند", () => {
+		it("should not return day-candidates event if no candidate is in range", () => {
 			// candidates: 21,23,25,27,29 — query: month 9, days 10-20 (20 not a candidate)
 			const result = matchRange(hijriSample, "hijri", 9, 10, 9, 20);
 			expect(result.some((e) => e.id === "hijri-laylat-al-qadr")).toBe(false);
@@ -225,12 +225,12 @@ describe("matchRange", () => {
 	});
 
 	describe("category filtering", () => {
-		it("باید فیلتر category روی matchRange هم اعمال شود", () => {
+		it("should apply category filtering on matchRange as well", () => {
 			const result = matchRange(gregorianSample, "gregorian", 1, 1, 12, 31, ["government"]);
 			expect(result.every((e) => e.categories.includes("government"))).toBe(true);
 		});
 
-		it("باید رویدادهای چند دسته‌بندی را صحیح فیلتر کند", () => {
+		it("should correctly filter multi-category events", () => {
 			const result = matchRange(gregorianSample, "gregorian", 1, 1, 12, 31, [
 				"religious",
 				"international",
@@ -244,11 +244,11 @@ describe("matchRange", () => {
 	});
 
 	describe("edge cases", () => {
-		it("با لیست خالی باید آرایه خالی برگرداند", () => {
+		it("with empty list should return empty array", () => {
 			expect(matchRange([], "gregorian", 1, 1, 12, 31)).toEqual([]);
 		});
 
-		it("بازه تک‌روزه باید مثل matchDay عمل کند", () => {
+		it("single-day range should behave like matchDay", () => {
 			const rangeResult = matchRange(gregorianSample, "gregorian", 12, 1, 12, 1);
 			const dayResult = matchDay(gregorianSample, "gregorian", 12, 1);
 			expect(rangeResult.map((e) => e.id).sort()).toEqual(dayResult.map((e) => e.id).sort());

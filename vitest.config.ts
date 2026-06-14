@@ -9,7 +9,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, "./src"),
-			data: path.resolve(__dirname, "./lib/data"),
+			data: path.resolve(__dirname, "./dist/data"),
 		},
 	},
 });

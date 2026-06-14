@@ -7,7 +7,7 @@ import { globSync } from "glob";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DATA_DIR = resolve(ROOT, "data");
-const OUT_DIR = resolve(ROOT, "lib", "data");
+const OUT_DIR = resolve(ROOT, "src", "data");
 
 const CALENDARS = ["jalali", "gregorian", "hijri"];
 
@@ -28,16 +28,14 @@ function validateEvent(event, calendar, idx) {
 
 	if (!event.id) throw new Error(`${prefix} Missing "id"`);
 	if (!event.type) throw new Error(`${prefix} Missing "type"`);
-	if (!VALID_TYPES.has(event.type))
-		throw new Error(`${prefix} Invalid type "${event.type}"`);
+	if (!VALID_TYPES.has(event.type)) throw new Error(`${prefix} Invalid type "${event.type}"`);
 	if (!event.title?.fa || !event.title?.en)
 		throw new Error(`${prefix} Missing title.fa or title.en`);
 	if (!Array.isArray(event.categories) || event.categories.length === 0)
 		throw new Error(`${prefix} "categories" must be a non-empty array`);
 
 	for (const cat of event.categories) {
-		if (!VALID_CATEGORIES.has(cat))
-			throw new Error(`${prefix} Unknown category "${cat}"`);
+		if (!VALID_CATEGORIES.has(cat)) throw new Error(`${prefix} Unknown category "${cat}"`);
 	}
 
 	if (typeof event.isHolidayInIran !== "boolean")
@@ -50,13 +48,11 @@ function validateEvent(event, calendar, idx) {
 	if (event.type === "multi-day") {
 		const required = ["startMonth", "startDay", "endMonth", "endDay"];
 		for (const f of required) {
-			if (event[f] == null)
-				throw new Error(`${prefix} Multi-day event missing "${f}"`);
+			if (event[f] == null) throw new Error(`${prefix} Multi-day event missing "${f}"`);
 		}
 	}
 	if (event.type === "relative") {
-		if (!event.rule?.base)
-			throw new Error(`${prefix} Relative event must have rule.base`);
+		if (!event.rule?.base) throw new Error(`${prefix} Relative event must have rule.base`);
 	}
 }
 

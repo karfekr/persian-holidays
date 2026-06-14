@@ -5,7 +5,7 @@ import tseslint from "typescript-eslint";
 
 export default [
 	{
-		ignores: ["build/**", "lib/**", "data/**", "node_modules/**", ".github/**", ".husky"],
+		ignores: ["build/**", "dist/**", "data/**", "node_modules/**", ".github/**", ".husky"],
 	},
 
 	...tseslint.configs.recommended,

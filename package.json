@@ -28,35 +28,21 @@
 		"url": "git+https://github.com/karfekr/persian-holidays.git"
 	},
 	"packageManager": "pnpm@11.5.3+sha512.7ac1c919341c213a34dc0d02afb7143c5c26ac26ee8c4782deea821b8ac64d2134a081fd8941dae6e29bbb48f58dfc2b7fbceeccc07cb2f09d219d342a4969ed",
-	"main": "./lib/cjs/index.cjs",
-	"module": "./lib/index.js",
-	"types": "./lib/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-			"import": "./lib/index.js",
-			"require": "./lib/cjs/index.cjs",
-			"types": "./lib/index.d.ts"
-		},
-		"./jalali": {
-			"import": "./lib/jalali.js",
-			"require": "./lib/cjs/jalali.cjs",
-			"types": "./lib/index.d.ts"
-		},
-		"./gregorian": {
-			"import": "./lib/gregorian.js",
-			"require": "./lib/cjs/gregorian.cjs",
-			"types": "./lib/index.d.ts"
-		},
-		"./hijri": {
-			"import": "./lib/hijri.js",
-			"require": "./lib/cjs/hijri.cjs",
-			"types": "./lib/index.d.ts"
+			"types": {
+				"import": "./dist/index.d.ts",
+				"require": "./dist/index.d.cts"
+			},
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
 		}
 	},
 	"files": [
-		"src/",
-		"lib/",
-		"types/",
+		"dist/",
 		"README.md",
 		"README_FA.md",
 		"LICENSE"
@@ -72,9 +58,8 @@
 		]
 	},
 	"scripts": {
-		"build:data": "node build/buildData.mjs",
-		"build:cjs": "node build/buildCjs.mjs",
-		"build": "node build/buildData.mjs && node build/buildCjs.mjs",
+		"build:json": "node scripts/build-json.mjs",
+		"build": "pnpm run build:json && tsup",
 		"test": "vitest",
 		"format": "prettier --write .",
 		"lint": "eslint . --fix",
@@ -88,13 +73,14 @@
 		"eslint": "9.39.4",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-simple-import-sort": "^13.0.0",
-		"typescript-eslint": "^8.61.0",
 		"glob": "^13.0.6",
 		"globals": "^17.6.0",
 		"husky": "^9.1.7",
 		"js-yaml": "^4.2.0",
 		"lint-staged": "^17.0.7",
 		"prettier": "^3.8.4",
+		"tsup": "^8.5.1",
+		"typescript-eslint": "^8.61.0",
 		"vitest": "^4.1.8"
 	},
 	"engines": {
