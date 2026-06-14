@@ -1,6 +1,5 @@
 events:
   - id: hijri-05-05-15hc6t
-    calendar: hijri
     type: fixed
     month: 5
     day: 5
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-05-05-1ti88km
-    calendar: hijri
     type: fixed
     month: 5
     day: 5
@@ -25,7 +23,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-05-10-x3iw6w
-    calendar: hijri
     type: fixed
     month: 5
     day: 10
@@ -38,7 +35,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-05-13-dd0mod
-    calendar: hijri
     type: fixed
     month: 5
     day: 13

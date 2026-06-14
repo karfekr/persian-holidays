@@ -1,6 +1,5 @@
 events:
   - id: hijri-02-03-1hv4v2d
-    calendar: hijri
     type: fixed
     month: 2
     day: 3
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-02-07-bex1qo
-    calendar: hijri
     type: fixed
     month: 2
     day: 7
@@ -26,7 +24,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-02-07-8e4ya3
-    calendar: hijri
     type: fixed
     month: 2
     day: 7
@@ -38,7 +35,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-02-20-1exdwx5
-    calendar: hijri
     type: fixed
     month: 2
     day: 20
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-02-27-1kk1dyn
-    calendar: hijri
     type: fixed
     month: 2
     day: 27
@@ -64,7 +59,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-02-28-170896q
-    calendar: hijri
     type: fixed
     month: 2
     day: 28
@@ -78,7 +72,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-02-28-170896r
-    calendar: hijri
     type: fixed
     month: 2
     day: 28
@@ -91,7 +84,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-02-28-biqjob
-    calendar: hijri
     type: fixed
     month: 2
     day: 28
@@ -105,7 +97,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-02-30-8jkjp0
-    calendar: hijri
     type: fixed
     month: 2
     day: 30

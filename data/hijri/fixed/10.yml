@@ -1,6 +1,5 @@
 events:
   - id: hijri-10-01-hum8ft
-    calendar: hijri
     type: fixed
     month: 10
     day: 1
@@ -14,7 +13,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-10-01-hum8fu
-    calendar: hijri
     type: fixed
     month: 10
     day: 1
@@ -27,7 +25,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-10-17-13k3j8t
-    calendar: hijri
     type: fixed
     month: 10
     day: 17
@@ -39,7 +36,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-10-25-9vsldb
-    calendar: hijri
     type: fixed
     month: 10
     day: 25

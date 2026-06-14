@@ -1,6 +1,5 @@
 events:
   - id: hijri-04-03-1r67ea
-    calendar: hijri
     type: fixed
     month: 4
     day: 3
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-04-04-61tn57
-    calendar: hijri
     type: fixed
     month: 4
     day: 4
@@ -26,7 +24,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-04-08-znckbd
-    calendar: hijri
     type: fixed
     month: 4
     day: 8
@@ -39,7 +36,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-04-08-1peruy9
-    calendar: hijri
     type: fixed
     month: 4
     day: 8
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-04-10-e0q2s1
-    calendar: hijri
     type: fixed
     month: 4
     day: 10

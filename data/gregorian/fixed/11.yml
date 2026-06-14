@@ -1,6 +1,5 @@
 events:
   - id: gregorian-11-02-r26rr8
-    calendar: gregorian
     type: fixed
     month: 11
     day: 2
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-05-74n96g
-    calendar: gregorian
     type: fixed
     month: 11
     day: 5
@@ -26,7 +24,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-06-50xihe
-    calendar: gregorian
     type: fixed
     month: 11
     day: 6
@@ -39,7 +36,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-10-zd83gj
-    calendar: gregorian
     type: fixed
     month: 11
     day: 10
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-14-1fj0ygs
-    calendar: gregorian
     type: fixed
     month: 11
     day: 14
@@ -65,7 +60,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-16-ec62j4
-    calendar: gregorian
     type: fixed
     month: 11
     day: 16
@@ -78,7 +72,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-19-srnn94
-    calendar: gregorian
     type: fixed
     month: 11
     day: 19
@@ -91,7 +84,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-20-150i9lr
-    calendar: gregorian
     type: fixed
     month: 11
     day: 20
@@ -104,7 +96,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-20-8pulgp
-    calendar: gregorian
     type: fixed
     month: 11
     day: 20
@@ -117,7 +108,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-21-9efknd
-    calendar: gregorian
     type: fixed
     month: 11
     day: 21
@@ -130,7 +120,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-25-1mpp4fo
-    calendar: gregorian
     type: fixed
     month: 11
     day: 25
@@ -143,7 +132,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-11-29-qyobs4
-    calendar: gregorian
     type: fixed
     month: 11
     day: 29

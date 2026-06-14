@@ -1,6 +1,5 @@
 events:
   - id: hijri-12-01-p59bj6
-    calendar: hijri
     type: fixed
     month: 12
     day: 1
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-01-14t0het
-    calendar: hijri
     type: fixed
     month: 12
     day: 1
@@ -25,7 +23,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-07-stzzr9
-    calendar: hijri
     type: fixed
     month: 12
     day: 7
@@ -38,7 +35,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-09-159sz9v
-    calendar: hijri
     type: fixed
     month: 12
     day: 9
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-10-nl0az8
-    calendar: hijri
     type: fixed
     month: 12
     day: 10
@@ -66,7 +61,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-12-10-nl0az9
-    calendar: hijri
     type: fixed
     month: 12
     day: 10
@@ -79,7 +73,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-11-557yvv
-    calendar: hijri
     type: fixed
     month: 12
     day: 11
@@ -92,7 +85,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-12-1xexi2j
-    calendar: hijri
     type: fixed
     month: 12
     day: 12
@@ -105,7 +97,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-13-1qniza3
-    calendar: hijri
     type: fixed
     month: 12
     day: 13
@@ -118,7 +109,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-15-4q0rrs
-    calendar: hijri
     type: fixed
     month: 12
     day: 15
@@ -131,7 +121,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-18-1g6p89f
-    calendar: hijri
     type: fixed
     month: 12
     day: 18
@@ -145,7 +134,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-12-20-5aupis
-    calendar: hijri
     type: fixed
     month: 12
     day: 20
@@ -158,7 +146,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-24-4rxcok
-    calendar: hijri
     type: fixed
     month: 12
     day: 24
@@ -171,7 +158,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-12-25-8gnuga
-    calendar: hijri
     type: fixed
     month: 12
     day: 25

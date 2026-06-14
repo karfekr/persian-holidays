@@ -1,42 +1,30 @@
-import js from "@eslint/js";
-import globals from "globals";
-import jsdoc from "eslint-plugin-jsdoc";
 import prettier from "eslint-config-prettier";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default [
 	{
-		ignores: ["build/**", "lib/**", "data/**", "node_modules/**", ".github/**"],
+		ignores: ["build/**", "lib/**", "data/**", "node_modules/**", ".github/**", ".husky"],
 	},
 
-	js.configs.recommended,
+	...tseslint.configs.recommended,
 
 	{
-		files: ["**/*.js"],
-
+		files: ["**/*.{ts,tsx}"],
 		languageOptions: {
-			ecmaVersion: "latest",
-			sourceType: "module",
 			globals: {
 				...globals.node,
 				...globals.es2022,
 			},
 		},
-
 		plugins: {
-			jsdoc,
+			"simple-import-sort": simpleImportSort,
 		},
-
 		rules: {
-			"no-console": "warn",
-			"no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-			"jsdoc/check-types": "error",
-			"jsdoc/check-param-names": "error",
-			"jsdoc/require-param": "warn",
-			"jsdoc/require-returns": "warn",
-			"jsdoc/require-jsdoc": "off",
-			"jsdoc/no-undefined-types": "error",
-			"jsdoc/require-param-type": "error",
-			"jsdoc/require-returns-type": "error",
+			"no-console": "error",
+			"simple-import-sort/imports": "warn",
+			"simple-import-sort/exports": "warn",
 		},
 	},
 

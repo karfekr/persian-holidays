@@ -1,50 +1,41 @@
-/**
- * @typedef {import('./types.js').RelativeRule} RelativeRule
- * @typedef {import('./types.js').ResolverContext} ResolverContext
- * @typedef {import('./types.js').DatePoint} DatePoint
- * @typedef {(rule: RelativeRule, ctx: ResolverContext) => DatePoint[]} RuleResolver
- */
+import type { DatePoint, RelativeRule, ResolverContext, RuleResolver } from "src/types";
 
-import { getAdapter } from "./adapter.js";
+import { getAdapter } from "./adapter";
 
-/**
- * @param {string} ruleName
- * @param {ResolverContext} ctx
- * @param {...(keyof ResolverContext)} fields
- * @returns {boolean}
- */
-function requireCtx(ruleName, ctx, ...fields) {
+function requireCtx(
+	ruleName: string,
+	ctx: ResolverContext,
+	...fields: (keyof ResolverContext)[]
+): boolean {
 	for (const f of fields) {
 		if (ctx[f] == null) {
 			if (ctx.skipOnMissingYear) return true;
+
 			throw new Error(
 				`[persian-events] Rule "${ruleName}" requires ctx.${f}. ` +
 					`Pass { ${f}: <value> } as the context argument to getEvents() / resolveRule().`,
 			);
 		}
 	}
+
 	return false;
 }
 
-/**
- * @param {string} ruleName
- * @param {RelativeRule} rule
- * @param {...(keyof RelativeRule)} fields
- */
-function requireRule(ruleName, rule, ...fields) {
+function requireRule(
+	ruleName: string,
+	rule: RelativeRule,
+	...fields: (keyof RelativeRule)[]
+): void {
 	for (const f of fields) {
 		if (rule[f] == null) {
 			throw new Error(
-				`[persian-events] Rule "${ruleName}" requires rule.${f} in the data definition.`,
+				`[persian-events] Rule "${ruleName}" requires rule.${String(f)} in the data definition.`,
 			);
 		}
 	}
 }
 
-/**
- * @type {RuleResolver}
- */
-function resolveComputus(rule, ctx) {
+const resolveComputus: RuleResolver = (rule, ctx) => {
 	if (ctx.year == null) return [];
 
 	const y = ctx.year;
@@ -64,13 +55,11 @@ function resolveComputus(rule, ctx) {
 	const day = ((h + l - 7 * m + 114) % 31) + 1 + (rule.offsetDays ?? 0);
 
 	return [{ month, day }];
-}
+};
 
-/**
- * @type {RuleResolver}
- */
-function resolveNthWeekdayOfMonth(rule, ctx) {
+const resolveNthWeekdayOfMonth: RuleResolver = (rule, ctx) => {
 	if (requireCtx("nth-weekday-of-month", ctx, "year")) return [];
+
 	requireRule("nth-weekday-of-month", rule, "month", "weekday");
 
 	const { calendar = "gregorian" } = ctx;
@@ -80,15 +69,19 @@ function resolveNthWeekdayOfMonth(rule, ctx) {
 	if (year == null) return [];
 
 	if (month == null) {
-		// Defensive runtime check to satisfy static type systems
 		throw new Error(
 			`[persian-events] nth-weekday-of-month: rule.month is required and must be a number.`,
 		);
 	}
 
-	const monthNumber = /** @type {number} */ (month);
+	if (weekday == null) {
+		throw new Error(
+			`[persian-events] nth-weekday-of-month: rule.weekday is required and must be a number.`,
+		);
+	}
 
-	const SUPPORTED = ["jalali", "hijri", "gregorian"];
+	const SUPPORTED = ["jalali", "hijri", "gregorian"] as const;
+
 	if (!SUPPORTED.includes(calendar)) {
 		throw new Error(
 			`[persian-events] nth-weekday-of-month: unsupported calendar "${calendar}". ` +
@@ -98,9 +91,11 @@ function resolveNthWeekdayOfMonth(rule, ctx) {
 
 	const adapter = getAdapter("nth-weekday-of-month");
 
-	const firstWeekday = adapter.firstWeekdayOfMonth(calendar, year, monthNumber);
-	const totalDays = adapter.daysInMonth(calendar, year, monthNumber);
-	const matches = [];
+	const firstWeekday = adapter.firstWeekdayOfMonth(calendar, year, month);
+	const totalDays = adapter.daysInMonth(calendar, year, month);
+
+	const matches: number[] = [];
+
 	for (let d = 1; d <= totalDays; d++) {
 		if ((firstWeekday + d - 1) % 7 === weekday) {
 			matches.push(d);
@@ -127,12 +122,9 @@ function resolveNthWeekdayOfMonth(rule, ctx) {
 	}
 
 	return [{ month, day: matches[occurrenceIndex] }];
-}
+};
 
-/**
- * @type {RuleResolver}
- */
-function resolveDayCandidates(rule, _ctx) {
+const resolveDayCandidates: RuleResolver = (rule) => {
 	requireRule("day-candidates", rule, "month");
 
 	if (!Array.isArray(rule.candidates) || rule.candidates.length === 0) {
@@ -142,6 +134,7 @@ function resolveDayCandidates(rule, _ctx) {
 	}
 
 	const month = rule.month;
+
 	if (month == null) {
 		throw new Error(
 			`[persian-events] Rule "day-candidates" requires rule.month in the data definition.`,
@@ -149,26 +142,19 @@ function resolveDayCandidates(rule, _ctx) {
 	}
 
 	return rule.candidates.map((day) => ({ month, day }));
-}
+};
 
-/** @type {Record<string, RuleResolver>} */
-const RULE_REGISTRY = {
+const RULE_REGISTRY: Record<string, RuleResolver> = {
 	computus: resolveComputus,
 	"nth-weekday-of-month": resolveNthWeekdayOfMonth,
 	"day-candidates": resolveDayCandidates,
 	"month-weekday": resolveNthWeekdayOfMonth,
-	"month-end": (rule, ctx) =>
-		resolveNthWeekdayOfMonth({ ...rule, occurrence: "last" }, ctx),
+	"month-end": (rule, ctx) => resolveNthWeekdayOfMonth({ ...rule, occurrence: "last" }, ctx),
 };
 
-/** @type {Map<string, DatePoint[]>} */
-const _cache = new Map();
+const cache = new Map<string, DatePoint[]>();
 
-/**
- * @param {RelativeRule} rule
- * @returns {string}
- */
-function _ruleKey(rule) {
+function ruleKey(rule: RelativeRule): string {
 	return JSON.stringify([
 		rule.base,
 		rule.month ?? null,
@@ -179,31 +165,27 @@ function _ruleKey(rule) {
 	]);
 }
 
-/**
- * @param {RelativeRule} rule
- * @param {ResolverContext} [ctx]
- * @returns {DatePoint[]}
- */
-export function resolveRule(rule, ctx = {}) {
+export function resolveRule(rule: RelativeRule, ctx: ResolverContext = {}): DatePoint[] {
 	const fn = RULE_REGISTRY[rule.base];
 
 	if (!fn) {
 		throw new Error(
 			`[persian-events] Unknown rule base: "${rule.base}". ` +
-				`Known types: ${Object.keys(RULE_REGISTRY).join(", ")}. `,
+				`Known types: ${Object.keys(RULE_REGISTRY).join(", ")}.`,
 		);
 	}
 
-	const cacheKey = `${_ruleKey(rule)}:${ctx.year ?? "-"}:${ctx.calendar ?? "-"}`;
+	const cacheKey = `${ruleKey(rule)}:${ctx.year ?? "-"}:${ctx.calendar ?? "-"}`;
 
-	if (_cache.has(cacheKey)) {
-		const cached = _cache.get(cacheKey);
-		if (cached !== undefined) {
-			return cached;
-		}
+	const cached = cache.get(cacheKey);
+
+	if (cached !== undefined) {
+		return cached;
 	}
 
 	const result = fn(rule, ctx);
-	_cache.set(cacheKey, result);
+
+	cache.set(cacheKey, result);
+
 	return result;
 }

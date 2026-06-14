@@ -1,6 +1,5 @@
 events:
   - id: hijri-08-03-newb43
-    calendar: hijri
     type: fixed
     month: 8
     day: 3
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-03-1s1qkhb
-    calendar: hijri
     type: fixed
     month: 8
     day: 3
@@ -25,7 +23,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-04-1k6uvtg
-    calendar: hijri
     type: fixed
     month: 8
     day: 4
@@ -38,7 +35,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-04-1c4xtyp
-    calendar: hijri
     type: fixed
     month: 8
     day: 4
@@ -50,7 +46,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-05-ftq8zx
-    calendar: hijri
     type: fixed
     month: 8
     day: 5
@@ -63,7 +58,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-11-1g7wo03
-    calendar: hijri
     type: fixed
     month: 8
     day: 11
@@ -76,7 +70,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-11-a9u0o8
-    calendar: hijri
     type: fixed
     month: 8
     day: 11
@@ -88,7 +81,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-15-1std2bn
-    calendar: hijri
     type: fixed
     month: 8
     day: 15
@@ -102,7 +94,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-08-15-1klkhgi
-    calendar: hijri
     type: fixed
     month: 8
     day: 15
@@ -115,7 +106,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-15-o2nvmr
-    calendar: hijri
     type: fixed
     month: 8
     day: 15
@@ -128,7 +118,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-08-15-1ow5kog
-    calendar: hijri
     type: fixed
     month: 8
     day: 15

@@ -1,6 +1,5 @@
 events:
   - id: gregorian-01-27-ogldp4
-    calendar: gregorian
     type: fixed
     month: 1
     day: 27

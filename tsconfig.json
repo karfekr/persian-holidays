@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"src/*": ["./src/*"],
+			"data/*": ["./lib/data/*"]
+		},
+		"inlineSourceMap": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"inlineSources": true,
+		"module": "ESNext",
+		"target": "ES2022",
+		"allowJs": true,
+		"noImplicitAny": true,
+		"moduleResolution": "bundler",
+		"importHelpers": true,
+		"isolatedModules": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"verbatimModuleSyntax": true,
+		"lib": ["DOM", "ES2022"],
+		"types": ["vitest/globals"]
+	},
+	"include": ["src/**/*.ts", "tests/**/*.ts"]
+}

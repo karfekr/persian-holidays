@@ -1,6 +1,5 @@
 events:
   - id: gregorian-12-01-14uslvu
-    calendar: gregorian
     type: fixed
     month: 12
     day: 1
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-02-1jeqau3
-    calendar: gregorian
     type: fixed
     month: 12
     day: 2
@@ -26,7 +24,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-03-1xuxydk
-    calendar: gregorian
     type: fixed
     month: 12
     day: 3
@@ -39,7 +36,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-05-mr9t2l
-    calendar: gregorian
     type: fixed
     month: 12
     day: 5
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-05-189atzb
-    calendar: gregorian
     type: fixed
     month: 12
     day: 5
@@ -65,7 +60,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-07-cywzq1
-    calendar: gregorian
     type: fixed
     month: 12
     day: 7
@@ -78,7 +72,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-09-1enj55s
-    calendar: gregorian
     type: fixed
     month: 12
     day: 9
@@ -91,7 +84,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-09-9h8vxy
-    calendar: gregorian
     type: fixed
     month: 12
     day: 9
@@ -104,7 +96,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-10-1uqasic
-    calendar: gregorian
     type: fixed
     month: 12
     day: 10
@@ -117,7 +108,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-11-hbh7mx
-    calendar: gregorian
     type: fixed
     month: 12
     day: 11
@@ -130,7 +120,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-12-1fcm2lc
-    calendar: gregorian
     type: fixed
     month: 12
     day: 12
@@ -143,7 +132,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-18-1edt6xv
-    calendar: gregorian
     type: fixed
     month: 12
     day: 18
@@ -156,7 +144,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-18-17yk2y3
-    calendar: gregorian
     type: fixed
     month: 12
     day: 18
@@ -169,7 +156,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-12-20-bjn7gn
-    calendar: gregorian
     type: fixed
     month: 12
     day: 20

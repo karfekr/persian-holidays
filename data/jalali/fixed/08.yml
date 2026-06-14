@@ -1,6 +1,5 @@
 events:
   - id: jalali-08-01-1gcw16q
-    calendar: jalali
     type: fixed
     month: 8
     day: 1
@@ -12,7 +11,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-01-1mrs734
-    calendar: jalali
     type: fixed
     month: 8
     day: 1
@@ -24,7 +22,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-04-ffxs96
-    calendar: jalali
     type: fixed
     month: 8
     day: 4
@@ -36,7 +33,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-04-19i6mqb
-    calendar: jalali
     type: fixed
     month: 8
     day: 4
@@ -48,7 +44,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-07-17gn2yu
-    calendar: jalali
     type: fixed
     month: 8
     day: 7
@@ -61,7 +56,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-07-1d1xjg5
-    calendar: jalali
     type: fixed
     month: 8
     day: 7
@@ -73,7 +67,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-08-1aumolq
-    calendar: jalali
     type: fixed
     month: 8
     day: 8
@@ -85,7 +78,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-08-pmre15
-    calendar: jalali
     type: fixed
     month: 8
     day: 8
@@ -97,7 +89,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-08-x89vpp
-    calendar: jalali
     type: fixed
     month: 8
     day: 8
@@ -109,7 +100,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-08-1v7b60u
-    calendar: jalali
     type: fixed
     month: 8
     day: 8
@@ -121,7 +111,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-10-pth2qv
-    calendar: jalali
     type: fixed
     month: 8
     day: 10
@@ -133,7 +122,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-13-ynl04r
-    calendar: jalali
     type: fixed
     month: 8
     day: 13
@@ -145,7 +133,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-13-11z8rhq
-    calendar: jalali
     type: fixed
     month: 8
     day: 13
@@ -157,7 +144,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-13-clpmyu
-    calendar: jalali
     type: fixed
     month: 8
     day: 13
@@ -169,7 +155,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-13-1t3jy73
-    calendar: jalali
     type: fixed
     month: 8
     day: 13
@@ -181,7 +166,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-14-13d1nsd
-    calendar: jalali
     type: fixed
     month: 8
     day: 14
@@ -193,7 +177,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-15-1mt4vg6
-    calendar: jalali
     type: fixed
     month: 8
     day: 15
@@ -205,7 +188,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-18-2ps2x1
-    calendar: jalali
     type: fixed
     month: 8
     day: 18
@@ -217,7 +199,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-24-zd3sya
-    calendar: jalali
     type: fixed
     month: 8
     day: 24
@@ -229,7 +210,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-24-1revkil
-    calendar: jalali
     type: fixed
     month: 8
     day: 24
@@ -241,7 +221,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-26-1r1ccun
-    calendar: jalali
     type: fixed
     month: 8
     day: 26
@@ -253,7 +232,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-30-dd4m1z
-    calendar: jalali
     type: fixed
     month: 8
     day: 30
@@ -265,7 +243,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-08-30-g5cmot
-    calendar: jalali
     type: fixed
     month: 8
     day: 30

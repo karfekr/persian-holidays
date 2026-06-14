@@ -1,6 +1,5 @@
 events:
   - id: jalali-02-01-1cgreei
-    calendar: jalali
     type: fixed
     month: 2
     day: 1
@@ -12,7 +11,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-02-rjceo7
-    calendar: jalali
     type: fixed
     month: 2
     day: 2
@@ -24,7 +22,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-02-1fgf53w
-    calendar: jalali
     type: fixed
     month: 2
     day: 2
@@ -36,7 +33,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-02-ntsirl
-    calendar: jalali
     type: fixed
     month: 2
     day: 2
@@ -48,7 +44,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-02-iyz2nd
-    calendar: jalali
     type: fixed
     month: 2
     day: 2
@@ -60,7 +55,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-03-19v0egi
-    calendar: jalali
     type: fixed
     month: 2
     day: 3
@@ -72,7 +66,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-03-g0s91l
-    calendar: jalali
     type: fixed
     month: 2
     day: 3
@@ -84,7 +77,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-05-o6kjb5
-    calendar: jalali
     type: fixed
     month: 2
     day: 5
@@ -96,7 +88,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-07-1rx3nkq
-    calendar: jalali
     type: fixed
     month: 2
     day: 7
@@ -108,7 +99,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-09-koethw
-    calendar: jalali
     type: fixed
     month: 2
     day: 9
@@ -120,7 +110,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-10-yuqdsx
-    calendar: jalali
     type: fixed
     month: 2
     day: 10
@@ -132,7 +121,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-10-e1vnvy
-    calendar: jalali
     type: fixed
     month: 2
     day: 10
@@ -144,7 +132,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-10-1153s89
-    calendar: jalali
     type: fixed
     month: 2
     day: 10
@@ -156,7 +143,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-12-3yem4r
-    calendar: jalali
     type: fixed
     month: 2
     day: 12
@@ -168,7 +154,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-12-fjf3y6
-    calendar: jalali
     type: fixed
     month: 2
     day: 12
@@ -180,7 +165,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-15-1e0443a
-    calendar: jalali
     type: fixed
     month: 2
     day: 15
@@ -192,7 +176,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-15-1376i9h
-    calendar: jalali
     type: fixed
     month: 2
     day: 15
@@ -204,7 +187,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-18-1tynxdo
-    calendar: jalali
     type: fixed
     month: 2
     day: 18
@@ -216,7 +198,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-19-aj9o7s
-    calendar: jalali
     type: fixed
     month: 2
     day: 19
@@ -228,7 +209,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-19-5y9tg1
-    calendar: jalali
     type: fixed
     month: 2
     day: 19
@@ -240,7 +220,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-24-qhcge1
-    calendar: jalali
     type: fixed
     month: 2
     day: 24
@@ -252,7 +231,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-25-1mljeyt
-    calendar: jalali
     type: fixed
     month: 2
     day: 25
@@ -264,7 +242,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-25-11nhhos
-    calendar: jalali
     type: fixed
     month: 2
     day: 25
@@ -276,7 +253,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-28-1radkpg
-    calendar: jalali
     type: fixed
     month: 2
     day: 28
@@ -288,7 +264,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-30-zipf2a
-    calendar: jalali
     type: fixed
     month: 2
     day: 30
@@ -300,7 +275,6 @@ events:
     isHolidayInIran: false
 
   - id: jalali-02-31-ai3gsc
-    calendar: jalali
     type: fixed
     month: 2
     day: 31

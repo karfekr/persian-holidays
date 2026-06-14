@@ -1,6 +1,5 @@
 events:
   - id: gregorian-07-11-afb1pb
-    calendar: gregorian
     type: fixed
     month: 7
     day: 11
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-07-15-oao0gy
-    calendar: gregorian
     type: fixed
     month: 7
     day: 15
@@ -26,7 +24,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-07-18-19ogelk
-    calendar: gregorian
     type: fixed
     month: 7
     day: 18
@@ -39,7 +36,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-07-28-12gr6r4
-    calendar: gregorian
     type: fixed
     month: 7
     day: 28
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-07-30-kgqhwr
-    calendar: gregorian
     type: fixed
     month: 7
     day: 30
@@ -65,7 +60,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-07-30-m9tk8d
-    calendar: gregorian
     type: fixed
     month: 7
     day: 30

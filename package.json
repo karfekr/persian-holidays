@@ -29,28 +29,28 @@
 	},
 	"packageManager": "pnpm@11.5.3+sha512.7ac1c919341c213a34dc0d02afb7143c5c26ac26ee8c4782deea821b8ac64d2134a081fd8941dae6e29bbb48f58dfc2b7fbceeccc07cb2f09d219d342a4969ed",
 	"main": "./lib/cjs/index.cjs",
-	"module": "./src/index.js",
-	"types": "./types/index.d.ts",
+	"module": "./lib/index.js",
+	"types": "./lib/index.d.ts",
 	"exports": {
 		".": {
-			"import": "./src/index.js",
+			"import": "./lib/index.js",
 			"require": "./lib/cjs/index.cjs",
-			"types": "./types/index.d.ts"
+			"types": "./lib/index.d.ts"
 		},
 		"./jalali": {
-			"import": "./src/jalali.js",
+			"import": "./lib/jalali.js",
 			"require": "./lib/cjs/jalali.cjs",
-			"types": "./types/index.d.ts"
+			"types": "./lib/index.d.ts"
 		},
 		"./gregorian": {
-			"import": "./src/gregorian.js",
+			"import": "./lib/gregorian.js",
 			"require": "./lib/cjs/gregorian.cjs",
-			"types": "./types/index.d.ts"
+			"types": "./lib/index.d.ts"
 		},
 		"./hijri": {
-			"import": "./src/hijri.js",
+			"import": "./lib/hijri.js",
 			"require": "./lib/cjs/hijri.cjs",
-			"types": "./types/index.d.ts"
+			"types": "./lib/index.d.ts"
 		}
 	},
 	"files": [
@@ -63,10 +63,11 @@
 	],
 	"sideEffects": false,
 	"lint-staged": {
-		"*": [
-			"prettier --write"
+		"*.{md,json}": [
+			"pnpm run format"
 		],
 		"*.{js,cjs,mjs,ts}": [
+			"pnpm run format",
 			"eslint --fix"
 		]
 	},
@@ -75,21 +76,19 @@
 		"build:cjs": "node build/buildCjs.mjs",
 		"build": "node build/buildData.mjs && node build/buildCjs.mjs",
 		"test": "vitest",
-		"test:watch": "vitest watch",
-		"test:run": "vitest run",
+		"format": "prettier --write .",
 		"lint": "eslint . --fix",
-		"prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build",
+		"prepublishOnly": "pnpm run format && pnpm run lint && pnpm run test && pnpm run build",
 		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^21.0.2",
 		"@commitlint/config-conventional": "^21.0.2",
-		"@eslint/js": "^10.0.1",
 		"@internationalized/date": ">=3.12.0",
-		"eslint": "^10.4.1",
+		"eslint": "9.39.4",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-import": "^2.32.0",
-		"eslint-plugin-jsdoc": "^63.0.2",
+		"eslint-plugin-simple-import-sort": "^13.0.0",
+		"typescript-eslint": "^8.61.0",
 		"glob": "^13.0.6",
 		"globals": "^17.6.0",
 		"husky": "^9.1.7",

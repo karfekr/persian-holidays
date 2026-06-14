@@ -1,6 +1,5 @@
 events:
   - id: hijri-06-03-1qif133
-    calendar: hijri
     type: fixed
     month: 6
     day: 3
@@ -14,7 +13,6 @@ events:
     isHolidayInIran: true
 
   - id: hijri-06-12-kwwxaq
-    calendar: hijri
     type: fixed
     month: 6
     day: 12
@@ -27,7 +25,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-06-13-10cfbb6
-    calendar: hijri
     type: fixed
     month: 6
     day: 13
@@ -40,7 +37,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-06-13-1ou0otz
-    calendar: hijri
     type: fixed
     month: 6
     day: 13
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-06-20-1v1wesl
-    calendar: hijri
     type: fixed
     month: 6
     day: 20
@@ -65,7 +60,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-06-20-8bie1c
-    calendar: hijri
     type: fixed
     month: 6
     day: 20
@@ -78,7 +72,6 @@ events:
     isHolidayInIran: false
 
   - id: hijri-06-21-af7wbr
-    calendar: hijri
     type: fixed
     month: 6
     day: 21

@@ -1,6 +1,5 @@
 events:
   - id: gregorian-09-05-n4cxvg
-    calendar: gregorian
     type: fixed
     month: 9
     day: 5
@@ -13,7 +12,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-08-1xr7hjt
-    calendar: gregorian
     type: fixed
     month: 9
     day: 8
@@ -26,7 +24,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-12-ipcdyq
-    calendar: gregorian
     type: fixed
     month: 9
     day: 12
@@ -39,7 +36,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-15-gdtpvk
-    calendar: gregorian
     type: fixed
     month: 9
     day: 15
@@ -52,7 +48,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-16-11kly1k
-    calendar: gregorian
     type: fixed
     month: 9
     day: 16
@@ -65,7 +60,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-21-fez5ck
-    calendar: gregorian
     type: fixed
     month: 9
     day: 21
@@ -78,7 +72,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-26-1lwpc6m
-    calendar: gregorian
     type: fixed
     month: 9
     day: 26
@@ -91,7 +84,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-27-1d9nz9a
-    calendar: gregorian
     type: fixed
     month: 9
     day: 27
@@ -104,7 +96,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-28-bwhrw6
-    calendar: gregorian
     type: fixed
     month: 9
     day: 28
@@ -117,7 +108,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-28-u77mh8
-    calendar: gregorian
     type: fixed
     month: 9
     day: 28
@@ -130,7 +120,6 @@ events:
     isHolidayInIran: false
 
   - id: gregorian-09-30-1pkjkvb
-    calendar: gregorian
     type: fixed
     month: 9
     day: 30
