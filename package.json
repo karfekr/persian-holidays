@@ -39,6 +39,30 @@
 			},
 			"import": "./dist/index.js",
 			"require": "./dist/index.cjs"
+		},
+		"./gregorian": {
+			"types": {
+				"import": "./dist/gregorian.d.ts",
+				"require": "./dist/gregorian.d.cts"
+			},
+			"import": "./dist/gregorian.js",
+			"require": "./dist/gregorian.cjs"
+		},
+		"./hijri": {
+			"types": {
+				"import": "./dist/hijri.d.ts",
+				"require": "./dist/hijri.d.cts"
+			},
+			"import": "./dist/hijri.js",
+			"require": "./dist/hijri.cjs"
+		},
+		"./jalali": {
+			"types": {
+				"import": "./dist/jalali.d.ts",
+				"require": "./dist/jalali.d.cts"
+			},
+			"import": "./dist/jalali.js",
+			"require": "./dist/jalali.cjs"
 		}
 	},
 	"files": [
