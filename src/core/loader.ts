@@ -23,7 +23,7 @@ export function loadCalendar(calendar: CalendarType): RawEvent[] {
 
 	throw new Error(
 		`[persian-events] No data registered for calendar "${calendar}". ` +
-			`Import from "persian-events/${calendar}" or call registerData().`,
+			`Import from "persian-events/${calendar}"`,
 	);
 }
 

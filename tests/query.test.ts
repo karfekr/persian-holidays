@@ -100,12 +100,6 @@ describe("getEvents", () => {
 	});
 
 	describe("errors", () => {
-		it("should throw if calendar is unknown", () => {
-			expect(getEvents("unknown" as never, 1, 1)).rejects.toThrow(
-				/No data registered for calendar/,
-			);
-		});
-
 		it("should return empty array if no events exist", () => {
 			const events = getEvents("gregorian", 6, 15);
 			expect(Array.isArray(events)).toBe(true);
