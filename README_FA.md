@@ -61,7 +61,7 @@ getEvents(
   day: number,
   options?: {
     year?: number; // برای مناسبت‌های متغیر
-    categories?: Category[];
+    categories?: CategoryType[];
   }
 )
 ```
@@ -84,7 +84,7 @@ getMonthEvents(
   month: number,
   options?: {
     year?: number; // برای مناسبت‌های متغیر
-    categories?: Category[];
+    categories?: CategoryType[];
   }
 ): Event[]
 ```
@@ -109,7 +109,7 @@ getYearEvents(
   calendar: 'jalali' | 'gregorian' | 'hijri',
   year: number,
   options?: {
-    categories?: Category[];
+    categories?: CategoryType[];
   }
 ): Event[]
 ```
@@ -127,7 +127,7 @@ type Event = {
 		fa: string;
 		en: string;
 	};
-	categories: Category[];
+	categories: CategoryType[];
 	isHolidayInIran: boolean;
 	calendar: CalendarType;
 	type: "fixed" | "multi-day" | "relative";

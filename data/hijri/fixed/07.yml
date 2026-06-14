@@ -164,18 +164,7 @@ events:
       en: Mab'ath of Prophet Muhammad, Isra and Mi'raj
     categories:
       - shia
+      - sunni
       - religious
       - government
     isHolidayInIran: true
-
-  - id: hijri-07-27-1cj7x7y
-    type: fixed
-    month: 7
-    day: 27
-    title:
-      fa: مبعث پیامبر(ص)، شب معراج اهل تسنن
-      en: Mab'ath of Prophet Muhammad, Isra and Mi'raj
-    categories:
-      - sunni
-      - religious
-    isHolidayInIran: false
