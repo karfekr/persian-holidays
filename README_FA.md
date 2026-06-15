@@ -46,6 +46,9 @@ npm install persian-holidays
 
 > اگر فقط به مناسبت‌های ثابت نیاز دارید، می‌توانید بدون پیکربندی Adapter از این پکیج استفاده کنید.
 
+- وقتی مقدار `trueHolidays` روی `false` تنظیم شود، مقدار `isHolidayInIran` را در تمام رویدادهای
+  بازگشتی به `false` تغییر می‌دهد. درحالت عادی اگر مقداری تنظیم نشود برابر با true خواهد بود.
+
 ### `getEvents(calendar, month, day, options?)`
 
 تمام مناسبت‌های یک روز مشخص از ماه را برمی‌گرداند.
@@ -65,6 +68,7 @@ getEvents(
     year?: number; // برای مناسبت‌های پویا الزامی است
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // آداپتر را برای این فراخوانی بازنویسی می‌کند
+	trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -89,6 +93,7 @@ getMonthEvents(
     year?: number;
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // آداپتر را برای این فراخوانی بازنویسی می‌کند
+	trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -116,6 +121,7 @@ getYearEvents(
   options?: {
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // آداپتر را برای این فراخوانی بازنویسی می‌کند
+	trueHolidays?: boolean;
   }
 ): Event[]
 ```

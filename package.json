@@ -1,6 +1,6 @@
 {
 	"name": "persian-holidays",
-	"version": "1.3.0",
+	"version": "1.3.5",
 	"description": "A unified calendar events engine for Persian, Islamic, and international dates, providing bilingual event data(English & Persian), holiday classification, and a powerful query system for fixed, multi-day, and relative events.",
 	"type": "module",
 	"keywords": [

@@ -39,6 +39,9 @@ All calendar events are divided into two main types:
 
 > If you only need fixed events, you can use this package without configuring an adapter.
 
+- When set to `false`, the `trueHolidays` option overrides `isHolidayInIran` to `false` on all
+  returned events.
+
 ### `getEvents(calendar, month, day, options?)`
 
 Returns all events for a specific day of a month.
@@ -56,6 +59,7 @@ getEvents(
     year?: number; // required for dynamic events
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // overrides the global adapter for this call
+	trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -76,6 +80,7 @@ getMonthEvents(
     year?: number;
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // overrides the global adapter for this call
+	trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -99,6 +104,7 @@ getYearEvents(
   options?: {
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // overrides the global adapter for this call
+	trueHolidays?: boolean;
   }
 ): Event[]
 ```
