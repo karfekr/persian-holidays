@@ -176,7 +176,7 @@ interface CalendarAdapter {
 
 پکیج Adapter مورد استفاده را با ترتیب زیر انتخاب می‌کند:
 
-<div align="center">
+<div align="center" dir="ltr">
 
 | اولویت | منبع           | نحوه استفاده                  |
 | ------ | -------------- | ----------------------------- |
