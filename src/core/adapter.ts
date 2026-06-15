@@ -1,6 +1,6 @@
 import type { AdapterType } from "src/types";
 
-let adapter: AdapterType | null = null;
+let adapter: AdapterType | undefined = undefined;
 
 export function setAdapter(next: AdapterType): void {
 	if (typeof next?.firstWeekdayOfMonth !== "function" || typeof next?.monthLength !== "function") {
@@ -15,7 +15,7 @@ export function setAdapter(next: AdapterType): void {
 }
 
 export function getAdapter(callerHint?: string): AdapterType {
-	if (adapter === null) {
+	if (!adapter) {
 		const who = callerHint ? `Rule "${callerHint}" ` : "A relative rule ";
 
 		throw new Error(
@@ -27,10 +27,10 @@ export function getAdapter(callerHint?: string): AdapterType {
 	return adapter;
 }
 
-export function clearAdapter(): void {
-	adapter = null;
+export function resolveAdapter(override?: AdapterType): AdapterType | undefined {
+	return override ?? adapter ?? undefined;
 }
 
-export function resolveAdapter(override?: AdapterType): AdapterType | null {
-	return override ?? adapter ?? null;
+export function clearAdapter(): void {
+	adapter = undefined;
 }

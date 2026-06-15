@@ -151,8 +151,8 @@ The package resolves the adapter using the following priority order:
 
 | Priority    | Source           | How                                          |
 | ----------- | ---------------- | -------------------------------------------- |
-| 1 (highest) | Per-call adapter | `getEvents(..., { adapter })`     |
-| 2           | Global adapter   | `setAdapter(...)`                      |
+| 1 (highest) | Per-call adapter | `getEvents(..., { adapter })`                |
+| 2           | Global adapter   | `setAdapter(...)`                            |
 | 3 (lowest)  | No adapter       | Only fixed and multi-day events are returned |
 
 This means you can set a global adapter once and override it for specific calls when needed —
@@ -208,6 +208,7 @@ setAdapter({
 ```
 
 ## 🤝 Contribution & Support
+
 You can support its continued development by:
 
 - Contributing to the project

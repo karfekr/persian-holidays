@@ -175,7 +175,8 @@ export function resolveRule(rule: RelativeRule, ctx: ResolverContext = {}): Date
 		);
 	}
 
-	const cacheKey = `${ruleKey(rule)}:${ctx.year ?? "-"}:${ctx.calendar ?? "-"}`;
+	const adapterKey = ctx.adapter ? "custom" : "global";
+	const cacheKey = `${ruleKey(rule)}:${ctx.year ?? "-"}:${ctx.calendar ?? "-"}:${adapterKey}`;
 
 	const cached = cache.get(cacheKey);
 

@@ -149,6 +149,25 @@ describe("getMonthEvents", () => {
 		expect(events.some((e) => e.id === "hijri-laylat-al-qadr")).toBe(true);
 	});
 
+	describe("per-call adapter", () => {
+		it("should use per-call adapter when no global adapter is set", () => {
+			clearAdapter();
+			const adapter = createInternationalizedAdapter();
+			const events = getMonthEvents("gregorian", 5, { year: 2024, adapter });
+			expect(events.some((e) => e.id === "gregorian-mothers-day")).toBe(true);
+		});
+
+		it("should not affect subsequent calls without per-call adapter", () => {
+			const overrideAdapter = {
+				firstWeekdayOfMonth: vi.fn().mockReturnValue(0),
+				monthLength: vi.fn().mockReturnValue(31),
+			};
+			getMonthEvents("gregorian", 5, { year: 2024, adapter: overrideAdapter });
+			getMonthEvents("gregorian", 5, { year: 2024 });
+			expect(overrideAdapter.monthLength).toHaveBeenCalledTimes(1);
+		});
+	});
+
 	it("category filter should work on getMonthEvents", () => {
 		const events = getMonthEvents("gregorian", 12, {
 			year: 2024,
@@ -195,6 +214,26 @@ describe("getYearEvents", () => {
 		expect(ids).toContain("hijri-eid-fitr-holidays");
 		expect(ids).toContain("hijri-laylat-al-qadr");
 		expect(ids).toContain("hijri-12-01-p59bj6");
+	});
+
+	describe("per-call adapter", () => {
+		it("should use per-call adapter when no global adapter is set", () => {
+			clearAdapter();
+			const adapter = createInternationalizedAdapter();
+			const events = getYearEvents("gregorian", 2024, { adapter });
+			expect(events.some((e) => e.id === "gregorian-mothers-day")).toBe(true);
+		});
+
+		it("should not affect subsequent calls without per-call adapter", () => {
+			const overrideAdapter = {
+				firstWeekdayOfMonth: vi.fn().mockReturnValue(0),
+				monthLength: vi.fn().mockReturnValue(31),
+			};
+			getYearEvents("gregorian", 2024, { adapter: overrideAdapter });
+			const callCount = overrideAdapter.monthLength.mock.calls.length;
+			getYearEvents("gregorian", 2024);
+			expect(overrideAdapter.monthLength).toHaveBeenCalledTimes(callCount);
+		});
 	});
 
 	it("category filter should work on getYearEvents", () => {

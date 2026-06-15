@@ -8,6 +8,7 @@ import type {
 	ResolverContext,
 } from "src/types";
 
+import { resolveAdapter } from "./adapter";
 import { resolveRule } from "./ruleResolver";
 
 type MonthDayPoint = DatePoint;
@@ -55,7 +56,7 @@ export function matchDay(
 	day: number,
 	categories?: CategoryType[],
 	year?: number,
-	resolveAdapter?: AdapterType,
+	adapter?: AdapterType,
 ): EventType[] {
 	const results: EventType[] = [];
 
@@ -85,7 +86,7 @@ export function matchDay(
 				year,
 				calendar,
 				skipOnMissingYear: year == null,
-				adapter: resolveAdapter,
+				adapter: resolveAdapter(adapter),
 			};
 
 			const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);
@@ -111,7 +112,7 @@ export function matchRange(
 	endDay: number,
 	categories?: CategoryType[],
 	year?: number,
-	resolveAdapter?: AdapterType,
+	adapter?: AdapterType,
 ): EventType[] {
 	const results: EventType[] = [];
 	const seen = new Set<string>();
@@ -158,7 +159,7 @@ export function matchRange(
 				year,
 				calendar,
 				skipOnMissingYear: year == null,
-				adapter: resolveAdapter,
+				adapter: resolveAdapter(adapter),
 			};
 
 			const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);

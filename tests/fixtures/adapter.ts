@@ -7,13 +7,7 @@ import {
 	PersianCalendar,
 	startOfMonth,
 } from "@internationalized/date";
-import type { CalendarType } from "src/types";
-
-export type InternationalizedAdapter = {
-	firstWeekdayOfMonth: (calendar: CalendarType, year: number, month: number) => number;
-
-	monthLength: (calendar: CalendarType, year: number, month: number) => number;
-};
+import type { AdapterType, CalendarType } from "src/types";
 
 const CALENDARS: Record<CalendarType, unknown> = {
 	jalali: new PersianCalendar(),
@@ -35,7 +29,7 @@ function normaliseWeekday(rawWeekday: number, calendar: CalendarType): number {
 	return rawWeekday;
 }
 
-export function createInternationalizedAdapter(): InternationalizedAdapter {
+export function createInternationalizedAdapter(): AdapterType {
 	return {
 		firstWeekdayOfMonth(calendar, year, month) {
 			const cal = CALENDARS[calendar];
