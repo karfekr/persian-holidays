@@ -208,9 +208,6 @@ setAdapter({
 ```
 
 ## 🤝 Contribution & Support
-
-This package is built with love and for non-commercial use under the [LICENSE](LICENSE).
-
 You can support its continued development by:
 
 - Contributing to the project
