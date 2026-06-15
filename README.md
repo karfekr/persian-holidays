@@ -167,7 +167,7 @@ without affecting the rest of your application.
 ### 🔧 Example Adapter using `@internationalized/date`
 
 ```ts
-import { CalendarType, setAdapter } from "persian-holidays";
+import { type CalendarType, setAdapter } from "persian-holidays";
 import {
 	CalendarDate,
 	PersianCalendar,
