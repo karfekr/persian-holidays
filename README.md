@@ -59,7 +59,7 @@ getEvents(
     year?: number; // required for dynamic events
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // overrides the global adapter for this call
-	trueHolidays?: boolean;
+    trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -80,7 +80,7 @@ getMonthEvents(
     year?: number;
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // overrides the global adapter for this call
-	trueHolidays?: boolean;
+    trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -104,7 +104,7 @@ getYearEvents(
   options?: {
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // overrides the global adapter for this call
-	trueHolidays?: boolean;
+    trueHolidays?: boolean;
   }
 ): Event[]
 ```

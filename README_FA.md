@@ -68,7 +68,7 @@ getEvents(
     year?: number; // برای مناسبت‌های پویا الزامی است
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // آداپتر را برای این فراخوانی بازنویسی می‌کند
-	trueHolidays?: boolean;
+    trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -93,7 +93,7 @@ getMonthEvents(
     year?: number;
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // آداپتر را برای این فراخوانی بازنویسی می‌کند
-	trueHolidays?: boolean;
+    trueHolidays?: boolean;
   }
 ): Event[]
 ```
@@ -121,7 +121,7 @@ getYearEvents(
   options?: {
     categories?: CategoryType[];
     adapter?: CalendarAdapter; // آداپتر را برای این فراخوانی بازنویسی می‌کند
-	trueHolidays?: boolean;
+    trueHolidays?: boolean;
   }
 ): Event[]
 ```
