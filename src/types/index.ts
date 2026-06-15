@@ -43,6 +43,7 @@ export type ResolverContext = {
 	year?: number;
 	calendar?: CalendarType;
 	skipOnMissingYear?: boolean;
+	adapter?: AdapterType;
 };
 
 export type DatePoint = {
@@ -87,9 +88,15 @@ export type EventType = {
 	type: OccasionType;
 };
 
+export type AdapterType = {
+	firstWeekdayOfMonth: (calendar: CalendarType, year: number, month: number) => number;
+	monthLength: (calendar: CalendarType, year: number, month: number) => number;
+};
+
 export type QueryOptions = {
 	categories?: CategoryType[];
 	year?: number;
+	adapter?: AdapterType;
 };
 
 export type RuleResolver = (rule: RelativeRule, ctx: ResolverContext) => DatePoint[];

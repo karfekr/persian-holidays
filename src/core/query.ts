@@ -1,14 +1,8 @@
 import type { CalendarType, EventType, QueryOptions } from "src/types";
 
-import { getAdapter } from "./adapter";
+import { resolveAdapter } from "./adapter";
 import { matchDay, matchRange } from "./engine";
 import { loadCalendar } from "./loader";
-
-function getMonthLength(calendar: CalendarType, month: number, year?: number): number {
-	const adapter = getAdapter("getMonthLength");
-
-	return adapter.monthLength(calendar, year ?? 0, month);
-}
 
 export function getEvents(
 	calendar: CalendarType,
@@ -17,8 +11,15 @@ export function getEvents(
 	options?: QueryOptions,
 ): EventType[] {
 	const raw = loadCalendar(calendar);
-
-	return matchDay(raw, calendar, month, day, options?.categories, options?.year);
+	return matchDay(
+		raw,
+		calendar,
+		month,
+		day,
+		options?.categories,
+		options?.year,
+		resolveAdapter(options?.adapter) ?? undefined,
+	);
 }
 
 export function getMonthEvents(
@@ -27,11 +28,20 @@ export function getMonthEvents(
 	options?: QueryOptions,
 ): EventType[] {
 	const raw = loadCalendar(calendar);
-
+	const resolvedAdapter = resolveAdapter(options?.adapter);
 	const year = options?.year;
-	const lastDay = getMonthLength(calendar, month, year);
-
-	return matchRange(raw, calendar, month, 1, month, lastDay, options?.categories, year);
+	const lastDay = resolvedAdapter ? resolvedAdapter.monthLength(calendar, year ?? 0, month) : 31;
+	return matchRange(
+		raw,
+		calendar,
+		month,
+		1,
+		month,
+		lastDay,
+		options?.categories,
+		year,
+		resolvedAdapter ?? undefined,
+	);
 }
 
 export function getYearEvents(
@@ -40,8 +50,17 @@ export function getYearEvents(
 	options?: QueryOptions,
 ): EventType[] {
 	const raw = loadCalendar(calendar);
-
-	const lastDay = getMonthLength(calendar, 12, year);
-
-	return matchRange(raw, calendar, 1, 1, 12, lastDay, options?.categories, year);
+	const resolvedAdapter = resolveAdapter(options?.adapter);
+	const lastDay = resolvedAdapter ? resolvedAdapter.monthLength(calendar, year, 12) : 31;
+	return matchRange(
+		raw,
+		calendar,
+		1,
+		1,
+		12,
+		lastDay,
+		options?.categories,
+		year,
+		resolvedAdapter ?? undefined,
+	);
 }

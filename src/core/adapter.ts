@@ -1,13 +1,8 @@
-import type { CalendarType } from "src/types";
+import type { AdapterType } from "src/types";
 
-export type CalendarAdapter = {
-	firstWeekdayOfMonth: (calendar: CalendarType, year: number, month: number) => number;
-	monthLength: (calendar: CalendarType, year: number, month: number) => number;
-};
+let adapter: AdapterType | null = null;
 
-let adapter: CalendarAdapter | null = null;
-
-export function setAdapter(next: CalendarAdapter): void {
+export function setAdapter(next: AdapterType): void {
 	if (typeof next?.firstWeekdayOfMonth !== "function" || typeof next?.monthLength !== "function") {
 		throw new TypeError(
 			"[persian-holidays] setAdapter() requires an object with " +
@@ -19,7 +14,7 @@ export function setAdapter(next: CalendarAdapter): void {
 	adapter = next;
 }
 
-export function getAdapter(callerHint?: string): CalendarAdapter {
+export function getAdapter(callerHint?: string): AdapterType {
 	if (adapter === null) {
 		const who = callerHint ? `Rule "${callerHint}" ` : "A relative rule ";
 
@@ -34,4 +29,8 @@ export function getAdapter(callerHint?: string): CalendarAdapter {
 
 export function clearAdapter(): void {
 	adapter = null;
+}
+
+export function resolveAdapter(override?: AdapterType): AdapterType | null {
+	return override ?? adapter ?? null;
 }

@@ -89,7 +89,7 @@ const resolveNthWeekdayOfMonth: RuleResolver = (rule, ctx) => {
 		);
 	}
 
-	const adapter = getAdapter("nth-weekday-of-month");
+	const adapter = ctx.adapter ?? getAdapter("nth-weekday-of-month");
 
 	const firstWeekday = adapter.firstWeekdayOfMonth(calendar, year, month);
 	const totalDays = adapter.monthLength(calendar, year, month);

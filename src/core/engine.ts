@@ -1,4 +1,5 @@
 import type {
+	AdapterType,
 	CalendarType,
 	CategoryType,
 	DatePoint,
@@ -54,6 +55,7 @@ export function matchDay(
 	day: number,
 	categories?: CategoryType[],
 	year?: number,
+	resolveAdapter?: AdapterType,
 ): EventType[] {
 	const results: EventType[] = [];
 
@@ -83,6 +85,7 @@ export function matchDay(
 				year,
 				calendar,
 				skipOnMissingYear: year == null,
+				adapter: resolveAdapter,
 			};
 
 			const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);
@@ -108,6 +111,7 @@ export function matchRange(
 	endDay: number,
 	categories?: CategoryType[],
 	year?: number,
+	resolveAdapter?: AdapterType,
 ): EventType[] {
 	const results: EventType[] = [];
 	const seen = new Set<string>();
@@ -154,6 +158,7 @@ export function matchRange(
 				year,
 				calendar,
 				skipOnMissingYear: year == null,
+				adapter: resolveAdapter,
 			};
 
 			const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);

@@ -16,7 +16,8 @@ for fixed, multi-day, and rule-based dynamic events.
 - **Complex event support**: Includes events like Easter (Gregorian) and Chaharshanbe Suri (Jalali)
 - **Tree-shaking friendly output** based on actual usage
 - **Zero dependencies**
-- **Adapter system** allowing integration with any date conversion library
+- **Flexible adapter system** — set a global adapter once, or pass a per-call adapter directly to
+  any function
 - **Bilingual event titles**
 - **Flexible and overlapping category filters**
 
@@ -50,9 +51,11 @@ const events = getEvents("jalali", 9, 20);
 getEvents(
   calendar: 'jalali' | 'gregorian' | 'hijri',
   month: number,
+  day: number,
   options?: {
     year?: number; // required for dynamic events
     categories?: CategoryType[];
+    adapter?: CalendarAdapter; // overrides the global adapter for this call
   }
 ): Event[]
 ```
@@ -72,6 +75,7 @@ getMonthEvents(
   options?: {
     year?: number;
     categories?: CategoryType[];
+    adapter?: CalendarAdapter; // overrides the global adapter for this call
   }
 ): Event[]
 ```
@@ -94,6 +98,7 @@ getYearEvents(
   year: number,
   options?: {
     categories?: CategoryType[];
+    adapter?: CalendarAdapter; // overrides the global adapter for this call
   }
 ): Event[]
 ```
@@ -139,6 +144,19 @@ interface CalendarAdapter {
 	monthLength(calendar: "jalali" | "gregorian" | "hijri", year: number, month: number): number;
 }
 ```
+
+### 🔢 Adapter Priority
+
+The package resolves the adapter using the following priority order:
+
+| Priority    | Source           | How                                          |
+| ----------- | ---------------- | -------------------------------------------- |
+| 1 (highest) | Per-call adapter | `getEvents(..., { adapter: myAdapter })`     |
+| 2           | Global adapter   | `setAdapter(myAdapter)`                      |
+| 3 (lowest)  | No adapter       | Only fixed and multi-day events are returned |
+
+This means you can set a global adapter once and override it for specific calls when needed —
+without affecting the rest of your application.
 
 ### 🔧 Example Adapter using `@internationalized/date`
 
