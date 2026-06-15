@@ -97,6 +97,7 @@ export type QueryOptions = {
 	categories?: CategoryType[];
 	year?: number;
 	adapter?: AdapterType;
+	trueHolidays?: boolean;
 };
 
 export type RuleResolver = (rule: RelativeRule, ctx: ResolverContext) => DatePoint[];

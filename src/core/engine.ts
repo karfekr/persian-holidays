@@ -38,12 +38,12 @@ function matchesCategory(event: RawEvent, categories?: CategoryType[]): boolean 
 	return event.categories.some((c) => categories.includes(c));
 }
 
-function toEvent(raw: RawEvent, calendar: CalendarType): EventType {
+function toEvent(raw: RawEvent, calendar: CalendarType, trueHolidays: boolean): EventType {
 	return {
 		id: raw.id,
 		title: raw.title,
 		categories: raw.categories,
-		isHolidayInIran: raw.isHolidayInIran,
+		isHolidayInIran: trueHolidays ? raw.isHolidayInIran : false,
 		calendar,
 		type: raw.type,
 	};
@@ -57,6 +57,7 @@ export function matchDay(
 	categories?: CategoryType[],
 	year?: number,
 	adapter?: AdapterType,
+	trueHolidays = true,
 ): EventType[] {
 	const results: EventType[] = [];
 
@@ -65,7 +66,7 @@ export function matchDay(
 
 		if (event.type === "fixed") {
 			if (event.month != null && event.day != null && event.month === month && event.day === day) {
-				results.push(toEvent(event, calendar));
+				results.push(toEvent(event, calendar, trueHolidays));
 			}
 		} else if (event.type === "multi-day") {
 			const { startMonth, startDay, endMonth, endDay } = event;
@@ -77,7 +78,7 @@ export function matchDay(
 				endDay != null &&
 				inRange(month, day, startMonth, startDay, endMonth, endDay)
 			) {
-				results.push(toEvent(event, calendar));
+				results.push(toEvent(event, calendar, trueHolidays));
 			}
 		} else if (event.type === "relative") {
 			if (event.rule == null) continue;
@@ -93,7 +94,7 @@ export function matchDay(
 
 			for (const pt of resolved) {
 				if (pt.month === month && pt.day === day) {
-					results.push(toEvent(event, calendar));
+					results.push(toEvent(event, calendar, trueHolidays));
 					break;
 				}
 			}
@@ -113,6 +114,7 @@ export function matchRange(
 	categories?: CategoryType[],
 	year?: number,
 	adapter?: AdapterType,
+	trueHolidays = true,
 ): EventType[] {
 	const results: EventType[] = [];
 	const seen = new Set<string>();
@@ -120,7 +122,7 @@ export function matchRange(
 	const add = (event: RawEvent): void => {
 		if (!seen.has(event.id)) {
 			seen.add(event.id);
-			results.push(toEvent(event, calendar));
+			results.push(toEvent(event, calendar, trueHolidays));
 		}
 	};
 

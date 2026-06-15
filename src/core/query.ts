@@ -11,9 +11,18 @@ export function getEvents(
 	options?: QueryOptions,
 ): EventType[] {
 	const raw = loadCalendar(calendar);
-	const adapter = resolveAdapter(options?.adapter) ?? undefined;
+	const adapter = resolveAdapter(options?.adapter);
 
-	return matchDay(raw, calendar, month, day, options?.categories, options?.year, adapter);
+	return matchDay(
+		raw,
+		calendar,
+		month,
+		day,
+		options?.categories,
+		options?.year,
+		adapter ?? undefined,
+		options?.trueHolidays ?? true,
+	);
 }
 
 export function getMonthEvents(
@@ -36,6 +45,7 @@ export function getMonthEvents(
 		options?.categories,
 		year,
 		adapter ?? undefined,
+		options?.trueHolidays ?? true,
 	);
 }
 
@@ -58,5 +68,6 @@ export function getYearEvents(
 		options?.categories,
 		year,
 		adapter ?? undefined,
+		options?.trueHolidays ?? true,
 	);
 }

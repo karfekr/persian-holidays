@@ -92,6 +92,31 @@ describe("getEvents", () => {
 		});
 	});
 
+	describe("holidays option", () => {
+		it("should return isHolidayInIran as-is when holidays is true (default)", () => {
+			const events = getEvents("jalali", 1, 1);
+			const nowruz = events.find((e) => e.id === "jalali-nowruz-holidays");
+			expect(nowruz?.isHolidayInIran).toBe(true);
+		});
+
+		it("should return isHolidayInIran as false for all events when holidays is false", () => {
+			const events = getEvents("jalali", 1, 1, { trueHolidays: false });
+			expect(events.every((e) => e.isHolidayInIran === false)).toBe(true);
+		});
+
+		it("should override isHolidayInIran:true to false when holidays is false", () => {
+			const events = getEvents("jalali", 1, 1, { trueHolidays: false });
+			const nowruz = events.find((e) => e.id === "jalali-nowruz-holidays");
+			expect(nowruz?.isHolidayInIran).toBe(false);
+		});
+
+		it("should keep isHolidayInIran:false unchanged when holidays is false", () => {
+			const events = getEvents("hijri", 9, 15, { trueHolidays: false });
+			const ramadan = events.find((e) => e.id === "hijri-ramadan");
+			expect(ramadan?.isHolidayInIran).toBe(false);
+		});
+	});
+
 	describe("calendar field in output", () => {
 		it("should return correct calendar in Event", () => {
 			const events = getEvents("jalali", 12, 1);
@@ -149,22 +174,22 @@ describe("getMonthEvents", () => {
 		expect(events.some((e) => e.id === "hijri-laylat-al-qadr")).toBe(true);
 	});
 
-	describe("per-call adapter", () => {
-		it("should use per-call adapter when no global adapter is set", () => {
-			clearAdapter();
-			const adapter = createInternationalizedAdapter();
-			const events = getMonthEvents("gregorian", 5, { year: 2024, adapter });
-			expect(events.some((e) => e.id === "gregorian-mothers-day")).toBe(true);
+	describe("holidays option", () => {
+		it("should return isHolidayInIran as-is when holidays is true (default)", () => {
+			const events = getMonthEvents("hijri", 10, { year: 1445 });
+			const eid = events.find((e) => e.id === "hijri-eid-fitr-holidays");
+			expect(eid?.isHolidayInIran).toBe(true);
 		});
 
-		it("should not affect subsequent calls without per-call adapter", () => {
-			const overrideAdapter = {
-				firstWeekdayOfMonth: vi.fn().mockReturnValue(0),
-				monthLength: vi.fn().mockReturnValue(31),
-			};
-			getMonthEvents("gregorian", 5, { year: 2024, adapter: overrideAdapter });
-			getMonthEvents("gregorian", 5, { year: 2024 });
-			expect(overrideAdapter.monthLength).toHaveBeenCalledTimes(1);
+		it("should set isHolidayInIran to false for all events when holidays is false", () => {
+			const events = getMonthEvents("jalali", 1, { year: 1403, trueHolidays: false });
+			expect(events.every((e) => e.isHolidayInIran === false)).toBe(true);
+		});
+
+		it("should override isHolidayInIran:true to false when holidays is false", () => {
+			const events = getMonthEvents("hijri", 10, { year: 1445, trueHolidays: false });
+			const eid = events.find((e) => e.id === "hijri-eid-fitr-holidays");
+			expect(eid?.isHolidayInIran).toBe(false);
 		});
 	});
 
@@ -216,23 +241,22 @@ describe("getYearEvents", () => {
 		expect(ids).toContain("hijri-12-01-p59bj6");
 	});
 
-	describe("per-call adapter", () => {
-		it("should use per-call adapter when no global adapter is set", () => {
-			clearAdapter();
-			const adapter = createInternationalizedAdapter();
-			const events = getYearEvents("gregorian", 2024, { adapter });
-			expect(events.some((e) => e.id === "gregorian-mothers-day")).toBe(true);
+	describe("holidays option", () => {
+		it("should return isHolidayInIran as-is when holidays is true (default)", () => {
+			const events = getYearEvents("jalali", 1403);
+			const nowruz = events.find((e) => e.id === "jalali-nowruz-holidays");
+			expect(nowruz?.isHolidayInIran).toBe(true);
 		});
 
-		it("should not affect subsequent calls without per-call adapter", () => {
-			const overrideAdapter = {
-				firstWeekdayOfMonth: vi.fn().mockReturnValue(0),
-				monthLength: vi.fn().mockReturnValue(31),
-			};
-			getYearEvents("gregorian", 2024, { adapter: overrideAdapter });
-			const callCount = overrideAdapter.monthLength.mock.calls.length;
-			getYearEvents("gregorian", 2024);
-			expect(overrideAdapter.monthLength).toHaveBeenCalledTimes(callCount);
+		it("should set isHolidayInIran to false for all events when holidays is false", () => {
+			const events = getYearEvents("jalali", 1403, { trueHolidays: false });
+			expect(events.every((e) => e.isHolidayInIran === false)).toBe(true);
+		});
+
+		it("should override isHolidayInIran:true to false when holidays is false", () => {
+			const events = getYearEvents("hijri", 1445, { trueHolidays: false });
+			const eid = events.find((e) => e.id === "hijri-eid-fitr-holidays");
+			expect(eid?.isHolidayInIran).toBe(false);
 		});
 	});
 
