@@ -155,6 +155,15 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-10-29-adew3uu
+    type: fixed
+    month: 10
+    day: 29
+    title:
+      fa: روز جهانی مراقبت و حمایت
+      en: International Day of Care and Support
+    categories: [international, united_nations]
+
   - id: gregorian-10-31-1cfx8v5
     type: fixed
     month: 10

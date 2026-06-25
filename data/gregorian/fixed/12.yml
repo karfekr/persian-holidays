@@ -166,3 +166,21 @@ events:
       - international
       - united_nations
     isHolidayInIran: false
+
+  - id: gregorian-12-21-bai2nu
+    type: fixed
+    month: 12
+    day: 21
+    title:
+      fa: روز جهانی مدیتیشن
+      en: World Meditation Day
+    categories: [international, united_nations]
+
+  - id: gregorian-12-27-abn0kb
+    type: fixed
+    month: 12
+    day: 27
+    title:
+      fa: روز جهانی آمادگی در برابر همه‌گیری‌ها
+      en: International Day of Epidemic Preparedness
+    categories: [international, united_nations]

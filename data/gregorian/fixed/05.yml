@@ -107,6 +107,15 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-05-25-ph689ju
+    type: fixed
+    month: 5
+    day: 25
+    title:
+      fa: روز جهانی فوتبال
+      en: World Football Day
+    categories: [international, united_nations]
+
   - id: gregorian-05-29-lfp505
     type: fixed
     month: 5

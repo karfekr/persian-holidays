@@ -11,6 +11,15 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-09-07-joskkve
+    type: fixed
+    month: 9
+    day: 7
+    title:
+      fa: روز جهانی هوای پاک برای آسمان آبی
+      en: International Day of Clean Air for Blue Skies
+    categories: [international, united_nations]
+
   - id: gregorian-09-08-1xr7hjt
     type: fixed
     month: 9
@@ -54,6 +63,18 @@ events:
     title:
       fa: روز جهانی حفاظت از لایه اوزون
       en: International Day for the Preservation of the Ozone Layer
+    categories:
+      - international
+      - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-09-20-k3t2y1k
+    type: fixed
+    month: 9
+    day: 20
+    title:
+      fa: روز جهانی پاکیزه‌سازی
+      en: World Cleanup Day
     categories:
       - international
       - united_nations
@@ -118,6 +139,15 @@ events:
       - international
       - united_nations
     isHolidayInIran: false
+
+  - id: gregorian-09-29-8kpksva
+    type: fixed
+    month: 9
+    day: 29
+    title:
+      fa: روز جهانی آگاهی از اتلاف و هدررفت غذا
+      en: International Day of Awareness of Food Loss and Waste
+    categories: [international, united_nations]
 
   - id: gregorian-09-30-1pkjkvb
     type: fixed

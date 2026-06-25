@@ -61,7 +61,7 @@ export const gregorianSample: RawEvent[] = [
 			occurrence: "second",
 		},
 		title: {
-			fa: "روز مادر (بین‌المللی)",
+			fa: "روز مادر (جهانی)",
 			en: "Mother's Day (International)",
 		},
 		categories: ["international"],

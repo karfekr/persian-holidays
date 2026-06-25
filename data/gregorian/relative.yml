@@ -6,11 +6,11 @@ events:
     rule:
       base: nth-weekday-of-month
       month: 5
-      weekday: 0 # Sunday in iso system
+      weekday: 0
       occurrence: second
     title:
-      fa: روز مادر (بین‌المللی)
-      en: Mother's Day (International)
+      fa: روز جهانی مادر
+      en: World Mother's Day
     categories: [international]
     isHolidayInIran: false
 
@@ -19,7 +19,7 @@ events:
     rule:
       base: nth-weekday-of-month
       month: 11
-      weekday: 4 # Thursday in iso system
+      weekday: 4
       occurrence: fourth
     title:
       fa: روز شکرگزاری
@@ -36,4 +36,43 @@ events:
       fa: عید پاک
       en: Easter Sunday
     categories: [international, religious]
+    isHolidayInIran: false
+
+  - id: gregorian-migratory-bird-day-may
+    type: relative
+    rule:
+      base: nth-weekday-of-month
+      month: 5
+      weekday: 6
+      occurrence: second
+    title:
+      fa: روز جهانی پرندگان مهاجر بهار
+      en: World Migratory Bird Day (Spring)
+    categories: [international, united_nations]
+    isHolidayInIran: false
+
+  - id: gregorian-migratory-bird-day-october
+    type: relative
+    rule:
+      base: nth-weekday-of-month
+      month: 10
+      weekday: 6
+      occurrence: second
+    title:
+      fa: روز جهانی پرندگان مهاجر پاییز
+      en: World Migratory Bird Day (Autumn)
+    categories: [international, united_nations]
+    isHolidayInIran: false
+
+  - id: gregorian-maritime-day
+    type: relative
+    rule:
+      base: month-weekday
+      month: 9
+      weekday: 4
+      occurrence: last
+    title:
+      fa: روز جهانی دریانوردی
+      en: World Maritime Day
+    categories: [international, united_nations]
     isHolidayInIran: false

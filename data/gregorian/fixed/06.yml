@@ -59,6 +59,24 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-06-10-ba87eq
+    type: fixed
+    month: 6
+    day: 10
+    title:
+      fa: روز جهانی گفت‌وگو میان تمدن‌ها
+      en: International Day for Dialogue among Civilizations
+    categories: [international, united_nations]
+
+  - id: gregorian-06-11-upn2un
+    type: fixed
+    month: 6
+    day: 11
+    title:
+      fa: روز جهانی بازی
+      en: International Day of Play
+    categories: [international, united_nations]
+
   - id: gregorian-06-12-crit54
     type: fixed
     month: 6
@@ -143,6 +161,15 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-06-18-aiw9gi
+    type: fixed
+    month: 6
+    day: 18
+    title:
+      fa: روز جهانی مقابله با نفرت‌پراکنی
+      en: International Day for Countering Hate Speech
+    categories: [international, united_nations]
+
   - id: gregorian-06-19-11zolcz
     type: fixed
     month: 6
@@ -202,6 +229,15 @@ events:
       - international
       - united_nations
     isHolidayInIran: false
+
+  - id: gregorian-06-24-bay7ji
+    type: fixed
+    month: 6
+    day: 24
+    title:
+      fa: روز جهانی زنان در دیپلماسی
+      en: International Day of Women in Diplomacy
+    categories: [international, united_nations]
 
   - id: gregorian-06-25-osslp7
     type: fixed
