@@ -15,6 +15,8 @@ export const CATEGORIES = [
 
 export type CategoryType = (typeof CATEGORIES)[number];
 
+export type DateType = { month: number; day: number };
+
 export type OccasionType = "fixed" | "multi-day" | "relative";
 
 export type BilingualTitle = {
@@ -26,6 +28,22 @@ export type EventMetadata = {
 	importance?: string;
 	source?: string;
 	note?: string;
+};
+
+export type EventType = {
+	id: string;
+
+	title: BilingualTitle;
+
+	categories: CategoryType[];
+
+	isHolidayInIran: boolean;
+
+	calendar: CalendarType;
+
+	type: OccasionType;
+
+	date: DateType;
 };
 
 export type RelativeRule = {
@@ -72,20 +90,6 @@ export type RawEvent = {
 	categories: CategoryType[];
 
 	isHolidayInIran: boolean;
-};
-
-export type EventType = {
-	id: string;
-
-	title: BilingualTitle;
-
-	categories: CategoryType[];
-
-	isHolidayInIran: boolean;
-
-	calendar: CalendarType;
-
-	type: OccasionType;
 };
 
 export type AdapterType = {

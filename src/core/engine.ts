@@ -3,6 +3,7 @@ import type {
 	CalendarType,
 	CategoryType,
 	DatePoint,
+	DateType,
 	EventType,
 	RawEvent,
 	ResolverContext,
@@ -38,7 +39,12 @@ function matchesCategory(event: RawEvent, categories?: CategoryType[]): boolean 
 	return event.categories.some((c) => categories.includes(c));
 }
 
-function toEvent(raw: RawEvent, calendar: CalendarType, trueHolidays: boolean): EventType {
+function toEvent(
+	raw: RawEvent,
+	calendar: CalendarType,
+	trueHolidays: boolean,
+	date: DateType,
+): EventType {
 	return {
 		id: raw.id,
 		title: raw.title,
@@ -46,6 +52,7 @@ function toEvent(raw: RawEvent, calendar: CalendarType, trueHolidays: boolean): 
 		isHolidayInIran: trueHolidays ? raw.isHolidayInIran : false,
 		calendar,
 		type: raw.type,
+		date,
 	};
 }
 
@@ -66,7 +73,7 @@ export function matchDay(
 
 		if (event.type === "fixed") {
 			if (event.month != null && event.day != null && event.month === month && event.day === day) {
-				results.push(toEvent(event, calendar, trueHolidays));
+				results.push(toEvent(event, calendar, trueHolidays, { month, day }));
 			}
 		} else if (event.type === "multi-day") {
 			const { startMonth, startDay, endMonth, endDay } = event;
@@ -78,7 +85,7 @@ export function matchDay(
 				endDay != null &&
 				inRange(month, day, startMonth, startDay, endMonth, endDay)
 			) {
-				results.push(toEvent(event, calendar, trueHolidays));
+				results.push(toEvent(event, calendar, trueHolidays, { month, day }));
 			}
 		} else if (event.type === "relative") {
 			if (event.rule == null) continue;
@@ -94,7 +101,7 @@ export function matchDay(
 
 			for (const pt of resolved) {
 				if (pt.month === month && pt.day === day) {
-					results.push(toEvent(event, calendar, trueHolidays));
+					results.push(toEvent(event, calendar, trueHolidays, { month: pt.month, day: pt.day }));
 					break;
 				}
 			}
@@ -119,10 +126,10 @@ export function matchRange(
 	const results: EventType[] = [];
 	const seen = new Set<string>();
 
-	const add = (event: RawEvent): void => {
+	const add = (event: RawEvent, date: { month: number; day: number }): void => {
 		if (!seen.has(event.id)) {
 			seen.add(event.id);
-			results.push(toEvent(event, calendar, trueHolidays));
+			results.push(toEvent(event, calendar, trueHolidays, date));
 		}
 	};
 
@@ -135,7 +142,7 @@ export function matchRange(
 				event.day != null &&
 				inRange(event.month, event.day, startMonth, startDay, endMonth, endDay)
 			) {
-				add(event);
+				add(event, { month: event.month, day: event.day });
 			}
 		} else if (event.type === "multi-day") {
 			const {
@@ -151,7 +158,7 @@ export function matchRange(
 				const overlapEnd = cmpDate(evStartMonth, evStartDay, endMonth, endDay) <= 0;
 
 				if (overlapStart && overlapEnd) {
-					add(event);
+					add(event, { month: evStartMonth, day: evStartDay });
 				}
 			}
 		} else if (event.type === "relative") {
@@ -168,7 +175,7 @@ export function matchRange(
 
 			for (const pt of resolved) {
 				if (inRange(pt.month, pt.day, startMonth, startDay, endMonth, endDay)) {
-					add(event);
+					add(event, { month: pt.month, day: pt.day });
 					break;
 				}
 			}
