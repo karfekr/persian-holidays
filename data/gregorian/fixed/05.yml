@@ -35,18 +35,6 @@ events:
       - united_nations
     isHolidayInIran: false
 
-  - id: gregorian-05-10-ik8utc
-    type: fixed
-    month: 5
-    day: 10
-    title:
-      fa: روز جهانی وساک
-      en: World Vesak Day
-    categories:
-      - international
-      - united_nations
-    isHolidayInIran: false
-
   - id: gregorian-05-10-enpas2
     type: fixed
     month: 5

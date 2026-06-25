@@ -59,7 +59,7 @@ events:
     month: 4
     day: 7
     title:
-      fa: روز قوهٔ قضاییه
+      fa: روز قوه‌ی قضاییه
       en: Judiciary Day
     categories:
       - government
@@ -103,7 +103,7 @@ events:
     month: 4
     day: 12
     title:
-      fa: حملهٔ ناوگان آمریکا به هواپیمای مسافربری ایران
+      fa: حمله‌ی ناوگان آمریکا به هواپیمای مسافربری ایران
       en: US Fleet Attack on Iranian Passenger Plane
     categories:
       - historical
@@ -290,7 +290,7 @@ events:
     month: 4
     day: 27
     title:
-      fa: اعلام پذیرش قطعنامهٔ ۵۹۸ شورای امنیت از سوی ایران
+      fa: اعلام پذیرش قطعنامه‌ی ۵۹۸ شورای امنیت از سوی ایران
       en: Acceptance of UN Security Council Resolution 598 by Iran
     categories:
       - historical

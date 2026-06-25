@@ -59,7 +59,7 @@ events:
     month: 11
     day: 12
     title:
-      fa: آغاز دههٔ فجر
+      fa: آغاز دهه‌ی فجر
       en: Start of Fajr Days
     categories:
       - government
@@ -81,7 +81,7 @@ events:
     month: 11
     day: 15
     title:
-      fa: جشن میانهٔ زمستان
+      fa: جشن میانه‌ی زمستان
       en: Midwinter Festival
     categories:
       - ancient

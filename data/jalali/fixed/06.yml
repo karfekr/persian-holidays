@@ -37,7 +37,7 @@ events:
     month: 6
     day: 2
     title:
-      fa: آغاز هفتهٔ دولت
+      fa: آغاز هفته‌ی دولت
       en: Beginning of Government Week
     categories:
       - government
@@ -400,7 +400,7 @@ events:
     month: 6
     day: 31
     title:
-      fa: آغاز هفتهٔ دفاع مقدس
+      fa: آغاز هفته‌ی دفاع مقدس
       en: Beginning of Sacred Defense Week
     categories:
       - government
