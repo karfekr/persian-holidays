@@ -119,6 +119,7 @@ type Event = {
 		en: string;
 	};
 	categories: CategoryType[];
+	date: { month: number; day: number };
 	isHolidayInIran: boolean;
 	calendar: CalendarType;
 	type: "fixed" | "multi-day" | "relative";

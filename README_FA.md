@@ -119,7 +119,8 @@ getYearEvents(
   calendar: 'jalali' | 'gregorian' | 'hijri',
   year: number,
   options?: {
-    categories?: CategoryType[];
+		categories?: CategoryType[];
+		date: { month: number; day: number };
     adapter?: CalendarAdapter; // آداپتر را برای این فراخوانی بازنویسی می‌کند
     trueHolidays?: boolean;
   }
