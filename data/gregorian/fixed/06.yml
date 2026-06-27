@@ -67,6 +67,7 @@ events:
       fa: روز جهانی گفت‌وگو میان تمدن‌ها
       en: International Day for Dialogue among Civilizations
     categories: [international, united_nations]
+    isHolidayInIran: false
 
   - id: gregorian-06-11-upn2un
     type: fixed
@@ -76,6 +77,7 @@ events:
       fa: روز جهانی بازی
       en: International Day of Play
     categories: [international, united_nations]
+    isHolidayInIran: false
 
   - id: gregorian-06-12-crit54
     type: fixed
@@ -169,6 +171,7 @@ events:
       fa: روز جهانی مقابله با نفرت‌پراکنی
       en: International Day for Countering Hate Speech
     categories: [international, united_nations]
+    isHolidayInIran: false
 
   - id: gregorian-06-19-11zolcz
     type: fixed
@@ -238,6 +241,7 @@ events:
       fa: روز جهانی زنان در دیپلماسی
       en: International Day of Women in Diplomacy
     categories: [international, united_nations]
+    isHolidayInIran: false
 
   - id: gregorian-06-25-osslp7
     type: fixed

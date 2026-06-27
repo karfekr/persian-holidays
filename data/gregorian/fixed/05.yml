@@ -115,6 +115,7 @@ events:
       fa: روز جهانی فوتبال
       en: World Football Day
     categories: [international, united_nations]
+    isHolidayInIran: false
 
   - id: gregorian-05-29-lfp505
     type: fixed

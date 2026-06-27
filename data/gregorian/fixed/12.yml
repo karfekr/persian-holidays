@@ -175,6 +175,7 @@ events:
       fa: روز جهانی مدیتیشن
       en: World Meditation Day
     categories: [international, united_nations]
+    isHolidayInIran: false
 
   - id: gregorian-12-27-abn0kb
     type: fixed
@@ -184,3 +185,4 @@ events:
       fa: روز جهانی آمادگی در برابر همه‌گیری‌ها
       en: International Day of Epidemic Preparedness
     categories: [international, united_nations]
+    isHolidayInIran: false

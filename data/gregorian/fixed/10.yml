@@ -163,6 +163,7 @@ events:
       fa: روز جهانی مراقبت و حمایت
       en: International Day of Care and Support
     categories: [international, united_nations]
+    isHolidayInIran: false
 
   - id: gregorian-10-31-1cfx8v5
     type: fixed
