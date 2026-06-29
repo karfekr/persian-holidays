@@ -8,7 +8,7 @@
 
 A unified engine for holidays and events across the Jalali (Persian), Hijri (Islamic), and Gregorian
 calendars — with bilingual (Persian & English) data, official holiday categorization, and support
-for fixed, multi-day, and rule-based dynamic events.
+for fixed and rule-based dynamic events.
 
 ## ✨ Features
 
@@ -122,7 +122,7 @@ type Event = {
   date: { month: number; day: number };
   isHolidayInIran: boolean;
   calendar: CalendarType;
-  type: "fixed" | "multi-day" | "relative";
+  type: "fixed" | "relative";
 };
 ```
 
@@ -156,11 +156,11 @@ interface CalendarAdapter {
 
 The package resolves the adapter using the following priority order:
 
-| Priority    | Source           | How                                          |
-| ----------- | ---------------- | -------------------------------------------- |
-| 1 (highest) | Per-call adapter | `getEvents(..., { adapter })`                |
-| 2           | Global adapter   | `setAdapter(...)`                            |
-| 3 (lowest)  | No adapter       | Only fixed and multi-day events are returned |
+| Priority    | Source           | How                            |
+| ----------- | ---------------- | ------------------------------ |
+| 1 (highest) | Per-call adapter | `getEvents(..., { adapter })`  |
+| 2           | Global adapter   | `setAdapter(...)`              |
+| 3 (lowest)  | No adapter       | Only fixed events are returned |
 
 This means you can set a global adapter once and override it for specific calls when needed —
 without affecting the rest of your application.

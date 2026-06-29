@@ -17,7 +17,7 @@ export type CategoryType = (typeof CATEGORIES)[number];
 
 export type DateType = { month: number; day: number };
 
-export type OccasionType = "fixed" | "multi-day" | "relative";
+export type OccasionType = "fixed" | "relative";
 
 export type BilingualTitle = {
   fa: string;

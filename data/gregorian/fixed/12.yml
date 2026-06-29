@@ -177,6 +177,18 @@ events:
     categories: [international, united_nations]
     isHolidayInIran: false
 
+  - id: gregorian-12-25-biljnu
+    type: fixed
+    month: 12
+    day: 25
+    title:
+      fa: کریسمس
+      en: Christmas
+    categories:
+      - international
+      - religious
+    isHolidayInIran: false
+
   - id: gregorian-12-27-abn0kb
     type: fixed
     month: 12

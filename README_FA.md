@@ -37,8 +37,8 @@ npm install persian-holidays
 
 تمام مناسبت‌ها در سه تقویم به دو دسته‌ی اصلی تقسیم می‌شوند:
 
-- **مناسبت‌های ثابت (Fixed & Multi-Days Events):** مناسبت‌هایی که در تمام سال‌ها با یک روز و ماه
-  مشخص تعریف می‌شوند.
+- **مناسبت‌های ثابت (Fixed Events):** مناسبت‌هایی که در تمام سال‌ها با یک روز و ماه مشخص تعریف
+  می‌شوند.
 - **مناسبت‌های پویا (Dynamic Events):** مناسبت‌هایی مانند چهارشنبه‌سوری (جلالی) یا روز شکرگزاری
   (میلادی) که در همه‌ی سال‌ها روی یک روز و ماه ثابت قرار نمی‌گیرند.
 
@@ -143,7 +143,7 @@ type Events = {
   categories: CategoryType[];
   isHolidayInIran: boolean;
   calendar: CalendarType;
-  type: "fixed" | "multi-day" | "relative";
+  type: "fixed" | "relative";
 }[];
 ```
 

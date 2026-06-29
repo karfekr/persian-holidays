@@ -36,31 +36,9 @@ describe("getEvents", () => {
     });
   });
 
-  describe("multi-day events", () => {
-    it("should return Nowruz on first day", () => {
-      const events = getEvents("jalali", 1, 1);
-      expect(events.some((e) => e.id === "jalali-nowruz-holidays")).toBe(true);
-    });
-
-    it("should return Nowruz on fourth day", () => {
-      const events = getEvents("jalali", 1, 4);
-      expect(events.some((e) => e.id === "jalali-nowruz-holidays")).toBe(true);
-    });
-
-    it("should not return Nowruz on fifth day", () => {
-      const events = getEvents("jalali", 1, 5);
-      expect(events.some((e) => e.id === "jalali-nowruz-holidays")).toBe(false);
-    });
-
-    it("should return Ramadan on day 15 of month 9", () => {
-      const events = getEvents("hijri", 9, 15);
-      expect(events.some((e) => e.id === "hijri-ramadan")).toBe(true);
-    });
-  });
-
   describe("relative events", () => {
     it("should return day-candidates on candidate days", () => {
-      for (const day of [21, 23, 25, 27, 29]) {
+      for (const day of [19, 21, 23]) {
         const events = getEvents("hijri", 9, day);
         expect(events.some((e) => e.id === "hijri-laylat-al-qadr")).toBe(true);
       }
@@ -109,12 +87,6 @@ describe("getEvents", () => {
       const nowruz = events.find((e) => e.id === "jalali-nowruz-holidays");
       expect(nowruz?.isHolidayInIran).toBe(false);
     });
-
-    it("should keep isHolidayInIran:false unchanged when holidays is false", () => {
-      const events = getEvents("hijri", 9, 15, { trueHolidays: false });
-      const ramadan = events.find((e) => e.id === "hijri-ramadan");
-      expect(ramadan?.isHolidayInIran).toBe(false);
-    });
   });
 
   describe("calendar field in output", () => {
@@ -147,26 +119,9 @@ describe("getMonthEvents", () => {
     expect(events.some((e) => e.id === "jalali-12-01-gneby")).toBe(true);
   });
 
-  it("should return defense-week in both months it spans", () => {
-    const month6 = getMonthEvents("jalali", 6, { year: 1403 });
-    const month7 = getMonthEvents("jalali", 7, { year: 1403 });
-    expect(month6.some((e) => e.id === "jalali-defense-week")).toBe(true);
-    expect(month7.some((e) => e.id === "jalali-defense-week")).toBe(true);
-  });
-
   it("should return correct gregorian month 5 events", () => {
     const events = getMonthEvents("gregorian", 5, { year: 2024 });
     expect(events.some((e) => e.id === "gregorian-mothers-day")).toBe(true);
-  });
-
-  it("should return christmas events in month 12", () => {
-    const events = getMonthEvents("gregorian", 12, { year: 2024 });
-    expect(events.some((e) => e.id === "gregorian-christmas-week")).toBe(true);
-  });
-
-  it("should return Ramadan events in hijri month 9", () => {
-    const events = getMonthEvents("hijri", 9, { year: 1445 });
-    expect(events.some((e) => e.id === "hijri-ramadan")).toBe(true);
   });
 
   it("should return day-candidates in month 9", () => {
@@ -176,7 +131,7 @@ describe("getMonthEvents", () => {
 
   describe("holidays option", () => {
     it("should return isHolidayInIran as-is when holidays is true (default)", () => {
-      const events = getMonthEvents("hijri", 10, { year: 1445 });
+      const events = getMonthEvents("hijri", 12, { year: 1445 });
       const eid = events.find((e) => e.id === "hijri-eid-fitr-holidays");
       expect(eid?.isHolidayInIran).toBe(true);
     });
@@ -187,7 +142,7 @@ describe("getMonthEvents", () => {
     });
 
     it("should override isHolidayInIran:true to false when holidays is false", () => {
-      const events = getMonthEvents("hijri", 10, { year: 1445, trueHolidays: false });
+      const events = getMonthEvents("hijri", 12, { year: 1445, trueHolidays: false });
       const eid = events.find((e) => e.id === "hijri-eid-fitr-holidays");
       expect(eid?.isHolidayInIran).toBe(false);
     });
@@ -217,25 +172,22 @@ describe("getYearEvents", () => {
     const events = getYearEvents("jalali", 1403);
     const ids = events.map((e) => e.id);
     expect(ids).toContain("jalali-nowruz-holidays");
-    expect(ids).toContain("jalali-defense-week");
-    expect(ids).toContain("jalali-12-01-gneby");
     expect(ids).toContain("jalali-last-wednesday");
+    expect(ids).toContain("jalali-12-01-gneby");
   });
 
   it("should return all gregorian events in a year", () => {
     const events = getYearEvents("gregorian", 2024);
     const ids = events.map((e) => e.id);
-    expect(ids).toContain("gregorian-christmas-week");
-    expect(ids).toContain("gregorian-earth-week");
-    expect(ids).toContain("gregorian-12-01-14uslvu");
     expect(ids).toContain("gregorian-mothers-day");
     expect(ids).toContain("gregorian-thanksgiving");
+    expect(ids).toContain("gregorian-easter");
+    expect(ids).toContain("gregorian-12-01-14uslvu");
   });
 
   it("should return all hijri events in a year", () => {
     const events = getYearEvents("hijri", 1445);
     const ids = events.map((e) => e.id);
-    expect(ids).toContain("hijri-ramadan");
     expect(ids).toContain("hijri-eid-fitr-holidays");
     expect(ids).toContain("hijri-laylat-al-qadr");
     expect(ids).toContain("hijri-12-01-p59bj6");

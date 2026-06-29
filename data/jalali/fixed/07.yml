@@ -1,4 +1,16 @@
 events:
+  - id: jalali-07-01-jojobiz
+    type: fixed
+    month: 7
+    day: 1
+    title:
+      fa: هفته‌ی دفاع مقدس
+      en: Sacred Defense Week
+    categories:
+      - government
+      - historical
+    isHolidayInIran: false
+
   - id: jalali-07-01-1v3sp9l
     type: fixed
     month: 7
@@ -10,6 +22,54 @@ events:
       - ancient
     isHolidayInIran: false
 
+  - id: jalali-07-02-bouubij
+    type: fixed
+    month: 7
+    day: 2
+    title:
+      fa: هفته‌ی دفاع مقدس
+      en: Sacred Defense Week
+    categories:
+      - government
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-03-bouubij
+    type: fixed
+    month: 7
+    day: 3
+    title:
+      fa: هفته‌ی دفاع مقدس
+      en: Sacred Defense Week
+    categories:
+      - government
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-04-bouubij
+    type: fixed
+    month: 7
+    day: 4
+    title:
+      fa: هفته‌ی دفاع مقدس
+      en: Sacred Defense Week
+    categories:
+      - government
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-05-bouubij
+    type: fixed
+    month: 7
+    day: 5
+    title:
+      fa: هفته‌ی دفاع مقدس
+      en: Sacred Defense Week
+    categories:
+      - government
+      - historical
+    isHolidayInIran: false
+
   - id: jalali-07-05-10i53f4
     type: fixed
     month: 7
@@ -18,6 +78,18 @@ events:
       fa: شکست حصر آبادان در عملیات ثامن‌الأئمه
       en: Breaking of Abadan Siege in Operation Samen al-Aemeh
     categories:
+      - historical
+    isHolidayInIran: false
+
+  - id: jalali-07-06-bouubij
+    type: fixed
+    month: 7
+    day: 6
+    title:
+      fa: هفته‌ی دفاع مقدس
+      en: Sacred Defense Week
+    categories:
+      - government
       - historical
     isHolidayInIran: false
 

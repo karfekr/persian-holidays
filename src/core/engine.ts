@@ -75,18 +75,6 @@ export function matchDay(
       if (event.month != null && event.day != null && event.month === month && event.day === day) {
         results.push(toEvent(event, calendar, trueHolidays, { month, day }));
       }
-    } else if (event.type === "multi-day") {
-      const { startMonth, startDay, endMonth, endDay } = event;
-
-      if (
-        startMonth != null &&
-        startDay != null &&
-        endMonth != null &&
-        endDay != null &&
-        inRange(month, day, startMonth, startDay, endMonth, endDay)
-      ) {
-        results.push(toEvent(event, calendar, trueHolidays, { month, day }));
-      }
     } else if (event.type === "relative") {
       if (event.rule == null) continue;
 
@@ -143,23 +131,6 @@ export function matchRange(
         inRange(event.month, event.day, startMonth, startDay, endMonth, endDay)
       ) {
         add(event, { month: event.month, day: event.day });
-      }
-    } else if (event.type === "multi-day") {
-      const {
-        startMonth: evStartMonth,
-        startDay: evStartDay,
-        endMonth: evEndMonth,
-        endDay: evEndDay,
-      } = event;
-
-      if (evStartMonth != null && evStartDay != null && evEndMonth != null && evEndDay != null) {
-        const overlapStart = cmpDate(evEndMonth, evEndDay, startMonth, startDay) >= 0;
-
-        const overlapEnd = cmpDate(evStartMonth, evStartDay, endMonth, endDay) <= 0;
-
-        if (overlapStart && overlapEnd) {
-          add(event, { month: evStartMonth, day: evStartDay });
-        }
       }
     } else if (event.type === "relative") {
       if (event.rule == null) continue;

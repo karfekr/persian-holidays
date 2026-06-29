@@ -11,7 +11,7 @@ const OUT_DIR = resolve(ROOT, "src", "data");
 
 const CALENDARS = ["jalali", "gregorian", "hijri"];
 
-const VALID_TYPES = new Set(["fixed", "multi-day", "relative"]);
+const VALID_TYPES = new Set(["fixed", "relative"]);
 const VALID_CATEGORIES = new Set([
   "government",
   "religious",
@@ -44,12 +44,6 @@ function validateEvent(event, calendar, idx) {
   if (event.type === "fixed") {
     if (event.month == null || event.day == null)
       throw new Error(`${prefix} Fixed event must have month and day`);
-  }
-  if (event.type === "multi-day") {
-    const required = ["startMonth", "startDay", "endMonth", "endDay"];
-    for (const f of required) {
-      if (event[f] == null) throw new Error(`${prefix} Multi-day event missing "${f}"`);
-    }
   }
   if (event.type === "relative") {
     if (!event.rule?.base) throw new Error(`${prefix} Relative event must have rule.base`);
