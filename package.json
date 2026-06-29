@@ -1,113 +1,113 @@
 {
-	"name": "persian-holidays",
-	"version": "1.4.0",
-	"description": "A unified calendar events engine for Persian, Islamic, and international dates, providing bilingual event data(English & Persian), holiday classification, and a powerful query system for fixed, multi-day, and relative events.",
-	"type": "module",
-	"keywords": [
-		"persian",
-		"jalali",
-		"hijri",
-		"gregorian",
-		"holidays",
-		"events",
-		"holidays",
-		"iran",
-		"calendar"
-	],
-	"license": "MIT",
-	"author": {
-		"name": "Alireza Mohammadzadeh(NedaMani)",
-		"url": "https://nedamani.ir"
-	},
-	"homepage": "https://github.com/karfekr/persian-holidays",
-	"bugs": {
-		"url": "https://github.com/karfekr/persian-holidays/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/karfekr/persian-holidays.git"
-	},
-	"packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		".": {
-			"types": {
-				"import": "./dist/index.d.ts",
-				"require": "./dist/index.d.cts"
-			},
-			"import": "./dist/index.js",
-			"require": "./dist/index.cjs"
-		},
-		"./gregorian": {
-			"types": {
-				"import": "./dist/gregorian.d.ts",
-				"require": "./dist/gregorian.d.cts"
-			},
-			"import": "./dist/gregorian.js",
-			"require": "./dist/gregorian.cjs"
-		},
-		"./hijri": {
-			"types": {
-				"import": "./dist/hijri.d.ts",
-				"require": "./dist/hijri.d.cts"
-			},
-			"import": "./dist/hijri.js",
-			"require": "./dist/hijri.cjs"
-		},
-		"./jalali": {
-			"types": {
-				"import": "./dist/jalali.d.ts",
-				"require": "./dist/jalali.d.cts"
-			},
-			"import": "./dist/jalali.js",
-			"require": "./dist/jalali.cjs"
-		}
-	},
-	"files": [
-		"dist/",
-		"README.md",
-		"README_FA.md",
-		"LICENSE"
-	],
-	"sideEffects": false,
-	"lint-staged": {
-		"*.{md,json}": [
-			"pnpm run lint"
-		],
-		"*.{js,cjs,mjs,ts}": [
-			"pnpm run lint",
-			"eslint --fix"
-		]
-	},
-	"scripts": {
-		"build:json": "node scripts/build-json.mjs",
-		"build": "pnpm run build:json && tsup",
-		"test": "vitest",
-		"format": "prettier --write .",
-		"lint": "eslint . --fix && pnpm run format",
-		"prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build",
-		"prepare": "husky"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^21.0.2",
-		"@commitlint/config-conventional": "^21.0.2",
-		"@internationalized/date": ">=3.12.0",
-		"eslint": "9.39.4",
-		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-simple-import-sort": "^13.0.0",
-		"glob": "^13.0.6",
-		"globals": "^17.6.0",
-		"husky": "^9.1.7",
-		"js-yaml": "^4.2.0",
-		"lint-staged": "^17.0.7",
-		"prettier": "^3.8.4",
-		"tsup": "^8.5.1",
-		"typescript-eslint": "^8.61.0",
-		"vitest": "^4.1.8"
-	},
-	"engines": {
-		"node": ">=18.0.0"
-	}
+  "name": "persian-holidays",
+  "version": "1.4.0",
+  "description": "A unified calendar events engine for Persian, Islamic, and international dates, providing bilingual event data(English & Persian), holiday classification, and a powerful query system for fixed, multi-day, and relative events.",
+  "type": "module",
+  "keywords": [
+    "persian",
+    "jalali",
+    "hijri",
+    "gregorian",
+    "holidays",
+    "events",
+    "holidays",
+    "iran",
+    "calendar"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Alireza Mohammadzadeh(NedaMani)",
+    "url": "https://nedamani.ir"
+  },
+  "homepage": "https://github.com/karfekr/persian-holidays",
+  "bugs": {
+    "url": "https://github.com/karfekr/persian-holidays/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karfekr/persian-holidays.git"
+  },
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./gregorian": {
+      "types": {
+        "import": "./dist/gregorian.d.ts",
+        "require": "./dist/gregorian.d.cts"
+      },
+      "import": "./dist/gregorian.js",
+      "require": "./dist/gregorian.cjs"
+    },
+    "./hijri": {
+      "types": {
+        "import": "./dist/hijri.d.ts",
+        "require": "./dist/hijri.d.cts"
+      },
+      "import": "./dist/hijri.js",
+      "require": "./dist/hijri.cjs"
+    },
+    "./jalali": {
+      "types": {
+        "import": "./dist/jalali.d.ts",
+        "require": "./dist/jalali.d.cts"
+      },
+      "import": "./dist/jalali.js",
+      "require": "./dist/jalali.cjs"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "README_FA.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "lint-staged": {
+    "*.{md,json}": [
+      "pnpm run lint"
+    ],
+    "*.{js,cjs,mjs,ts}": [
+      "pnpm run lint",
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "build:json": "node scripts/build-json.mjs",
+    "build": "pnpm run build:json && tsup",
+    "test": "vitest",
+    "format": "prettier --write .",
+    "lint": "eslint . --fix && pnpm run format",
+    "prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@internationalized/date": ">=3.12.0",
+    "eslint": "9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "glob": "^13.0.6",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "js-yaml": "^4.2.0",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.4",
+    "tsup": "^8.5.1",
+    "typescript-eslint": "^8.61.0",
+    "vitest": "^4.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

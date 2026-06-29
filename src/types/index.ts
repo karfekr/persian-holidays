@@ -3,14 +3,14 @@ export const CALENDAR_TYPES = ["jalali", "gregorian", "hijri"] as const;
 export type CalendarType = (typeof CALENDAR_TYPES)[number];
 
 export const CATEGORIES = [
-	"government",
-	"religious",
-	"shia",
-	"sunni",
-	"ancient",
-	"international",
-	"historical",
-	"united_nations",
+  "government",
+  "religious",
+  "shia",
+  "sunni",
+  "ancient",
+  "international",
+  "historical",
+  "united_nations",
 ] as const;
 
 export type CategoryType = (typeof CATEGORIES)[number];
@@ -20,105 +20,105 @@ export type DateType = { month: number; day: number };
 export type OccasionType = "fixed" | "multi-day" | "relative";
 
 export type BilingualTitle = {
-	fa: string;
-	en: string;
+  fa: string;
+  en: string;
 };
 
 export type EventMetadata = {
-	importance?: string;
-	source?: string;
-	note?: string;
+  importance?: string;
+  source?: string;
+  note?: string;
 };
 
 export type EventType = {
-	id: string;
+  id: string;
 
-	title: BilingualTitle;
+  title: BilingualTitle;
 
-	categories: CategoryType[];
+  categories: CategoryType[];
 
-	isHolidayInIran: boolean;
+  isHolidayInIran: boolean;
 
-	calendar: CalendarType;
+  calendar: CalendarType;
 
-	type: OccasionType;
+  type: OccasionType;
 
-	date: DateType;
+  date: DateType;
 };
 
 export type RelativeRule = {
-	base: "nth-weekday-of-month" | "computus" | "day-candidates" | "month-weekday" | "month-end";
+  base: "nth-weekday-of-month" | "computus" | "day-candidates" | "month-weekday" | "month-end";
 
-	month?: number;
-	weekday?: number;
-	occurrence?: "first" | "second" | "third" | "fourth" | "last";
+  month?: number;
+  weekday?: number;
+  occurrence?: "first" | "second" | "third" | "fourth" | "last";
 
-	offsetDays?: number;
-	candidates?: number[];
+  offsetDays?: number;
+  candidates?: number[];
 };
 
 export type ResolverContext = {
-	year?: number;
-	calendar?: CalendarType;
-	skipOnMissingYear?: boolean;
-	adapter?: AdapterType;
+  year?: number;
+  calendar?: CalendarType;
+  skipOnMissingYear?: boolean;
+  adapter?: AdapterType;
 };
 
 export type DatePoint = {
-	month: number;
-	day: number;
+  month: number;
+  day: number;
 };
 
 export type RawEvent = {
-	id: string;
+  id: string;
 
-	type: OccasionType;
+  type: OccasionType;
 
-	month?: number;
-	day?: number;
+  month?: number;
+  day?: number;
 
-	startMonth?: number;
-	startDay?: number;
+  startMonth?: number;
+  startDay?: number;
 
-	endMonth?: number;
-	endDay?: number;
+  endMonth?: number;
+  endDay?: number;
 
-	rule?: RelativeRule;
+  rule?: RelativeRule;
 
-	title: BilingualTitle;
+  title: BilingualTitle;
 
-	categories: CategoryType[];
+  categories: CategoryType[];
 
-	isHolidayInIran: boolean;
+  isHolidayInIran: boolean;
 };
 
 export type AdapterType = {
-	firstWeekdayOfMonth: (calendar: CalendarType, year: number, month: number) => number;
-	monthLength: (calendar: CalendarType, year: number, month: number) => number;
+  firstWeekdayOfMonth: (calendar: CalendarType, year: number, month: number) => number;
+  monthLength: (calendar: CalendarType, year: number, month: number) => number;
 };
 
 export type QueryOptions = {
-	categories?: CategoryType[];
-	year?: number;
-	adapter?: AdapterType;
-	trueHolidays?: boolean;
+  categories?: CategoryType[];
+  year?: number;
+  adapter?: AdapterType;
+  trueHolidays?: boolean;
 };
 
 export type RuleResolver = (rule: RelativeRule, ctx: ResolverContext) => DatePoint[];
 
 export type EventRule =
-	| {
-			base: "nth-weekday-of-month";
-			month: number;
-			weekday: number;
-			occurrence: "first" | "second" | "third" | "fourth" | "last";
-	  }
-	| {
-			base: "computus";
-			offsetDays?: number;
-	  }
-	| {
-			base: "day-candidates";
-			month: number;
-			candidates: number[];
-	  };
+  | {
+      base: "nth-weekday-of-month";
+      month: number;
+      weekday: number;
+      occurrence: "first" | "second" | "third" | "fourth" | "last";
+    }
+  | {
+      base: "computus";
+      offsetDays?: number;
+    }
+  | {
+      base: "day-candidates";
+      month: number;
+      candidates: number[];
+    };

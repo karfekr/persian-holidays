@@ -110,7 +110,7 @@ getMonthEvents(
 const allOf1403 = getYearEvents("jalali", 1403);
 
 const religiousOf1403 = getYearEvents("jalali", 1403, {
-	categories: ["religious", "shia"],
+  categories: ["religious", "shia"],
 });
 ```
 
@@ -135,15 +135,15 @@ getYearEvents(
 
 ```ts
 type Events = {
-	id: string;
-	title: {
-		fa: string;
-		en: string;
-	};
-	categories: CategoryType[];
-	isHolidayInIran: boolean;
-	calendar: CalendarType;
-	type: "fixed" | "multi-day" | "relative";
+  id: string;
+  title: {
+    fa: string;
+    en: string;
+  };
+  categories: CategoryType[];
+  isHolidayInIran: boolean;
+  calendar: CalendarType;
+  type: "fixed" | "multi-day" | "relative";
 }[];
 ```
 
@@ -167,13 +167,13 @@ type Events = {
 
 ```ts
 interface CalendarAdapter {
-	firstWeekdayOfMonth(
-		calendar: "jalali" | "gregorian" | "hijri",
-		year: number,
-		month: number,
-	): number;
+  firstWeekdayOfMonth(
+    calendar: "jalali" | "gregorian" | "hijri",
+    year: number,
+    month: number,
+  ): number;
 
-	monthLength(calendar: "jalali" | "gregorian" | "hijri", year: number, month: number): number;
+  monthLength(calendar: "jalali" | "gregorian" | "hijri", year: number, month: number): number;
 }
 ```
 
@@ -201,50 +201,50 @@ interface CalendarAdapter {
 ```ts
 import { type CalendarType, setAdapter } from "persian-holidays";
 import {
-	CalendarDate,
-	PersianCalendar,
-	IslamicUmalquraCalendar,
-	GregorianCalendar,
-	getDayOfWeek,
-	endOfMonth,
-	startOfMonth,
+  CalendarDate,
+  PersianCalendar,
+  IslamicUmalquraCalendar,
+  GregorianCalendar,
+  getDayOfWeek,
+  endOfMonth,
+  startOfMonth,
 } from "@internationalized/date";
 
 const CALENDARS = {
-	jalali: new PersianCalendar(),
-	hijri: new IslamicUmalquraCalendar(),
-	gregorian: new GregorianCalendar(),
+  jalali: new PersianCalendar(),
+  hijri: new IslamicUmalquraCalendar(),
+  gregorian: new GregorianCalendar(),
 };
 
 const LOCALE = {
-	jalali: "fa-IR",
-	hijri: "fa-IR",
-	gregorian: "en-US",
+  jalali: "fa-IR",
+  hijri: "fa-IR",
+  gregorian: "en-US",
 };
 
 function normalizeWeekday(rawWeekday: number, calendar: CalendarType) {
-	if (calendar === "jalali" || calendar === "hijri") {
-		return (rawWeekday + 6) % 7;
-	}
-	return rawWeekday;
+  if (calendar === "jalali" || calendar === "hijri") {
+    return (rawWeekday + 6) % 7;
+  }
+  return rawWeekday;
 }
 
 setAdapter({
-	firstWeekdayOfMonth(calendar, year, month) {
-		const cal = CALENDARS[calendar];
-		const firstDay = startOfMonth(new CalendarDate(cal, year, month, 1));
+  firstWeekdayOfMonth(calendar, year, month) {
+    const cal = CALENDARS[calendar];
+    const firstDay = startOfMonth(new CalendarDate(cal, year, month, 1));
 
-		const raw = getDayOfWeek(firstDay, LOCALE[calendar]);
+    const raw = getDayOfWeek(firstDay, LOCALE[calendar]);
 
-		return normalizeWeekday(raw, calendar);
-	},
+    return normalizeWeekday(raw, calendar);
+  },
 
-	monthLength(calendar, year, month) {
-		const cal = CALENDARS[calendar];
-		const last = endOfMonth(new CalendarDate(cal, year, month, 1));
+  monthLength(calendar, year, month) {
+    const cal = CALENDARS[calendar];
+    const last = endOfMonth(new CalendarDate(cal, year, month, 1));
 
-		return last.day;
-	},
+    return last.day;
+  },
 });
 ```
 

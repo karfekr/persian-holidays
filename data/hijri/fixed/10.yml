@@ -8,21 +8,10 @@ events:
       en: Eid al-Fitr
     categories:
       - shia
+      - sunni
       - religious
       - government
     isHolidayInIran: true
-
-  - id: hijri-10-01-hum8fu
-    type: fixed
-    month: 10
-    day: 1
-    title:
-      fa: عید سعید فطر
-      en: Eid al-Fitr
-    categories:
-      - sunni
-      - religious
-    isHolidayInIran: false
 
   - id: hijri-10-17-13k3j8t
     type: fixed

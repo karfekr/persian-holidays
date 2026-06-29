@@ -1,12 +1,12 @@
 import type {
-	AdapterType,
-	CalendarType,
-	CategoryType,
-	DatePoint,
-	DateType,
-	EventType,
-	RawEvent,
-	ResolverContext,
+  AdapterType,
+  CalendarType,
+  CategoryType,
+  DatePoint,
+  DateType,
+  EventType,
+  RawEvent,
+  ResolverContext,
 } from "src/types";
 
 import { resolveAdapter } from "./adapter";
@@ -15,172 +15,172 @@ import { resolveRule } from "./ruleResolver";
 type MonthDayPoint = DatePoint;
 
 function cmpDate(aM: number, aD: number, bM: number, bD: number): number {
-	return aM !== bM ? aM - bM : aD - bD;
+  return aM !== bM ? aM - bM : aD - bD;
 }
 
 function inRange(
-	month: number,
-	day: number,
-	startMonth: number,
-	startDay: number,
-	endMonth: number,
-	endDay: number,
+  month: number,
+  day: number,
+  startMonth: number,
+  startDay: number,
+  endMonth: number,
+  endDay: number,
 ): boolean {
-	return (
-		cmpDate(month, day, startMonth, startDay) >= 0 && cmpDate(month, day, endMonth, endDay) <= 0
-	);
+  return (
+    cmpDate(month, day, startMonth, startDay) >= 0 && cmpDate(month, day, endMonth, endDay) <= 0
+  );
 }
 
 function matchesCategory(event: RawEvent, categories?: CategoryType[]): boolean {
-	if (!categories || categories.length === 0) {
-		return true;
-	}
+  if (!categories || categories.length === 0) {
+    return true;
+  }
 
-	return event.categories.some((c) => categories.includes(c));
+  return event.categories.some((c) => categories.includes(c));
 }
 
 function toEvent(
-	raw: RawEvent,
-	calendar: CalendarType,
-	trueHolidays: boolean,
-	date: DateType,
+  raw: RawEvent,
+  calendar: CalendarType,
+  trueHolidays: boolean,
+  date: DateType,
 ): EventType {
-	return {
-		id: raw.id,
-		title: raw.title,
-		categories: raw.categories,
-		isHolidayInIran: trueHolidays ? raw.isHolidayInIran : false,
-		calendar,
-		type: raw.type,
-		date,
-	};
+  return {
+    id: raw.id,
+    title: raw.title,
+    categories: raw.categories,
+    isHolidayInIran: trueHolidays ? raw.isHolidayInIran : false,
+    calendar,
+    type: raw.type,
+    date,
+  };
 }
 
 export function matchDay(
-	rawEvents: RawEvent[],
-	calendar: CalendarType,
-	month: number,
-	day: number,
-	categories?: CategoryType[],
-	year?: number,
-	adapter?: AdapterType,
-	trueHolidays = true,
+  rawEvents: RawEvent[],
+  calendar: CalendarType,
+  month: number,
+  day: number,
+  categories?: CategoryType[],
+  year?: number,
+  adapter?: AdapterType,
+  trueHolidays = true,
 ): EventType[] {
-	const results: EventType[] = [];
+  const results: EventType[] = [];
 
-	for (const event of rawEvents) {
-		if (!matchesCategory(event, categories)) continue;
+  for (const event of rawEvents) {
+    if (!matchesCategory(event, categories)) continue;
 
-		if (event.type === "fixed") {
-			if (event.month != null && event.day != null && event.month === month && event.day === day) {
-				results.push(toEvent(event, calendar, trueHolidays, { month, day }));
-			}
-		} else if (event.type === "multi-day") {
-			const { startMonth, startDay, endMonth, endDay } = event;
+    if (event.type === "fixed") {
+      if (event.month != null && event.day != null && event.month === month && event.day === day) {
+        results.push(toEvent(event, calendar, trueHolidays, { month, day }));
+      }
+    } else if (event.type === "multi-day") {
+      const { startMonth, startDay, endMonth, endDay } = event;
 
-			if (
-				startMonth != null &&
-				startDay != null &&
-				endMonth != null &&
-				endDay != null &&
-				inRange(month, day, startMonth, startDay, endMonth, endDay)
-			) {
-				results.push(toEvent(event, calendar, trueHolidays, { month, day }));
-			}
-		} else if (event.type === "relative") {
-			if (event.rule == null) continue;
+      if (
+        startMonth != null &&
+        startDay != null &&
+        endMonth != null &&
+        endDay != null &&
+        inRange(month, day, startMonth, startDay, endMonth, endDay)
+      ) {
+        results.push(toEvent(event, calendar, trueHolidays, { month, day }));
+      }
+    } else if (event.type === "relative") {
+      if (event.rule == null) continue;
 
-			const ctx: ResolverContext = {
-				year,
-				calendar,
-				skipOnMissingYear: year == null,
-				adapter: resolveAdapter(adapter),
-			};
+      const ctx: ResolverContext = {
+        year,
+        calendar,
+        skipOnMissingYear: year == null,
+        adapter: resolveAdapter(adapter),
+      };
 
-			const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);
+      const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);
 
-			for (const pt of resolved) {
-				if (pt.month === month && pt.day === day) {
-					results.push(toEvent(event, calendar, trueHolidays, { month: pt.month, day: pt.day }));
-					break;
-				}
-			}
-		}
-	}
+      for (const pt of resolved) {
+        if (pt.month === month && pt.day === day) {
+          results.push(toEvent(event, calendar, trueHolidays, { month: pt.month, day: pt.day }));
+          break;
+        }
+      }
+    }
+  }
 
-	return results;
+  return results;
 }
 
 export function matchRange(
-	rawEvents: RawEvent[],
-	calendar: CalendarType,
-	startMonth: number,
-	startDay: number,
-	endMonth: number,
-	endDay: number,
-	categories?: CategoryType[],
-	year?: number,
-	adapter?: AdapterType,
-	trueHolidays = true,
+  rawEvents: RawEvent[],
+  calendar: CalendarType,
+  startMonth: number,
+  startDay: number,
+  endMonth: number,
+  endDay: number,
+  categories?: CategoryType[],
+  year?: number,
+  adapter?: AdapterType,
+  trueHolidays = true,
 ): EventType[] {
-	const results: EventType[] = [];
-	const seen = new Set<string>();
+  const results: EventType[] = [];
+  const seen = new Set<string>();
 
-	const add = (event: RawEvent, date: { month: number; day: number }): void => {
-		if (!seen.has(event.id)) {
-			seen.add(event.id);
-			results.push(toEvent(event, calendar, trueHolidays, date));
-		}
-	};
+  const add = (event: RawEvent, date: { month: number; day: number }): void => {
+    if (!seen.has(event.id)) {
+      seen.add(event.id);
+      results.push(toEvent(event, calendar, trueHolidays, date));
+    }
+  };
 
-	for (const event of rawEvents) {
-		if (!matchesCategory(event, categories)) continue;
+  for (const event of rawEvents) {
+    if (!matchesCategory(event, categories)) continue;
 
-		if (event.type === "fixed") {
-			if (
-				event.month != null &&
-				event.day != null &&
-				inRange(event.month, event.day, startMonth, startDay, endMonth, endDay)
-			) {
-				add(event, { month: event.month, day: event.day });
-			}
-		} else if (event.type === "multi-day") {
-			const {
-				startMonth: evStartMonth,
-				startDay: evStartDay,
-				endMonth: evEndMonth,
-				endDay: evEndDay,
-			} = event;
+    if (event.type === "fixed") {
+      if (
+        event.month != null &&
+        event.day != null &&
+        inRange(event.month, event.day, startMonth, startDay, endMonth, endDay)
+      ) {
+        add(event, { month: event.month, day: event.day });
+      }
+    } else if (event.type === "multi-day") {
+      const {
+        startMonth: evStartMonth,
+        startDay: evStartDay,
+        endMonth: evEndMonth,
+        endDay: evEndDay,
+      } = event;
 
-			if (evStartMonth != null && evStartDay != null && evEndMonth != null && evEndDay != null) {
-				const overlapStart = cmpDate(evEndMonth, evEndDay, startMonth, startDay) >= 0;
+      if (evStartMonth != null && evStartDay != null && evEndMonth != null && evEndDay != null) {
+        const overlapStart = cmpDate(evEndMonth, evEndDay, startMonth, startDay) >= 0;
 
-				const overlapEnd = cmpDate(evStartMonth, evStartDay, endMonth, endDay) <= 0;
+        const overlapEnd = cmpDate(evStartMonth, evStartDay, endMonth, endDay) <= 0;
 
-				if (overlapStart && overlapEnd) {
-					add(event, { month: evStartMonth, day: evStartDay });
-				}
-			}
-		} else if (event.type === "relative") {
-			if (event.rule == null) continue;
+        if (overlapStart && overlapEnd) {
+          add(event, { month: evStartMonth, day: evStartDay });
+        }
+      }
+    } else if (event.type === "relative") {
+      if (event.rule == null) continue;
 
-			const ctx: ResolverContext = {
-				year,
-				calendar,
-				skipOnMissingYear: year == null,
-				adapter: resolveAdapter(adapter),
-			};
+      const ctx: ResolverContext = {
+        year,
+        calendar,
+        skipOnMissingYear: year == null,
+        adapter: resolveAdapter(adapter),
+      };
 
-			const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);
+      const resolved: MonthDayPoint[] = resolveRule(event.rule, ctx);
 
-			for (const pt of resolved) {
-				if (inRange(pt.month, pt.day, startMonth, startDay, endMonth, endDay)) {
-					add(event, { month: pt.month, day: pt.day });
-					break;
-				}
-			}
-		}
-	}
+      for (const pt of resolved) {
+        if (inRange(pt.month, pt.day, startMonth, startDay, endMonth, endDay)) {
+          add(event, { month: pt.month, day: pt.day });
+          break;
+        }
+      }
+    }
+  }
 
-	return results;
+  return results;
 }
