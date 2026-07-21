@@ -1,8 +1,8 @@
-import { readFileSync, writeFileSync, mkdirSync } from "fs";
-import { resolve, dirname, join } from "path";
-import { fileURLToPath } from "url";
-import { load as parseYaml } from "js-yaml";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { globSync } from "glob";
+import { load as parseYaml } from "js-yaml";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -71,7 +71,7 @@ for (const calendar of CALENDARS) {
 
   const files = loadCalendarFiles(calendar);
 
-  let allEvents = [];
+  const allEvents = [];
 
   for (const file of files) {
     let raw;

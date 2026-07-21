@@ -97,7 +97,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm run lint",
-    "commit-msg": "commitlint --edit $1",
+    "commit-msg": "pnpm exec commitlint --edit $1",
     "pre-push": "pnpm run build && pnpm run test"
   }
 }

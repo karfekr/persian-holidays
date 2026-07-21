@@ -1,6 +1,6 @@
 import type { AdapterType } from "src/types";
 
-let adapter: AdapterType | undefined = undefined;
+let adapter: AdapterType | undefined;
 
 export function setAdapter(next: AdapterType): void {
   if (typeof next?.firstWeekdayOfMonth !== "function" || typeof next?.monthLength !== "function") {
