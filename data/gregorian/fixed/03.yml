@@ -153,6 +153,7 @@ events:
     categories:
       - international
       - united_nations
+      - world_health_organization
     isHolidayInIran: false
 
   - id: gregorian-03-24-gu9jy7

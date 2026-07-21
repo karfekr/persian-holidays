@@ -10,3 +10,15 @@ events:
       - international
       - united_nations
     isHolidayInIran: false
+
+  - id: gregorian-01-30-a8elp4
+    type: fixed
+    month: 1
+    day: 30
+    title:
+      fa: روز جهانی بیماری‌های گرمسیری نادیده‌گرفته‌شده
+      en: World Neglected Tropical Diseases Day
+    categories:
+      - international
+      - world_health_organization
+    isHolidayInIran: false

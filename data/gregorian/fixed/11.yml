@@ -59,6 +59,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-11-15-l9ds2w
+    type: fixed
+    month: 11
+    day: 15
+    title:
+      fa: روز جهانی نوزادان نارس
+      en: World Prematurity Day
+    categories:
+      - international
+      - world_health_organization
+    isHolidayInIran: false
+
   - id: gregorian-11-16-ec62j4
     type: fixed
     month: 11
@@ -69,6 +81,18 @@ events:
     categories:
       - international
       - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-11-17-m6fv8p
+    type: fixed
+    month: 11
+    day: 17
+    title:
+      fa: روز جهانی حذف سرطان دهانه رحم
+      en: World Cervical Cancer Elimination Day
+    categories:
+      - international
+      - world_health_organization
     isHolidayInIran: false
 
   - id: gregorian-11-19-srnn94

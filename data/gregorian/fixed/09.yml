@@ -69,6 +69,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-09-17-k7br4q
+    type: fixed
+    month: 9
+    day: 17
+    title:
+      fa: روز جهانی ایمنی بیمار
+      en: World Patient Safety Day
+    categories:
+      - international
+      - world_health_organization
+    isHolidayInIran: false
+
   - id: gregorian-09-20-k3t2y1k
     type: fixed
     month: 9

@@ -35,6 +35,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-07-25-i5mv8d
+    type: fixed
+    month: 7
+    day: 25
+    title:
+      fa: روز جهانی پیشگیری از غرق شدن
+      en: World Drowning Prevention Day
+    categories:
+      - international
+      - world_health_organization
+    isHolidayInIran: false
+
   - id: gregorian-07-28-12gr6r4
     type: fixed
     month: 7
@@ -45,6 +57,7 @@ events:
     categories:
       - international
       - united_nations
+      - world_health_organization
     isHolidayInIran: false
 
   - id: gregorian-07-30-kgqhwr

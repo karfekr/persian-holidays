@@ -57,6 +57,7 @@ events:
     categories:
       - international
       - united_nations
+      - world_health_organization
     isHolidayInIran: false
 
   - id: gregorian-04-12-v2u8un
@@ -69,6 +70,19 @@ events:
     categories:
       - international
       - united_nations
+    isHolidayInIran: false
+
+
+  - id: gregorian-04-14-d2m8qa
+    type: fixed
+    month: 4
+    day: 14
+    title:
+      fa: روز جهانی بیماری شاگاس
+      en: World Chagas Disease Day
+    categories:
+      - international
+      - world_health_organization
     isHolidayInIran: false
 
   - id: gregorian-04-20-1v99i4m
@@ -153,6 +167,7 @@ events:
     categories:
       - international
       - united_nations
+      - world_health_organization
     isHolidayInIran: false
 
   - id: gregorian-04-26-165xu8j
