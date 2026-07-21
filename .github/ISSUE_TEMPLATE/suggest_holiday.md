@@ -2,7 +2,7 @@
 name: "پیشنهاد مناسبت ناموجود"
 about: "پیشنهاد مناسبتی که در پکیج وجود ندارد"
 title: "[Add Holiday] "
-labels: "Holiday Request"
+labels: "Data Request"
 assignees: ""
 ---
 
