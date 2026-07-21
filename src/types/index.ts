@@ -12,6 +12,7 @@ export const CATEGORIES = [
   "historical",
   "united_nations",
   "world_health_organization",
+  "unesco",
 ] as const;
 
 export type CategoryType = (typeof CATEGORIES)[number];

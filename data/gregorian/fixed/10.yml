@@ -33,6 +33,19 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-10-06-s4p9q
+    type: fixed
+    month: 10
+    day: 6
+    title:
+      fa: روز جهانی تنوع زمین‌شناختی
+      en: International Geodiversity Day
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-10-09-joe8gc
@@ -69,6 +82,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-10-13-5jplu7
@@ -81,6 +95,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-10-15-1khe4z6
@@ -107,6 +122,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-10-17-w5m8r
+    type: fixed
+    month: 10
+    day: 17
+    title:
+      fa: روز جهانی میراث فرهنگی ناملموس
+      en: International Day of the Intangible Cultural Heritage
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-10-17-1fmk6qm
     type: fixed
     month: 10
@@ -117,6 +144,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-10-24-1ikybw2
@@ -153,6 +181,19 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-10-29-z6m3q
+    type: fixed
+    month: 10
+    day: 29
+    title:
+      fa: روز جهانی کدنویسی
+      en: World Coding Day
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-10-29-adew3uu

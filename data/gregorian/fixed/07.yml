@@ -1,4 +1,16 @@
 events:
+  - id: gregorian-07-07-b8p3q
+    type: fixed
+    month: 7
+    day: 7
+    title:
+      fa: روز جهانی زبان سواحیلی
+      en: Kiswahili Language Day
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-07-11-afb1pb
     type: fixed
     month: 7
@@ -33,6 +45,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-07-25-i5mv8d
@@ -45,6 +58,18 @@ events:
     categories:
       - international
       - world_health_organization
+    isHolidayInIran: false
+
+  - id: gregorian-07-26-d4k8v
+    type: fixed
+    month: 7
+    day: 26
+    title:
+      fa: روز جهانی حفاظت از زیست‌بوم مانگروها
+      en: International Day for the Conservation of the Mangrove Ecosystem
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-07-28-12gr6r4

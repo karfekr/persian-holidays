@@ -23,6 +23,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-03-04-v8k2m
+    type: fixed
+    month: 3
+    day: 4
+    title:
+      fa: روز جهانی مهندسی برای توسعه پایدار
+      en: World Engineering Day for Sustainable Development
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-03-08-1rmfzx2
     type: fixed
     month: 3
@@ -33,6 +45,31 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-03-14-k3r7b
+    type: fixed
+    month: 3
+    day: 14
+    title:
+      fa: روز جهانی ریاضیات
+      en: International Day of Mathematics
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-03-19-t6m8q
+    type: fixed
+    month: 3
+    day: 19
+    title:
+      fa: روز جهانی یادگیری دیجیتال
+      en: International Day for Digital Learning
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-03-20-j3judg
@@ -57,6 +94,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-03-21-1wspsfy
@@ -69,6 +107,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-03-21-1ukcb19
@@ -81,6 +120,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-03-21-1pkrl0p
@@ -93,6 +133,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-03-21-dirmox
@@ -119,6 +160,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-03-21-b9q5x
+    type: fixed
+    month: 3
+    day: 21
+    title:
+      fa: روز جهانی یخچال‌های طبیعی
+      en: World Day for Glaciers
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-03-22-p920ai
     type: fixed
     month: 3
@@ -129,6 +182,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-03-23-4xg5v

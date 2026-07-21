@@ -9,6 +9,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-08-12-9xnnbv
@@ -21,6 +22,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-08-19-1oy2qmb
@@ -46,6 +48,18 @@ events:
       - government
     isHolidayInIran: false
 
+  - id: gregorian-08-21-g3n7m
+    type: fixed
+    month: 8
+    day: 21
+    title:
+      fa: روز جهانی میراث فرهنگی زیر آب
+      en: International Day for Underwater Cultural Heritage
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-08-23-ettdd2
     type: fixed
     month: 8
@@ -56,6 +70,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-08-29-1fthamc

@@ -26,11 +26,24 @@ events:
     month: 9
     day: 8
     title:
-      fa: روز جهانی سواد
+      fa: روز جهانی سوادآموزی
       en: International Literacy Day
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-09-09-k7m3v
+    type: fixed
+    month: 9
+    day: 9
+    title:
+      fa: روز جهانی حفاظت از آموزش در هنگام جنگ
+      en: International Day to Protect Education from Attack
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-09-12-ipcdyq
@@ -45,6 +58,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-09-13-l4q8p
+    type: fixed
+    month: 9
+    day: 13
+    title:
+      fa: روز جهانی غارها و کارست
+      en: International Day for Caves and Karst
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-09-15-gdtpvk
     type: fixed
     month: 9
@@ -55,6 +80,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-09-16-11kly1k
@@ -93,6 +119,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-09-20-n8r5q
+    type: fixed
+    month: 9
+    day: 20
+    title:
+      fa: روز جهانی ورزشِ دانشگاه
+      en: International Day of University Sport
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-09-21-fez5ck
     type: fixed
     month: 9
@@ -103,6 +141,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-09-26-1lwpc6m
@@ -139,6 +178,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-09-28-u77mh8

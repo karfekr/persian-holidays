@@ -21,6 +21,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-05-04-ce8i3w
@@ -33,6 +34,30 @@ events:
     categories:
       - international
       - united_nations
+    isHolidayInIran: false
+
+  - id: gregorian-05-05-q8m4r
+    type: fixed
+    month: 5
+    day: 5
+    title:
+      fa: روز جهانی زبان پرتغالی
+      en: World Portuguese Language Day
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-05-05-r6n9t
+    type: fixed
+    month: 5
+    day: 5
+    title:
+      fa: روز میراث جهانی آفریقا
+      en: African World Heritage Day
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-05-10-enpas2
@@ -59,6 +84,30 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-05-16-s4p8k
+    type: fixed
+    month: 5
+    day: 16
+    title:
+      fa: روز جهانی زندگی مشترک در صلح
+      en: International Day of Living Together in Peace
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-05-16-t7m3q
+    type: fixed
+    month: 5
+    day: 16
+    title:
+      fa: روز جهانی نور
+      en: International Day of Light
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-05-17-oaiimr
     type: fixed
     month: 5
@@ -71,6 +120,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-05-20-v5k8n
+    type: fixed
+    month: 5
+    day: 20
+    title:
+      fa: روز جهانی اندازه‌شناسی
+      en: World Metrology Day
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-05-21-1uumq5o
     type: fixed
     month: 5
@@ -81,6 +142,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-05-22-u67c5z
@@ -93,6 +155,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-05-23-1h62w1m

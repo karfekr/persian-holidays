@@ -1,4 +1,52 @@
 events:
+  - id: gregorian-01-14-p3x7m
+    type: fixed
+    month: 1
+    day: 14
+    title:
+      fa: روز جهانی منطق
+      en: World Logic Day
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-01-24-q8n2v
+    type: fixed
+    month: 1
+    day: 24
+    title:
+      fa: روز جهانی آموزش
+      en: International Day of Education
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-01-24-r4k9t
+    type: fixed
+    month: 1
+    day: 24
+    title:
+      fa: روز جهانی فرهنگ آفریقایی و آفریقایی‌تباران
+      en: World Day for African and Afrodescendant Culture
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-01-25-b6m3x
+    type: fixed
+    month: 1
+    day: 25
+    title:
+      fa: روز جهانی زنان در چندجانبه‌گرایی
+      en: International Day of Women in Multilateralism
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-01-27-ogldp4
     type: fixed
     month: 1

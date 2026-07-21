@@ -10,6 +10,19 @@ events:
       - international
       - united_nations
       - world_health_organization
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-12-02-r5n8p
+    type: fixed
+    month: 12
+    day: 2
+    title:
+      fa: روز جهانی آینده‌ها
+      en: World Futures Day
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-12-02-1jeqau3
@@ -34,6 +47,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-12-05-mr9t2l
@@ -106,6 +120,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-12-11-hbh7mx
@@ -142,6 +157,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-12-18-17yk2y3
@@ -154,6 +170,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-12-20-bjn7gn

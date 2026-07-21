@@ -22,6 +22,7 @@ const VALID_CATEGORIES = new Set([
   "historical",
   "united_nations",
   "world_health_organization",
+  "unesco",
 ]);
 
 function validateEvent(event, calendar, idx) {

@@ -33,6 +33,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-02-13-v612mf
@@ -45,6 +46,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-02-20-11iu8pq
@@ -69,4 +71,5 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false

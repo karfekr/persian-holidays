@@ -23,6 +23,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-04-05-f2m7q
+    type: fixed
+    month: 4
+    day: 5
+    title:
+      fa: روز جهانی وجدان
+      en: International Day of Conscience
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-04-06-1toxwl1
     type: fixed
     month: 4
@@ -33,6 +45,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-04-07-135dd25
@@ -45,6 +58,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-04-07-s274rg
@@ -83,6 +97,18 @@ events:
     categories:
       - international
       - world_health_organization
+    isHolidayInIran: false
+
+  - id: gregorian-04-15-j4k8m
+    type: fixed
+    month: 4
+    day: 15
+    title:
+      fa: روز جهانی هنر
+      en: World Art Day
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-04-20-1v99i4m
@@ -143,6 +169,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-04-23-kafsyu
@@ -168,6 +195,18 @@ events:
       - international
       - united_nations
       - world_health_organization
+    isHolidayInIran: false
+
+  - id: gregorian-04-25-m6q9x
+    type: fixed
+    month: 4
+    day: 25
+    title:
+      fa: روز جهانی کشورهای جزیره‌ایِ کوچکِ در حال توسعه
+      en: International Day for Small Island Developing States
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-04-26-165xu8j
@@ -228,4 +267,5 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false

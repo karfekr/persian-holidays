@@ -9,6 +9,19 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-11-03-b7k4m
+    type: fixed
+    month: 11
+    day: 3
+    title:
+      fa: روز جهانی مناطق حفاظت‌شده‌ی زیست‌کره
+      en: International Day for Biosphere Reserves
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-11-05-74n96g
@@ -21,6 +34,19 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-11-05-c8p3q
+    type: fixed
+    month: 11
+    day: 5
+    title:
+      fa: روز جهانی زبان رومی
+      en: World Day of Romani Language
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-11-06-50xihe
@@ -35,6 +61,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-11-06-e4q8k
+    type: fixed
+    month: 11
+    day: 6
+    title:
+      fa: روز جهانی مقابله با خشونت و قلدری در مدرسه، از جمله قلدری سایبری
+      en: International Day against Violence and Bullying at School, including Cyberbullying
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-11-10-zd83gj
     type: fixed
     month: 11
@@ -45,6 +83,19 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-11-14-g3k7n
+    type: fixed
+    month: 11
+    day: 14
+    title:
+      fa: روز جهانی مقابله با قاچاق غیرقانونی اموال فرهنگی
+      en: International Day against Illicit Trafficking in Cultural Property
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-11-14-1fj0ygs
@@ -81,6 +132,7 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-11-17-m6fv8p
@@ -93,6 +145,18 @@ events:
     categories:
       - international
       - world_health_organization
+    isHolidayInIran: false
+
+  - id: gregorian-11-18-j7q3k
+    type: fixed
+    month: 11
+    day: 18
+    title:
+      fa: روز جهانی هنر اسلامی
+      en: International Day of Islamic Art
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-11-19-srnn94
@@ -131,6 +195,18 @@ events:
       - united_nations
     isHolidayInIran: false
 
+  - id: gregorian-11-20-k8m4v
+    type: fixed
+    month: 11
+    day: 20
+    title:
+      fa: روز جهانی فلسفه
+      en: World Philosophy Day
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
   - id: gregorian-11-21-9efknd
     type: fixed
     month: 11
@@ -153,6 +229,32 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
+    isHolidayInIran: false
+
+  - id: gregorian-11-26-m4r7q
+    type: fixed
+    month: 11
+    day: 26
+    title:
+      fa: روز جهانی درخت زیتون
+      en: World Olive Tree Day
+    categories:
+      - international
+      - unesco
+    isHolidayInIran: false
+
+
+  - id: gregorian-11-27-n5k9m
+    type: fixed
+    month: 11
+    day: 27
+    title:
+      fa: روز جهانی مشارکت در علم برای توسعه پایدار
+      en: International Day of Engagement in Science for Sustainable Development
+    categories:
+      - international
+      - unesco
     isHolidayInIran: false
 
   - id: gregorian-11-29-qyobs4
@@ -165,4 +267,5 @@ events:
     categories:
       - international
       - united_nations
+      - unesco
     isHolidayInIran: false
