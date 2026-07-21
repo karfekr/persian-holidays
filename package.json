@@ -96,7 +96,7 @@
     "node": ">=18.0.0"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged",
+    "pre-commit": "pnpm run lint",
     "commit-msg": "commitlint --edit $1",
     "pre-push": "pnpm run build && pnpm run test"
   }
