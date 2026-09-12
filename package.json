@@ -27,40 +27,43 @@
     "url": "git+https://github.com/karfekr/persian-holidays.git"
   },
   "packageManager": "pnpm@12.4.1+sha512.2e81e399d73fe8390dab25e06aa788ab7a5908248d2f5a370f82b481147a6a7a367bf8048f9a6fdb6460f21a66f0542dedb8b94ca2c8723596741920b1656d4c",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "types": {
-        "import": "./dist/index.d.ts",
+        "import": "./dist/index.d.mts",
         "require": "./dist/index.d.cts"
       },
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
+
     "./gregorian": {
       "types": {
-        "import": "./dist/gregorian.d.ts",
+        "import": "./dist/gregorian.d.mts",
         "require": "./dist/gregorian.d.cts"
       },
-      "import": "./dist/gregorian.js",
+      "import": "./dist/gregorian.mjs",
       "require": "./dist/gregorian.cjs"
     },
+
     "./hijri": {
       "types": {
-        "import": "./dist/hijri.d.ts",
+        "import": "./dist/hijri.d.mts",
         "require": "./dist/hijri.d.cts"
       },
-      "import": "./dist/hijri.js",
+      "import": "./dist/hijri.mjs",
       "require": "./dist/hijri.cjs"
     },
+
     "./jalali": {
       "types": {
-        "import": "./dist/jalali.d.ts",
+        "import": "./dist/jalali.d.mts",
         "require": "./dist/jalali.d.cts"
       },
-      "import": "./dist/jalali.js",
+      "import": "./dist/jalali.mjs",
       "require": "./dist/jalali.cjs"
     }
   },
