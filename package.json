@@ -73,7 +73,7 @@
   "sideEffects": false,
   "scripts": {
     "build:json": "node scripts/build-json.mjs",
-    "build": "pnpm run build:json && tsup",
+    "build": "pnpm run build:json && tsdown",
     "test": "vitest",
     "format": "biome format --write .",
     "lint": "biome check --write .",
